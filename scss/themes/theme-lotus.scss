@@ -1,0 +1,618 @@
+ /*********** 1.1 DEFAULT VARIABLES ******/
+ $lotus: #6960EC ;
+ $lotus-light: #736AFF;
+ $vbox-overlay-bg-color: rgba(105, 96, 236, 0.9);
+ $gallery-img-hover-bg-color: rgba(75, 46, 236, 0.55);
+ $home-video-overlay-bg-color: rgba(97, 17, 224, 0.35);
+ $scroll-to-top-bg: linear-gradient(-45deg, #464282, $lotus);
+ $ms-bg: linear-gradient(-50deg, $lotus 50%, $lotus-light 50%);
+ $preloader-wrapper-bg: linear-gradient(to right, $lotus 0%, $lotus-light 100%);
+ $overlay-bg: linear-gradient(-45deg, rgba(105, 96, 236, 0.85), rgba(105, 96, 236, 0.95));
+ /********** END DEFAULT VARIABLES *******/
+
+ /********** BOXSHADOW **********/
+ @mixin boxshadow($box-shadow) {
+   -webkit-box-shadow: $box-shadow;
+   -moz-box-shadow: $box-shadow;
+   box-shadow: $box-shadow;
+ }
+
+ /********** COMMON RGB **********/
+ @mixin commonBg(){
+   background: rgba(0, 0, 0, 0) -webkit-linear-gradient(left, $lotus 40%, $lotus-light 100%) repeat scroll 0 0;
+   background: rgba(0, 0, 0, 0) linear-gradient(to right, $lotus 40%, $lotus-light 100%) repeat scroll 0 0;
+ }
+
+ /****************************************
+ 1. DEFAULT SCSS
+ *****************************************/
+ /*********** 1.2 COMMON SCSS ************/
+ .ms-primary-bg {
+   background-color: $lotus;
+ }
+
+ .ms-text-primary {
+   color: $lotus;
+ }
+
+ /********** Widget list **********/
+ .ms-widget-list {
+
+   li:hover,
+   li:active,
+   li.active {
+     color: $lotus;
+
+     .ms-number {
+       background-color: $lotus;
+     }
+   }
+ }
+
+ .ms-tag {
+   border-color: $lotus;
+   color: $lotus;
+
+   &:hover,
+   &.active {
+     background-color: $lotus;
+     border-color: $lotus
+   }
+ }
+
+ /********** Header divider **********/
+ .ms-divider {
+   border-top: 1px solid $lotus;
+
+   &::after {
+     background-color: $lotus;
+   }
+
+   &.ms-reverse {
+     &::after {
+       border-color: $lotus;
+     }
+   }
+ }
+
+ /********** Pagination **********/
+ .ms-pagination-container {
+   .page-link.ms-border {
+     color: $lotus;
+   }
+
+   .ms-page-item {
+     &.active .page-link,
+     .page-link:hover {
+       background: $lotus;
+     }
+   }
+ }
+
+ /********** Rating **********/
+ .ms-rating-box {
+   color: $lotus;
+ }
+
+ /********** Nav list **********/
+ .ms-nav-group {
+
+   .nav-link,
+   .nav-link.active {
+     color: inherit;
+     background-color: transparent;
+   }
+
+   .nav-link {
+     &::after {
+       background: $lotus;
+     }
+   }
+ }
+
+ /********** Overlay **********/
+ .ms-overlay {
+   background: $overlay-bg;
+ }
+
+ /********** Home style bg **********/
+ .ms-bg {
+   background-image: $ms-bg;
+ }
+
+ /********** Checkbox **********/
+ .ms-checkbox {
+   &:hover + label:before,
+   &:checked + label:before {
+     border-color: $lotus;
+   }
+
+   &:not(:disabled):hover + label,
+   &:not(:disabled):checked + label {
+     color: $lotus;
+   }
+
+   &:not(:disabled):checked + label:after {
+     background: $lotus;
+   }
+ }
+ /****************************************
+ END COMMON SCSS
+ *****************************************/
+
+
+ /****************************************
+ 2. WINDOW/PAGE LOADER
+ *****************************************/
+ .ms-preloader-wrapper {
+   background: $preloader-wrapper-bg;
+ }
+ /****************************************
+  END WINDOW/PAGE LOADER
+ *****************************************/
+
+
+ /****************************************
+ 3. HEADER/NAV CONTAINER
+ *****************************************/
+ .ms-inner-page .ms-navbar-fixed {
+   @include commonBg();
+ }
+
+ .ms-navbar-fixed {
+   &.ms-fixed {
+     @include commonBg();
+   }
+ }
+
+ @media (max-width: 767px) {
+   /********** Page wrapper container **********/
+   .ms-page-wrapper {
+     .ms-navbar-fixed {
+       &.show {
+         @include commonBg();
+       }
+     }
+   }
+ }
+ /********** End main navbar style **********/
+
+ /****************************************
+ 4. HOME CONTAINER
+ *****************************************/
+ .ms-card {
+   .ms-card-body {
+     .ms-card-title-icon {
+       color: $lotus;
+     }
+   }
+ }
+
+ /*********** 4.1 HOME STYLE 1 *********/
+ .ms-home-style-1 {
+   @include commonBg();
+ }
+
+ .ms-home-style-2 {
+   @include commonBg();
+ }
+
+ .ms-home-style-3 {
+   @include commonBg();
+ }
+
+ .ms-home-style-4{
+   @include commonBg();
+ }
+
+ .ms-home-style-5 {
+   @include commonBg();
+ }
+
+ /*********** 4.2 HOME BG STYLE *********/
+ /********** 4.2.1 HOME BG IMG *********/
+ .ms-home-bg-img {
+   .ms-home-bg-overlay {
+     &::after {
+       background: $lotus;
+     }
+   }
+ }
+
+ /********** 4.2.2 HOME BG VIDEO *********/
+ .ms-home-bg-video {
+   .ms-home-bg-overlay {
+     &::after {
+       background: $lotus;
+     }
+   }
+ }
+
+ /*********** 4.3 HOME BOTTOM STYLE *********/
+ /*********** 4.3.6 HOME BOTTOM VIDEO ******/
+ .ms-home-btm-video-container {
+   .ms-home-video-overlay {
+     background: $home-video-overlay-bg-color;
+
+     button {
+       color: $lotus;
+     }
+   }
+ }
+ /****************************************
+ END HOME CONTAINER
+ *****************************************/
+
+
+ /****************************************
+ FEATURES CONTAINER
+ *****************************************/
+ .ms-media {
+   &:hover {
+     .ms-media-avatar {
+       background-color: $lotus;
+     }
+   }
+
+   .ms-media-avatar {
+     border: 1px solid $lotus;
+     color: $lotus;
+   }
+ }
+ /****************************************
+  END FEATURES CONTAINER
+ *****************************************/
+
+
+ /****************************************
+ HOW IT WORK CONTAINER
+ *****************************************/
+ .ms-work-container {
+   &::before {
+     background-color: $lotus;
+   }
+
+   .ms-work-single-line {
+
+     .ms-work-icon {
+       color: $lotus;
+       border-color: $lotus;
+     }
+
+     &.active, &:focus,
+     &:active, &:hover {
+       .ms-work-icon {
+         background-color: $lotus;
+       }
+     }
+   }
+ }
+ /****************************************
+  END HOW IT WORK CONTAINER
+ *****************************************/
+
+
+ /****************************************
+ VIDEO TUTORIAL CONTAINER
+ *****************************************/
+ .ms-video-container {
+   .ms-video-start-icon {
+     color: $lotus;
+   }
+ }
+ /****************************************
+  END VIDEO TUTORIAL  CONTAINER
+ *****************************************/
+
+
+ /****************************************
+ ACTIVITIES COUNTER CONTAINER
+ *****************************************/
+ .ms-counter-container {
+   color: $lotus;
+ }
+ /****************************************
+  END ACTIVITIES COUNTER CONTAINER
+ *****************************************/
+
+
+ /****************************************
+ PRICING CONTAINER
+ *****************************************/
+ .ms-single-pricing-table {
+
+   &.ms-border {
+     .ms-pricing-header {
+       border-color: $lotus;
+     }
+   }
+
+   .ms-price-discout-alt {
+     background: $lotus;
+   }
+ }
+
+ .ms-pricing-header {
+   h4 {
+     color: $lotus;
+   }
+ }
+ /****************************************
+  END PRICING CONTAINER
+ *****************************************/
+
+
+ /****************************************
+ FAQ CONTAINER
+ *****************************************/
+ .ms-tab-container {
+
+   .nav-link {
+     &::before {
+       background: $lotus;
+     }
+   }
+
+   &.ms-border {
+     .nav-link {
+       border-color: $lotus;
+     }
+   }
+
+   .nav-link:hover,
+   .nav-link.active,
+   &.show>.nav-link {
+     color: $lotus;
+   }
+ }
+
+ .ms-accordion {
+   &.ms-border {
+     .ms-accordion-header {
+       border-color: $lotus;
+     }
+   }
+ }
+ /****************************************
+  END FAQ CONTAINER
+ *****************************************/
+
+
+ /****************************************
+ BLOGS CONTAINER
+ *****************************************/
+ .ms-blog-body,
+ .ms-post-content {
+   a {
+     &:hover {
+       color: $lotus;
+     }
+   }
+ }
+ /****************************************
+  END BLOGS CONTAINER
+ *****************************************/
+
+
+ /****************************************
+ CONTACT CONTAINER
+ *****************************************/
+ .ms-contact-container {
+   .ms-address-box{
+     background-color: $lotus;
+   }
+ }
+ /****************************************
+  END CONTACT CONTAINER
+ *****************************************/
+
+
+ /****************************************
+ 18. FOOTER CONTAINER
+ *****************************************/
+ /********** Subscribe form box **********/
+ .ms-subscribe-box {
+
+   [type='submit']{
+     background-color: $lotus;
+   }
+
+   [type='submit']:hover,
+   [type='submit']:focus,
+   [type='submit']:active {
+     background-color: $lotus;
+   }
+ }
+
+ /********** Social links box **********/
+ .ms-social-box {
+   .ms-social-link {
+     &:hover{
+       border-color: $lotus;
+       @include commonBg();
+     }
+   }
+
+   &.ms-white-bg {
+     .ms-social-link {
+       border-color: $lotus;
+       color: $lotus;
+     }
+   }
+ }
+ /****************************************
+  END FOOTER CONTAINER
+ *****************************************/
+
+
+ /****************************************
+ 19. START SCROLL TO TOP CONTAINER
+ *****************************************/
+ .ms-scroll-to-top {
+   background: $scroll-to-top-bg;
+ }
+ /****************************************
+  END SCROLL TO TOP CONTAINER
+ *****************************************/
+
+
+ /****************************************
+ START OVERRIDE SCSS
+ *****************************************/
+ .ms-border,
+ .ms-border.active,
+ .ms-border-hover:hover {
+   border: 1px solid $lotus;
+ }
+
+ [aria-expanded="true"]{
+   color: $lotus;
+ }
+
+ /********** Outline button **********/
+ [class*="btn-outline-"] {
+   &:hover {
+     background-color: $lotus;
+     border-color: $lotus;
+   }
+ }
+
+ .btn-outline-light:not(:disabled):not(.disabled).active,
+ .btn-outline-light:not(:disabled):not(.disabled):focus,
+ .btn-outline-light:not(:disabled):not(.disabled):active {
+   color: $lotus;
+ }
+
+ .btn-outline-primary {
+   color: $lotus;
+   border-color: $lotus;
+ }
+
+ .btn-outline-primary:not(:disabled):not(.disabled).active,
+ .btn-outline-primary:not(:disabled):not(.disabled):active,
+ .show>.btn-outline-primary.dropdown-toggle {
+   background-color: $lotus;
+   border-color: $lotus;
+ }
+
+ /********** Form Group **********/
+ .ms-form-group{
+
+   input,
+   textarea {
+     &:not(:required):not([value=""]) ~ label,
+     &:not(:required):focus ~ label,
+     &:focus ~ label,
+     &:valid ~ label,
+     &[type='email']:not([value=""]):invalid ~ label,
+     &[type='password']:not([value=""]):invalid ~ label,
+     &[type='password']:not([value=""]):invalid ~ label,
+     &[type='number']:not([value=""]):invalid ~ label {
+       color: $lotus;
+     }
+
+     &:focus {
+       @include boxshadow(0 1px 0 0 $lotus);
+     }
+
+     &:focus ~ button,
+     & ~ button:hover {
+       color: $lotus;
+     }
+   }
+ }
+
+ /********** Slick Slider **********/
+ .slick-slider {
+   &:hover {
+     .slick-prev:before,
+     .slick-next:before {
+       border-color: $lotus;
+       color: $lotus;
+     }
+   }
+
+   .slick-prev:hover,
+   .slick-next:hover {
+     &:before,
+     &:before {
+       border-color: $lotus;
+       background-color: $lotus;
+       color: #ffffff;
+     }
+   }
+ }
+
+ /********** Venobo popup **********/
+ .vbox-overlay {
+   background: $vbox-overlay-bg-color !important;
+
+   .vbox-close {
+     color: $lotus !important;
+   }
+ }
+ /****************************************
+ END OVERRIDE CSS/SCSS
+ *****************************************/
+
+
+ /****************************************
+ START BLOG PAGE SCSS
+ *****************************************/
+ /********** 21.1. BLOG DEFAULT **********/
+ .ms-single-find {
+   a {
+     &:hover {
+       color: $lotus;
+     }
+   }
+ }
+
+ .ms-gallery-container {
+
+   .ms-gallery-item {
+     &:hover {
+       &::before {
+         background-color: $gallery-img-hover-bg-color;
+       }
+     }
+   }
+ }
+
+ .ms-post-media {
+   &:hover {
+     .ms-post-title a {
+       color: $lotus;
+     }
+   }
+ }
+ /****************************************
+ END BLOG PAGE SCSS
+ *****************************************/
+
+
+ /****************************************
+ 24. START SIGNUP/SIGNIN PAGE SCSS
+ *****************************************/
+ .ms-sign-form-container {
+   .ms-form-overlay {
+
+     &::after{
+       background: $lotus;
+     }
+   }
+
+   /********** Form box **********/
+   .ms-sign-form {
+     .ms-form-box {
+       .ms-form-suggest {
+         &:hover {
+           color: $lotus;
+         }
+       }
+     }
+   }
+ }
+ /****************************************
+ END SIGNUP/SIGNIN PAGE SCSS
+ *****************************************/

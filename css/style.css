@@ -1,0 +1,3530 @@
+/****************************************
+Template Name: MSAPP
+Description: App/Personal/CRM/Blog Landing HTML5 Template
+Template URI: http://msapp.themebins.com
+Author: themebins
+Author URI: https://themeforest.net/user/themebins
+Version: 0.1 (20 Jan 2019)
+
+********** MSAPP CSS INDEX *********
+1. DEFAULT SCSS
+    1.1. DEFAULT
+    1.2. COMMON SCSS
+2. WINDOW/PAGE LOADER
+3. HEADER/NAV CONTAINER
+4. HOME CONTAINER
+    4.1. HOME-STYLES
+        4.1.1. HOME-STYLE-1
+        4.1.2. HOME-STYLE-2
+        4.1.3. HOME-STYLE-3
+    4.2. HOME-BACKGROUND
+        4.2.1. HOME-BG-SOLID
+        4.2.2. HOME-BG-IMG
+        4.2.3. HOME-BG-PARTICLES
+        4.2.4. HOME-BG-VIDEO
+        4.2.5. HOME-BG-WATER
+        4.2.6. HOME-BG-ANIMATION
+    4.3. HOME-BOTTOM-STYLE
+        4.3.1. HOME-MAIN
+        4.3.2. HOME-TRIANGLE
+        4.3.3. HOME-WAVE
+        4.3.4. HOME-CLOUD
+5. FEATURES CONTAINER
+6. HOW IT WORKS CONTAINER
+7. VIDEO TUTORIAL CONTAINER
+8. SCREENSHOT/SLIDER CONTAINER
+9. ACTIVITIES COUNTER CONTAINER
+10. TEAM CONTAINER
+11. CLIENTS CONTAINER
+12. PRICING CONTAINER
+13. DOWNLOAD CONTAINER
+14. FAQ CONTAINER
+15. BLOGS CONTAINER
+16. MAP CONTAINER
+17. CONTACT CONTAINER
+18. FOOTER CONTAINER
+19. SCROLL TO TOP CONTAINER
+20. CSS OVERRIDE
+21. BLOG PAGE
+    21.1. BLOG DEFAULT
+    21.2. BLOG 2 COLUMN STYLE 1
+22. COMING SOON PAGE
+23. ERROR PAGE
+24. SIGNUP/SIGNIN PAGE
+25. THEMES(COLOR) BOX
+*****************************************/
+
+/****************************************
+1. DEFAULT SCSS
+*****************************************/
+/*********** 1.1 START DEFAULT ***************/
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i");
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #ffffff;
+    color: #656565;
+    font-size: 1rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, .h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+h5, .h5 {
+    font-size: 1.1rem;
+}
+/*********** END DEFAULT ***************/
+
+/*********** 1.2 COMMON SCSS ************/
+.ms-hidden {
+    display: none;
+}
+
+.ms-item-container {
+    padding: 5.5rem 0;
+}
+
+.ms-dsp-tc {
+    display: table-cell;
+}
+
+.ms-gray-bg {
+    background-color: #f9f9f9;
+}
+
+.ms-primary-bg {
+    background-color: #7827e2;
+    color: #ffffff;
+}
+
+.ms-space-200 {
+    height: 200px;
+}
+
+.ms-space-130 {
+    height: 130px;
+}
+
+.ms-success-color {
+    color: #7827e2;
+}
+
+.ms-error-color {
+    color: #E83636;
+}
+
+.ms-text-muted {
+    color: #888888;
+}
+
+.ms-text-primary {
+    color: #7827e2;
+}
+
+.ms-load-more {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.ms-section-header {
+    width: 60%;
+    text-align: center;
+    margin: 0 auto 5rem;
+}
+
+.ms-content-container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.ms-width-100p {
+    width: 100%;
+}
+
+/******* Widget list *******/
+.ms-contact-form-message {
+    margin: 1rem 0 0;
+    text-align: center;
+}
+
+/******* Widget list *******/
+.ms-widget-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ms-widget-list li:not(:first-child) {
+    border-top: 1px solid #f1f1f1;
+}
+
+.ms-widget-list li a {
+    position: relative;
+    display: block;
+    padding: 15px 0;
+    color: inherit;
+    text-decoration: none;
+}
+
+.ms-widget-list li a .ms-number {
+    display: block;
+    position: absolute;
+    border-radius: 10px;
+    top: 50%;
+    right: 0;
+    color: #444;
+    background-color: #f9f9f9;
+    padding: 0 6px;
+    margin-top: -10px;
+    font-size: 14px;
+}
+
+.ms-widget-list li:hover,
+.ms-widget-list li:active,
+.ms-widget-list li.active {
+    color: #7827e2;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.ms-widget-list li:hover .ms-number,
+.ms-widget-list li:active .ms-number,
+.ms-widget-list li.active .ms-number {
+    background-color: #7827e2;
+    color: #ffffff;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.ms-tag {
+    display: inline-block;
+    padding: 0.25rem 0.85rem 0.25rem 0.35rem;
+    border: 1px solid #eae9e9;
+    border-color: #7827e2;
+    color: #7827e2;
+    text-decoration: none !important;
+    border-radius: 50px;
+    margin: 0 0.5rem 0.75rem 0;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.ms-tag:hover,
+.ms-tag.active {
+    background-color: #7827e2;
+    color: #ffffff;
+    border-color: #7827e2;
+}
+
+/******** Header divider ********/
+.ms-divider {
+    position: relative;
+    width: 20%;
+    border-top: 1px solid #7827e2;
+    margin: 1.5rem auto;
+}
+
+.ms-divider::after {
+    content: '';
+    position: absolute;
+    background-color: #7827e2;
+    top: -11px;
+    border-radius: 50%;
+    margin-left: -10px;
+    padding: 5px;
+    border: 5px solid #ffffff;
+    left: 50%;
+}
+
+.ms-divider.ms-reverse {
+    border-color: #ffffff;
+}
+
+.ms-divider.ms-reverse::after {
+    background-color: #ffffff;
+    border-color: #7827e2;
+}
+
+/******** Breadcrumbs or page path instruction ********/
+.ms-breadcrumb-group {
+    background: transparent;
+    justify-content: center;
+}
+
+.ms-breadcrumb-group .breadcrumb-item {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 1.2rem;
+}
+
+.ms-breadcrumb-group .breadcrumb-item a,
+.ms-breadcrumb-group .breadcrumb-item + .breadcrumb-item::before {
+    color: #ffffff;
+    content: "-";
+    text-decoration: none;
+}
+
+/******* Pagination *******/
+.ms-pagination-container .ms-pagination {
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+}
+
+.ms-pagination-container .page-link {
+    padding: 8px 15px;
+    margin-right: 15px;
+    background: #ffffff;
+    border-radius: 50px;
+    font-size: 15px;
+    color: inherit;
+    margin-bottom: 0.8rem;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.08);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.08);
+}
+
+.ms-pagination-container .page-link:not(.ms-border) {
+    border: 0;
+}
+
+.ms-pagination-container .page-link.ms-border {
+    color: #7827e2;
+}
+
+.ms-pagination-container .ms-page-item.active .page-link,
+.ms-pagination-container .ms-page-item .page-link:hover {
+    background: #7827e2;
+    color: #ffffff;
+}
+
+.ms-pagination-container .ms-page-item.disabled .page-link,
+.ms-pagination-container .ms-page-item.disabled .page-link:hover {
+    background: inherit;
+    color: inherit;
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/******* Section triangle *******/
+.ms-triangle-container {
+    position: relative;
+}
+
+.ms-triangle-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 0;
+    width: 0;
+    z-index: 2;
+    border-left: 100vw solid #ffffff;
+    border-bottom: 10rem solid transparent;
+}
+
+.ms-triangle-container::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 0;
+    width: 0;
+    z-index: 2;
+    border-right: 100vw solid #ffffff;
+    border-top: 10rem solid transparent;
+}
+
+/******** Scroll to next bottom ********/
+.ms-scroll-to-next {
+    position: absolute;
+    bottom: 0;
+    left: auto;
+    color: #ffffff;
+    width: 100%;
+    text-align: center;
+    z-index: 3;
+}
+
+.ms-scroll-to-next a {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    text-decoration: none;
+}
+
+.ms-scroll-to-next a i {
+    font-size: 3rem;
+}
+
+/******* Rating *******/
+.ms-rating-box {
+    color: #7827e2;
+    margin: 0.5rem 0;
+    text-align: center;
+}
+
+/******** Nav list *******/
+.ms-nav-group {
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.ms-nav-group .nav-link,
+.ms-nav-group .nav-link.active {
+    color: inherit;
+    background-color: transparent;
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.35rem 0.6rem;
+    border-radius: 0;
+}
+
+.ms-nav-group .nav-link {
+    position: relative;
+}
+
+.ms-nav-group .nav-link::after {
+    content: '';
+    background: #7827e2;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    -webkit-transition: all 250ms ease 0s;
+    -moz-transition: all 250ms ease 0s;
+    -ms-transition: all 250ms ease 0s;
+    -o-transition: all 250ms ease 0s;
+    transition: all 250ms ease 0s;
+    -moz-transform: scale(0);
+    -o-transform: scale(0);
+    -ms-transform: scale(0);
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+
+.ms-nav-group .nav-link:hover::after,
+.ms-nav-group .nav-link.active::after {
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+/******** Overlay *******/
+.ms-overlay {
+    height: 100%;
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    background: linear-gradient(-45deg, rgba(89, 59, 210, 0.84), rgba(63, 23, 128, 0.95));
+}
+
+/******* Home style bg ********/
+.ms-bg {
+    -webkit-animation: slide 2s ease-in-out infinite alternate;
+    /* Safari 4+ */
+    -moz-animation: slide 2s ease-in-out infinite alternate;
+    /* Fx 5+ */
+    -o-animation: slide 2s ease-in-out infinite alternate;
+    /* Opera 12+ */
+    animation: slide 2s ease-in-out infinite alternate;
+    /* IE 10+, Fx 29+ */
+    background-image: linear-gradient(-50deg, #7827e2 50%, #6323b7 50%);
+    bottom: 0;
+    left: -50%;
+    opacity: 0.35;
+    position: absolute;
+    right: -50%;
+    top: 0;
+}
+
+.ms-bg:nth-child(2) {
+    animation-direction: alternate-reverse;
+    animation-duration: 4s;
+}
+
+.ms-bg:nth-child(3) {
+    animation-duration: 5s;
+}
+
+@keyframes slide {
+    0% {
+        -moz-transform: translateX(-25%);
+        -o-transform: translateX(-25%);
+        -ms-transform: translateX(-25%);
+        -webkit-transform: translateX(-25%);
+        transform: translateX(-25%);
+    }
+
+    100% {
+        -moz-transform: translateX(25%);
+        -o-transform: translateX(25%);
+        -ms-transform: translateX(25%);
+        -webkit-transform: translateX(25%);
+        transform: translateX(25%);
+    }
+
+}
+
+/******** Checkbox *******/
+.ms-checkbox {
+    position: absolute;
+    opacity: 0;
+}
+
+.ms-checkbox + label {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+}
+
+.ms-checkbox + label:before {
+    content: '';
+    margin-right: 0.9rem;
+    margin-top: -0.15rem;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 1px solid #eae9e9;
+    border-radius: 50px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.ms-checkbox:hover + label:before,
+.ms-checkbox:checked + label:before {
+    border-color: #7827e2;
+}
+
+.ms-checkbox:disabled + label {
+    color: #c7c6c6;
+    cursor: not-allowed;
+}
+
+.ms-checkbox:disabled + label:before {
+    background: #f9f9f9;
+    border: 1px solid #eae9e9;
+}
+
+.ms-checkbox:not(:disabled):hover + label,
+.ms-checkbox:not(:disabled):checked + label {
+    color: #7827e2;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.ms-checkbox:not(:disabled):checked + label:after {
+    content: '';
+    position: absolute;
+    left: 0.41rem;
+    top: 0.7rem;
+    width: 2px;
+    height: 2px;
+    transform: rotate(45deg);
+    background: #7827e2;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    box-shadow: 2px 0 0 #7827e2, 4px 0 0 #7827e2, 4px -2px 0 #7827e2, 4px -4px 0 #7827e2, 4px -6px 0 #7827e2, 4px -8px 0 #7827e2;
+}
+
+/******* Blockquote *******/
+.ms-blockquote {
+    background-color: #f9f9f9;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    margin: 2.5rem 0 1.5rem 1.5rem;
+    padding: 1.5rem;
+}
+
+.ms-single-item-style {
+    margin-bottom: 1rem;
+}
+
+.ms-single-item-style img {
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+}
+
+.ms-single-item-style a {
+    text-decoration: none;
+    display: block;
+}
+
+.ms-single-item-style .ms-single-item-box {
+    display: block;
+    position: relative;
+}
+
+.ms-single-item-style:hover .ms-single-item-box .ms-single-item-hover {
+    opacity: 1;
+}
+
+.ms-single-item-style .ms-single-item-box .ms-single-item-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease 0s;
+    z-index: 1;
+    opacity: 0;
+}
+
+.ms-single-item-style .ms-single-item-box .ms-single-item-hover .btn {
+    display: none;
+}
+
+.ms-single-item-style .ms-single-item-box:hover .ms-single-item-hover .btn {
+    display: block;
+}
+
+/******* Sketch animation bg *******/
+.ms-sketch {
+    border: 2px solid #ffffff;
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    left: 0;
+    top: 0;
+    -webkit-animation: sketch 15s linear 2s infinite running;
+    /* Safari 4+ */
+    -moz-animation: sketch 15s linear 2s infinite running;
+    /* Fx 5+ */
+    -o-animation: sketch 15s linear 2s infinite running;
+    /* Opera 12+ */
+    animation: sketch 15s linear 2s infinite running;
+    /* IE 10+, Fx 29+ */
+    -moz-transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    -o-transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    -ms-transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    -webkit-transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    -webkit-transform-origin: left top 0;
+    transform-origin: left top 0;
+}
+
+.ms-sketch:nth-child(2) {
+    -webkit-animation-delay: 4s;
+    animation-delay: 4s;
+    left: 75vw;
+    top: 50vh;
+}
+
+.ms-sketch:nth-child(3) {
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+    left: 40vw;
+    top: 30vh;
+}
+
+.ms-sketch:nth-child(4) {
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+    background-color: transparent;
+    left: 90vw;
+    top: 10vh;
+}
+
+.ms-sketch:nth-child(5) {
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+    background-color: #ffffff;
+    border: 0;
+    left: 2vw;
+    top: 90vh;
+}
+
+.ms-sketch:nth-child(6) {
+    -webkit-animation-delay: 4s;
+    animation-delay: 4s;
+    left: 50vw;
+    top: 100vh;
+}
+
+@-webkit-keyframes sketch {
+    0% {
+        opacity: 0.5;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+        -moz-transform: scale(0) rotate(0deg) translate(-50%, -50%);
+        -o-transform: scale(0) rotate(0deg) translate(-50%, -50%);
+        -ms-transform: scale(0) rotate(0deg) translate(-50%, -50%);
+        -webkit-transform: scale(0) rotate(0deg) translate(-50%, -50%);
+        transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    }
+
+    100% {
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        -moz-transform: scale(20) rotate(960deg) translate(-50%, -50%);
+        -o-transform: scale(20) rotate(960deg) translate(-50%, -50%);
+        -ms-transform: scale(20) rotate(960deg) translate(-50%, -50%);
+        -webkit-transform: scale(20) rotate(960deg) translate(-50%, -50%);
+        transform: scale(20) rotate(960deg) translate(-50%, -50%);
+    }
+
+}
+
+@keyframes sketch {
+    0% {
+        opacity: 0.5;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+        -moz-transform: scale(0) rotate(0deg) translate(-50%, -50%);
+        -o-transform: scale(0) rotate(0deg) translate(-50%, -50%);
+        -ms-transform: scale(0) rotate(0deg) translate(-50%, -50%);
+        -webkit-transform: scale(0) rotate(0deg) translate(-50%, -50%);
+        transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    }
+
+    100% {
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        -moz-transform: scale(20) rotate(960deg) translate(-50%, -50%);
+        -o-transform: scale(20) rotate(960deg) translate(-50%, -50%);
+        -ms-transform: scale(20) rotate(960deg) translate(-50%, -50%);
+        -webkit-transform: scale(20) rotate(960deg) translate(-50%, -50%);
+        transform: scale(20) rotate(960deg) translate(-50%, -50%);
+    }
+}
+/****************************************
+END COMMON SCSS
+*****************************************/
+
+
+
+/****************************************
+2. WINDOW/PAGE LOADER
+*****************************************/
+.ms-preloader-wrapper {
+    background: linear-gradient(to right, #7827e2 0%, #6323b7 100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 99999;
+}
+
+.ms-preloader-wrapper .ms-preloader-effect {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 100px;
+    width: 100px;
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.ms-preloader-wrapper .ms-preloader-effect:before,
+.ms-preloader-wrapper .ms-preloader-effect:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 50px solid #ffffff;
+}
+
+@keyframes loader-scale {
+    0% {
+        -moz-transform: scale(0);
+        -o-transform: scale(0);
+        -ms-transform: scale(0);
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    50% {
+        -moz-transform: scale(0.7);
+        -o-transform: scale(0.7);
+        -ms-transform: scale(0.7);
+        -webkit-transform: scale(0.7);
+        transform: scale(0.7);
+        opacity: 1;
+    }
+
+    100% {
+        -moz-transform: scale(1);
+        -o-transform: scale(1);
+        -ms-transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.ms-preloader-wrapper .ms-preloader-effect:before {
+    -webkit-animation: loader-scale 1s linear 0s infinite;
+    /* Safari 4+ */
+    -moz-animation: loader-scale 1s linear 0s infinite;
+    /* Fx 5+ */
+    -o-animation: loader-scale 1s linear 0s infinite;
+    /* Opera 12+ */
+    animation: loader-scale 1s linear 0s infinite;
+    /* IE 10+, Fx 29+ */
+}
+
+.ms-preloader-wrapper .ms-preloader-effect:after {
+    -moz-transform: scale(0);
+    -o-transform: scale(0);
+    -ms-transform: scale(0);
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-animation: loader-scale 1s linear 0.5s infinite;
+    /* Safari 4+ */
+    -moz-animation: loader-scale 1s linear 0.5s infinite;
+    /* Fx 5+ */
+    -o-animation: loader-scale 1s linear 0.5s infinite;
+    /* Opera 12+ */
+    animation: loader-scale 1s linear 0.5s infinite;
+    /* IE 10+, Fx 29+ */
+}
+
+/****************************************
+ END WINDOW/PAGE LOADER
+*****************************************/
+
+
+
+/****************************************
+3. HEADER/NAV CONTAINER
+*****************************************/
+.ms-navbar .nav-link:hover,
+.ms-navbar .nav-link {
+    color: #ffffff;
+}
+
+.ms-navbar-fixed {
+    padding: 2rem 1rem;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.ms-navbar-fixed.ms-fixed {
+    position: fixed;
+    padding: 0.5rem 0;
+    -webkit-box-shadow: 0px 3px 20px -10px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 3px 20px -10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 3px 20px -10px rgba(0, 0, 0, 0.5);
+    background: transparent -webkit-linear-gradient(left, #6323b7 40%, #7827e2 100%) repeat scroll 0 0;
+    background: transparent linear-gradient(to right, #6323b7 40%, #7827e2 100%) repeat scroll 0 0;
+}
+
+.ms-navbar-fixed .nav-link {
+    margin-right: 0.6rem;
+    margin-left: 0.6rem;
+    font-weight: bold;
+    position: relative;
+}
+
+.ms-navbar-fixed .nav-link::after {
+    content: '';
+    background: #ffffff;
+    position: absolute;
+    left: 0;
+    -webkit-transition: all 250ms ease 0s;
+    -moz-transition: all 250ms ease 0s;
+    -ms-transition: all 250ms ease 0s;
+    -o-transition: all 250ms ease 0s;
+    transition: all 250ms ease 0s;
+    -moz-transform: scale(0);
+    -o-transform: scale(0);
+    -ms-transform: scale(0);
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    width: 100%;
+    height: 1px;
+    /******** Various underline style ********/
+    bottom: 0;
+}
+
+.ms-navbar-fixed .nav-link.active::after,
+.ms-navbar-fixed .nav-link.active:hover::after,
+.ms-navbar-fixed .nav-link:hover::after {
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+/******** Toogle navbar button for mobile view ******/
+.navbar-toggler {
+    position: relative;
+    padding: 1.1rem;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.navbar-toggler:active,
+.navbar-toggler:focus {
+    outline: none;
+}
+
+.navbar-toggler span {
+    position: absolute;
+    background-color: #ffffff;
+    height: 2px;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-transition: background-color 0.2s ease-in-out;
+    -moz-transition: background-color 0.2s ease-in-out;
+    -ms-transition: background-color 0.2s ease-in-out;
+    -o-transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.navbar-toggler span:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+    -webkit-transition: -webkit-transform 0.1s ease-in-out, background-color 0.1s ease-in-out;
+    -webkit-transition: background-color 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out;
+    transition: background-color 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out;
+    transition: transform 0.1s ease-in-out, background-color 0.1s ease-in-out;
+    transition: transform 0.1s ease-in-out, background-color 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out;
+}
+
+.navbar-toggler span:after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+    -webkit-transition: -webkit-transform 0.1s ease-in-out, background-color 0.1s ease-in-out;
+    -webkit-transition: background-color 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out;
+    transition: background-color 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+    transition: transform 0.1s ease-in-out, background-color 0.1s ease-in-out;
+    transition: transform 0.1s ease-in-out, background-color 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out;
+}
+
+.navbar-toggler:not(.collapsed) span:before {
+    background-color: #ffffff;
+    -moz-transform: translateY(10px) translateX(0) rotate(45deg);
+    -o-transform: translateY(10px) translateX(0) rotate(45deg);
+    -ms-transform: translateY(10px) translateX(0) rotate(45deg);
+    -webkit-transform: translateY(10px) translateX(0) rotate(45deg);
+    transform: translateY(10px) translateX(0) rotate(45deg);
+}
+
+.navbar-toggler:not(.collapsed) span:after {
+    background-color: #ffffff;
+    -moz-transform: translateY(-10px) translateX(0) rotate(-45deg);
+    -o-transform: translateY(-10px) translateX(0) rotate(-45deg);
+    -ms-transform: translateY(-10px) translateX(0) rotate(-45deg);
+    -webkit-transform: translateY(-10px) translateX(0) rotate(-45deg);
+    transform: translateY(-10px) translateX(0) rotate(-45deg);
+}
+
+.navbar-toggler:not(.collapsed) span {
+    background-color: transparent;
+}
+
+/****************************************
+ END HEADER/NAV CONTAINER
+*****************************************/
+
+
+
+/****************************************
+4. HOME CONTAINER
+*****************************************/
+.ms-page-wrapper .ms-home-content {
+    color: #ffffff;
+    margin-top: 13rem;
+}
+
+.ms-page-wrapper .ms-home-container {
+    z-index: 2;
+}
+
+.ms-page-wrapper .ms-home-item .container {
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.ms-page-wrapper .ms-home-item .ms-home-content {
+    flex-basis: 75%;
+    padding-right: 5rem;
+}
+
+.ms-page-wrapper .ms-home-item .ms-home-content .ms-home-level {
+    font-size: 1.7rem;
+    background: rgba(255, 255, 255, 0.45);
+    padding: 0.25rem 0.8rem;
+    margin-left: 0.8rem;
+    border-radius: .05rem;
+}
+
+.ms-page-wrapper .ms-home-item .ms-home-content p {
+    margin-bottom: 2rem;
+}
+
+.ms-page-wrapper .ms-home-item .ms-home-content .btn {
+    margin-bottom: 1rem;
+    -webkit-box-shadow: 1px 1px 20px 1px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 1px 1px 20px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 1px 20px 1px rgba(0, 0, 0, 0.1);
+}
+
+.ms-page-wrapper .ms-home-item .ms-home-content .btn:not(:last-child) {
+    margin-right: 1rem;
+}
+
+.ms-page-wrapper .ms-home-item .ms-home-slider-img {
+    flex-basis: 25%;
+    margin-top: 4rem;
+}
+
+.ms-inner-page .ms-navbar-fixed {
+    background: transparent -webkit-linear-gradient(left, #6323b7 40%, #7827e2 100%) repeat scroll 0 0;
+    background: transparent linear-gradient(to right, #6323b7 40%, #7827e2 100%) repeat scroll 0 0;
+}
+
+.ms-inner-page .ms-inner-content-container {
+    margin: 12rem auto 0;
+    margin-bottom: 5rem;
+    min-height: 50vh;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.ms-card {
+    border-color: transparent;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.ms-card:hover {
+    -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.07);
+    -moz-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.07);
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.07);
+    -moz-transform: translate(3px, 3px);
+    -o-transform: translate(3px, 3px);
+    -ms-transform: translate(3px, 3px);
+    -webkit-transform: translate(3px, 3px);
+    transform: translate(3px, 3px);
+}
+
+.ms-card .ms-card-body .card-title {
+    margin: 0.75rem 0;
+}
+
+.ms-card .ms-card-body .ms-card-title-icon {
+    font-size: 2.5rem;
+    color: #7827e2;
+}
+
+.ms-home-style-1 {
+    position: relative;
+    overflow: hidden;
+    padding: 5.5rem 0 0;
+    background: transparent -webkit-linear-gradient(left, #6323b7 40%, #7827e2 100%) repeat scroll 0 0;
+    background: transparent linear-gradient(to right, #6323b7 40%, #7827e2 100%) repeat scroll 0 0;
+}
+
+.ms-home-style-2 {
+    position: relative;
+    overflow: hidden;
+    padding: 5.5rem 0 0;
+    background: transparent -webkit-linear-gradient(left, #6323b7 40%, #7827e2 100%) repeat scroll 0 0;
+    background: transparent linear-gradient(to right, #6323b7 40%, #7827e2 100%) repeat scroll 0 0;
+}
+
+.ms-home-style-2 .ms-home-item .container {
+    -webkit-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+}
+
+.ms-home-style-2 .ms-home-item .ms-home-content {
+    padding-left: 5rem;
+}
+
+.ms-home-style-3 {
+    position: relative;
+    overflow: hidden;
+    padding: 5.5rem 0 0;
+    background: transparent -webkit-linear-gradient(left, #6323b7 40%, #7827e2 100%) repeat scroll 0 0;
+    background: transparent linear-gradient(to right, #6323b7 40%, #7827e2 100%) repeat scroll 0 0;
+}
+
+.ms-home-style-3 .ms-home-item .ms-home-content {
+    flex-basis: 100%;
+    text-align: center;
+    padding-right: 0;
+    margin-bottom: 18rem;
+}
+
+.ms-home-style-4 {
+    position: relative;
+    overflow: hidden;
+    padding: 5.5rem 0 0;
+    background: transparent -webkit-linear-gradient(left, #6323b7 40%, #7827e2 100%) repeat scroll 0 0;
+    background: transparent linear-gradient(to right, #6323b7 40%, #7827e2 100%) repeat scroll 0 0;
+}
+
+.ms-home-style-4 .ms-home-item .ms-home-content {
+    flex-basis: 100%;
+    text-align: center;
+    padding-right: 0;
+    margin: 10rem 0 16rem 0;
+}
+
+.ms-home-style-5 {
+    position: relative;
+    overflow: hidden;
+    padding: 5.5rem 0 0;
+    background: transparent -webkit-linear-gradient(left, #6323b7 40%, #7827e2 100%) repeat scroll 0 0;
+    background: transparent linear-gradient(to right, #6323b7 40%, #7827e2 100%) repeat scroll 0 0;
+}
+
+.ms-home-style-5 .ms-home-item .ms-home-content {
+    flex-basis: 100%;
+    text-align: center;
+    padding-right: 0;
+    margin: 10rem 0 12rem 0;
+}
+
+.ms-home-bg-img .ms-home-bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../imgs/home-bg.png) no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.ms-home-bg-img .ms-home-bg-overlay::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #7827e2;
+    opacity: 0.85;
+}
+
+.ms-home-bg-video .ms-home-bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+.ms-home-bg-video .ms-home-bg-overlay::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #7827e2;
+    opacity: 0.7;
+}
+
+.ms-home-bg-video .inline-YTPlayer {
+    max-width: none !important;
+    position: absolute !important;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.ms-home-bg-video #ms-js-video-bg {
+    height: 100% !important;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+}
+
+/******* No need default style. *******/
+.ms-home-btm-triangle::before {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    right: 0;
+    height: 0;
+    width: 0;
+    z-index: 2;
+    border-right: 50vw solid #ffffff;
+    border-top: 10rem solid transparent;
+}
+
+.ms-home-btm-triangle::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    height: 0;
+    width: 0;
+    z-index: 1;
+    border-left: 50vw solid #ffffff;
+    border-top: 10rem solid transparent;
+}
+
+.ms-home-btm-triangle.ms-triangle-2::before {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    right: 0;
+    height: 0;
+    width: 0;
+    z-index: 2;
+    border-right: 100vw solid #ffffff;
+    border-top: 10rem solid transparent;
+}
+
+.ms-home-btm-triangle.ms-triangle-2::after {
+    display: none;
+}
+
+.ms-home-btm-wave::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    background: url(../imgs/system/wave-1.svg) bottom no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+.ms-home-btm-wave.ms-wave-2::after {
+    background: url(../imgs/system/wave-2.svg) bottom no-repeat;
+    background-size: cover;
+    bottom: -5px;
+    height: 100%;
+    z-index: 1;
+}
+
+.ms-home-btm-wave.ms-wave-3::after {
+    background: url(../imgs/system/wave-3.svg) bottom no-repeat;
+    z-index: 1;
+    height: 100%;
+    background-size: contain;
+}
+
+.ms-home-btm-wave.ms-wave-4::after {
+    background: url(../imgs/system/wave-4.svg) bottom no-repeat;
+    background-size: contain;
+    height: 100%;
+    z-index: 1;
+}
+
+.ms-home-btm-wave.ms-wave-5::after {
+    background: url(../imgs/system/wave-5.svg) bottom no-repeat;
+    background-size: contain;
+    height: 100%;
+    z-index: 1;
+}
+
+.ms-home-btm-cloud::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    background: url(../imgs/system/cloud-1.svg) bottom no-repeat;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+.ms-home-btm-cloud.ms-cloud-2::after {
+    background: url(../imgs/system/cloud-2.svg) bottom no-repeat;
+    background-size: cover;
+    height: 5rem;
+}
+
+.ms-home-btm-spot.ms-spot-1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50vw;
+    height: 100%;
+    z-index: 1;
+    border-left: 95vw solid rgba(255, 255, 255, 0.38);
+    border-color: rgba(255, 255, 255, 0.38);
+    border-top-right-radius: 15rem;
+    transform: rotate(20deg);
+}
+
+.ms-home-btm-spot.ms-spot-2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 7rem;
+    z-index: 1;
+    border-right: 60vw solid rgba(255, 255, 255, 0.38);
+    border-color: rgba(255, 255, 255, 0.38);
+    border-bottom-left-radius: 15rem;
+}
+
+.ms-home-btm-video-container {
+    position: relative;
+    z-index: 4;
+    margin-bottom: 10rem;
+}
+
+.ms-home-btm-video-container .ms-home-video {
+    position: absolute;
+    top: -160px;
+    left: 50%;
+    height: 320px;
+    width: 550px;
+    text-align: center;
+    border-radius: 0.25rem;
+    -moz-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.ms-home-btm-video-container .ms-home-video .playerBox {
+    width: 100% !important;
+    height: 100% !important;
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+}
+
+.ms-home-btm-video-container .mbYTP_wrapper {
+    border-radius: 0.25rem;
+    -webkit-box-shadow: 1px 2px 17px 1px rgba(0, 0, 0, 0.35);
+    -moz-box-shadow: 1px 2px 17px 1px rgba(0, 0, 0, 0.35);
+    box-shadow: 1px 2px 17px 1px rgba(0, 0, 0, 0.35);
+}
+
+.ms-home-btm-video-container .ms-home-video-overlay {
+    height: 100%;
+    width: 100%;
+    background: rgba(97, 17, 224, 0.35);
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+
+.ms-home-btm-video-container .ms-home-video-overlay button {
+    padding: 0.8rem 0.9rem;
+    border-radius: 50px;
+    font-size: 1.25rem;
+    color: #7827e2;
+    outline: none;
+    cursor: pointer;
+    -webkit-box-shadow: 1px 2px 17px 1px rgba(0, 0, 0, 0.35);
+    -moz-box-shadow: 1px 2px 17px 1px rgba(0, 0, 0, 0.35);
+    box-shadow: 1px 2px 17px 1px rgba(0, 0, 0, 0.35);
+    -webkit-animation: videoAnimation 800ms ease-out 0s alternate infinite none running;
+    /* Safari 4+ */
+    -moz-animation: videoAnimation 800ms ease-out 0s alternate infinite none running;
+    /* Fx 5+ */
+    -o-animation: videoAnimation 800ms ease-out 0s alternate infinite none running;
+    /* Opera 12+ */
+    animation: videoAnimation 800ms ease-out 0s alternate infinite none running;
+    /* IE 10+, Fx 29+ */
+}
+
+.ms-home-btm-video-container .ms-home-video-overlay .ms-video-loader,
+.ms-home-btm-video-container .ms-home-video-overlay .ms-js-pause-btn {
+    display: none;
+}
+
+.ms-home-btm-video-container .ms-home-video-overlay.ms-js-video-playing .ms-js-play-btn {
+    display: none;
+}
+
+.ms-home-btm-video-container .ms-home-video-overlay.ms-js-video-playing:hover .ms-js-pause-btn {
+    display: block;
+}
+
+.ms-home-btm-video-container .ms-home-video-overlay.ms-video-loading .ms-js-play-btn {
+    display: none;
+}
+
+.ms-home-btm-video-container .ms-home-video-overlay.ms-video-loading .ms-video-loader {
+    display: block;
+}
+
+.ms-btm-link-container {
+    position: absolute;
+    bottom: 3.25rem;
+    color: #ffffff;
+    width: 100%;
+    justify-content: center;
+    z-index: 2;
+}
+
+.ms-btm-link-container .nav-link {
+    display: block;
+    padding: .25rem 1rem;
+    line-height: 0.5rem;
+    font-weight: bolder;
+}
+
+.ms-btm-link-container .nav-item span,
+.ms-btm-link-container .nav-item i {
+    color: rgba(234, 233, 233, 0.5);
+}
+
+.ms-btm-link-container .nav-item:hover span,
+.ms-btm-link-container .nav-item:hover i {
+    color: #ffffff;
+}
+
+.ms-btm-link-container .nav-item:not(:last-child) {
+    border-right: 1px solid rgba(234, 233, 233, 0.5);
+}
+
+/****************************************
+END HOME CONTAINER
+*****************************************/
+
+
+
+/****************************************
+5. FEATURES CONTAINER
+*****************************************/
+.ms-feature-list {
+    padding: 0;
+    margin: 0;
+}
+
+.ms-feature-list li {
+    list-style: none;
+    line-height: 2rem;
+}
+
+.ms-media {
+    margin-bottom: 3rem;
+}
+
+.ms-media:hover .ms-media-avatar {
+    color: #ffffff;
+    background-color: #7827e2;
+    -webkit-box-shadow: -2px 3px 20px 0 rgba(0, 0, 0, 0.32);
+    -moz-box-shadow: -2px 3px 20px 0 rgba(0, 0, 0, 0.32);
+    box-shadow: -2px 3px 20px 0 rgba(0, 0, 0, 0.32);
+}
+
+.ms-media .ms-media-avatar {
+    padding: 0.7rem;
+    border: 1px solid #7827e2;
+    border-radius: 50%;
+    color: #7827e2;
+    font-size: 1.5rem;
+    margin-right: 1.25rem;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+/****************************************
+ END FEATURES CONTAINER
+*****************************************/
+
+
+
+/****************************************
+6. HOW IT WORK CONTAINER
+*****************************************/
+.ms-work-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 1px;
+    background-color: #7827e2;
+    left: 2.7rem;
+    z-index: -1;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.ms-work-container .ms-work-single-line {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.ms-work-container .ms-work-single-line:not(:last-child) {
+    margin-bottom: 2.5rem;
+}
+
+.ms-work-container .ms-work-single-line .ms-work-icon {
+    padding: 0.7rem;
+    border: 1px solid #7827e2;
+    border-radius: 50%;
+    color: #7827e2;
+    font-size: 1.5rem;
+    margin-right: 1.25rem;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    background-color: #ffffff;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.ms-work-container .ms-work-single-line.active .ms-work-icon,
+.ms-work-container .ms-work-single-line:focus .ms-work-icon,
+.ms-work-container .ms-work-single-line:active .ms-work-icon,
+.ms-work-container .ms-work-single-line:hover .ms-work-icon {
+    background-color: #7827e2;
+    color: #ffffff;
+    -webkit-box-shadow: -2px 3px 20px 0 rgba(0, 0, 0, 0.32);
+    -moz-box-shadow: -2px 3px 20px 0 rgba(0, 0, 0, 0.32);
+    box-shadow: -2px 3px 20px 0 rgba(0, 0, 0, 0.32);
+}
+
+/****************************************
+ END HOW IT WORK CONTAINER
+*****************************************/
+
+
+
+/****************************************
+7. VIDEO TUTORIAL CONTAINER
+*****************************************/
+.ms-video-container {
+    background: url("../imgs/video-bg.png") center center no-repeat fixed;
+    background-size: cover;
+    height: 450px;
+}
+
+.ms-video-container .ms-video-link {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    text-align: center;
+    display: inline-block;
+    line-height: 110px;
+    outline: none;
+    -webkit-animation: videoAnimation 800ms ease-out 0s alternate infinite none running;
+    /* Safari 4+ */
+    -moz-animation: videoAnimation 800ms ease-out 0s alternate infinite none running;
+    /* Fx 5+ */
+    -o-animation: videoAnimation 800ms ease-out 0s alternate infinite none running;
+    /* Opera 12+ */
+    animation: videoAnimation 800ms ease-out 0s alternate infinite none running;
+    /* IE 10+, Fx 29+ */
+}
+
+@keyframes videoAnimation {
+    0% {
+        -moz-transform: scale(0.7);
+        -o-transform: scale(0.7);
+        -ms-transform: scale(0.7);
+        -webkit-transform: scale(0.7);
+        transform: scale(0.7);
+        border-radius: 100%;
+    }
+
+    100% {
+        -moz-transform: scale(1);
+        -o-transform: scale(1);
+        -ms-transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+.ms-video-container .ms-video-start-icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 80px;
+    height: 80px;
+    font-size: 2rem;
+    line-height: 84px;
+    border-radius: 50%;
+    background: #ffffff;
+    text-align: center;
+    color: #7827e2;
+}
+/****************************************
+ END VIDEO TUTORIAL  CONTAINER
+*****************************************/
+
+
+
+/****************************************
+8. SCREENSHOT/SLIDER CONTAINER
+*****************************************/
+.ms-screenshot-container {
+    position: relative;
+}
+
+.ms-screenshot-container::before {
+    content: '';
+    position: absolute;
+    top: 24px;
+    left: calc(50% + 0.5px);
+    background-image: url("../imgs/system/mobile-moc-1.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: block;
+    height: 645px;
+    width: 300px;
+    z-index: 2;
+    border-radius: 50px;
+    -moz-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    -webkit-box-shadow: 0px 23px 42px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 23px 42px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 23px 42px rgba(0, 0, 0, 0.2);
+}
+
+.ms-screenshot-container .ms-screenshot-item {
+    cursor: pointer;
+    outline: none;
+}
+
+.ms-screenshot-container .ms-screenshot-item > img {
+    margin: 30px auto auto;
+    border-radius: 35px;
+    -webkit-box-shadow: 1px 1px 7px 1px rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 1px 1px 7px 1px rgba(0, 0, 0, 0.12);
+    box-shadow: 1px 1px 7px 1px rgba(0, 0, 0, 0.12);
+}
+
+.ms-screenshot-container:hover .slick-prev:before,
+.ms-screenshot-container:hover .slick-next:before {
+    opacity: 1;
+}
+/****************************************
+ END SCREENSHOT/SLIDER CONTAINER
+*****************************************/
+
+
+
+/****************************************
+9. ACTIVITIES COUNTER CONTAINER
+*****************************************/
+.ms-counter-container {
+    text-align: center;
+    color: #7827e2;
+    margin: 0.5rem 0 1rem 0;
+}
+
+.ms-counter-container .ms-icon {
+    font-size: 2.5rem;
+}
+
+.ms-counter-container .ms-counter-title {
+    margin: 0 0 0.6rem;
+}
+/****************************************
+ END ACTIVITES COUNTER CONTAINER
+*****************************************/
+
+
+
+/****************************************
+10. TEAM CONTAINER
+*****************************************/
+.ms-avatar-card {
+    border: none;
+    color: inherit;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.25rem;
+    -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.08);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.08);
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.ms-avatar-card .ms-avatar-description {
+    background: rgba(253, 253, 253, 0.9);
+    position: absolute;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 100%;
+    padding: 1.5rem;
+    text-align: center;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.ms-avatar-card:hover .ms-avatar-description {
+    left: 0;
+}
+/****************************************
+ END TEAM CONTAINER
+*****************************************/
+
+
+
+/****************************************
+11. CLIENTS CONTAINER
+*****************************************/
+.ms-client-container {
+    text-align: center;
+}
+
+.ms-client-container .ms-client {
+    cursor: move;
+    padding: 1rem 1.5rem;
+}
+
+.ms-client-container .ms-client-avatar {
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    margin-bottom: 1.25rem;
+}
+
+.ms-client-container:hover .slick-prev:before,
+.ms-client-container:hover .slick-next:before {
+    opacity: 1;
+}
+
+.ms-quotation {
+    margin-top: 1rem;
+    margin-left: 2.5rem;
+    font-style: italic;
+    position: relative;
+    text-align: left;
+}
+
+.ms-quotation::before {
+    content: "\E80E";
+    font-family: "fontello";
+    position: absolute;
+    top: -5px;
+    left: -15px;
+    font-size: 0.8rem;
+}
+
+.ms-quotation::after {
+    content: "\E812";
+    font-family: "fontello";
+    position: absolute;
+    bottom: 0;
+    font-size: 0.8rem;
+}
+/****************************************
+ END CLIENTS CONTAINER
+*****************************************/
+
+
+
+/****************************************
+12. PRICING CONTAINER
+*****************************************/
+.ms-single-pricing-table {
+    position: relative;
+    margin-bottom: 2rem;
+    border-radius: 0.25rem;
+    -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.08);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.08);
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.ms-single-pricing-table:hover {
+    -webkit-box-shadow: -2px 2px 20px 0 rgba(0, 0, 0, 0.13);
+    -moz-box-shadow: -2px 2px 20px 0 rgba(0, 0, 0, 0.13);
+    box-shadow: -2px 2px 20px 0 rgba(0, 0, 0, 0.13);
+    -moz-transform: translate(-3px, -3px);
+    -o-transform: translate(-3px, -3px);
+    -ms-transform: translate(-3px, -3px);
+    -webkit-transform: translate(-3px, -3px);
+    transform: translate(-3px, -3px);
+}
+
+.ms-single-pricing-table.ms-border .ms-pricing-header {
+    border-color: #7827e2;
+}
+
+.ms-single-pricing-table .ms-price-discout-alt {
+    position: absolute;
+    right: 0.5rem;
+    top: -1.8rem;
+    font-size: 1.25rem;
+    border-radius: 50%;
+    background: #7827e2;
+    height: 60px;
+    width: 60px;
+    line-height: 3.5rem;
+    color: #ffffff;
+    -webkit-box-shadow: -2px 3px 20px 0 rgba(0, 0, 0, 0.32);
+    -moz-box-shadow: -2px 3px 20px 0 rgba(0, 0, 0, 0.32);
+    box-shadow: -2px 3px 20px 0 rgba(0, 0, 0, 0.32);
+}
+
+.ms-pricing-header {
+    padding: 2.5rem 1.5rem 2rem;
+    border-bottom: 1px solid #eae9e9;
+    margin-bottom: 2.25rem;
+}
+
+.ms-pricing-header h4 {
+    margin-bottom: 1.5rem;
+    color: #7827e2;
+}
+
+.ms-pricing-header .ms-price sub {
+    font-size: 0.9rem;
+    color: #888888;
+}
+
+.ms-pricing-footer {
+    padding: 2.25rem 1.5rem 2.5rem;
+}
+/****************************************
+ END PRICING CONTAINER
+*****************************************/
+
+
+
+/****************************************
+13. DOWNLOAD CONTAINER
+*****************************************/
+.ms-download-container {
+    background: url("../imgs/download-bg.png") center center no-repeat fixed;
+    background-size: cover;
+}
+
+.ms-download-container .ms-overlay {
+    padding: 5.5rem 0;
+}
+/****************************************
+ END DOWNLOAD CONTAINER
+*****************************************/
+
+
+
+/****************************************
+14. FAQ CONTAINER
+*****************************************/
+.ms-tab-container {
+    margin-bottom: 1rem;
+    border-radius: 0.25rem;
+    -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.08);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.08);
+}
+
+.ms-tab-container .nav-link {
+    color: inherit;
+    background-color: #ffffff;
+    border-radius: 0;
+    padding: 1.2rem 1.5rem;
+    position: relative;
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.ms-tab-container .nav-link:first-child {
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
+
+.ms-tab-container .nav-link:last-child {
+    border-bottom-left-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+}
+
+.ms-tab-container .nav-link:not(:last-child) {
+    border-bottom: 1px solid #eae9e9;
+}
+
+.ms-tab-container .nav-link::before {
+    content: '';
+    background: #7827e2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    -moz-transform: scale(0);
+    -o-transform: scale(0);
+    -ms-transform: scale(0);
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+
+.ms-tab-container.ms-border .nav-link {
+    border-color: #7827e2;
+}
+
+.ms-tab-container.ms-border .nav-link::before {
+    width: 2px;
+}
+
+.ms-tab-container .nav-link:hover,
+.ms-tab-container .nav-link.active,
+.ms-tab-container.show > .nav-link {
+    background-color: inherit;
+    color: #7827e2;
+}
+
+.ms-tab-container .nav-link:hover::before,
+.ms-tab-container .nav-link.active::before,
+.ms-tab-container.show > .nav-link::before {
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.ms-accordion {
+    margin-bottom: 1rem;
+    border-radius: 0.25rem;
+    -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.08);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.08);
+}
+
+.ms-accordion .ms-accordion-tab-header {
+    padding: 1.8rem 1.8rem 1rem;
+}
+
+.ms-accordion .ms-accordion-header[aria-expanded="true"] .ms-accordion-icon {
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.ms-accordion .ms-accordion-header {
+    padding: 1.2rem 1.8rem;
+    border-bottom: 1px solid #eae9e9;
+    cursor: pointer;
+}
+
+.ms-accordion .ms-accordion-icon {
+    float: right;
+    opacity: 0.8;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.ms-accordion .ms-accordion-body {
+    padding: 1.2rem 1.8rem;
+}
+
+.ms-accordion.ms-border .ms-accordion-header {
+    border-color: #7827e2;
+}
+
+.ms-accordion > div:last-child .ms-accordion-header[aria-expanded="false"] {
+    border: none;
+}
+/****************************************
+ END FAQ CONTAINER
+*****************************************/
+
+
+
+/****************************************
+15. BLOGS CONTAINER
+*****************************************/
+.ms-blog {
+    border: none;
+    color: inherit;
+    margin-bottom: 2rem;
+    -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.08);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.08);
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.ms-blog .card-img-top {
+    height: auto;
+    width: 100%;
+    display: block;
+}
+
+.ms-blog:hover {
+    -webkit-box-shadow: -2px 2px 20px 0 rgba(0, 0, 0, 0.13);
+    -moz-box-shadow: -2px 2px 20px 0 rgba(0, 0, 0, 0.13);
+    box-shadow: -2px 2px 20px 0 rgba(0, 0, 0, 0.13);
+    -moz-transform: translate(-3px, -3px);
+    -o-transform: translate(-3px, -3px);
+    -ms-transform: translate(-3px, -3px);
+    -webkit-transform: translate(-3px, -3px);
+    transform: translate(-3px, -3px);
+}
+
+.ms-blog-body a,
+.ms-post-content a {
+    color: inherit;
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.ms-blog-body a:hover,
+.ms-post-content a:hover {
+    color: #7827e2;
+}
+
+.ms-blog-body .ms-blog-options,
+.ms-post-content .ms-blog-options {
+    font-size: 0.9rem;
+    padding: 0.5rem 0;
+    color: #888888;
+}
+
+.ms-blog-body .ms-blog-title,
+.ms-post-content .ms-blog-title {
+    font-size: 1.25rem;
+}
+/****************************************
+ END BLOGS CONTAINER
+*****************************************/
+
+
+
+/****************************************
+16. MAP CONTAINER
+*****************************************/
+.ms-map {
+    width: 100%;
+    height: 450px;
+    z-index: 0;
+}
+/****************************************
+ END MAP CONTAINER
+*****************************************/
+
+
+
+/****************************************
+17. CONTACT CONTAINER
+*****************************************/
+.ms-contact-section {
+    position: relative;
+    margin-bottom: 10rem;
+}
+
+.ms-contact-container {
+    left: 50%;
+    margin: 0 auto;
+    position: absolute;
+    top: 70%;
+    -moz-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    -webkit-box-shadow: -2px 3px 20px 0 rgba(0, 0, 0, 0.32);
+    -moz-box-shadow: -2px 3px 20px 0 rgba(0, 0, 0, 0.32);
+    box-shadow: -2px 3px 20px 0 rgba(0, 0, 0, 0.32);
+}
+
+.ms-contact-container .ms-address-box {
+    padding: 4rem;
+    background-color: #7827e2;
+    color: #ffffff;
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+}
+
+.ms-contact-container .ms-address-description {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+
+.ms-contact-container .ms-address-info {
+    list-style: none;
+    padding-left: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.ms-contact-container .ms-address-info li {
+    margin-bottom: 1.25rem;
+}
+
+.ms-contact-container .ms-address-info .ms-info-icon {
+    border: 1px solid;
+    border-radius: 30px;
+    height: 26px;
+    width: 26px;
+    margin-right: 1rem;
+    font-size: 0.7rem;
+    justify-content: center;
+    align-items: center;
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.ms-contact-container .ms-contact-us-box {
+    padding: 4rem;
+    background-color: #ffffff;
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+}
+/****************************************
+ END CONTACT CONTAINER
+*****************************************/
+
+
+
+/****************************************
+18. FOOTER CONTAINER
+*****************************************/
+.ms-footer {
+    padding: 5.5em 0 3.5rem;
+    background: #404040;
+    color: #ffffff;
+}
+
+/******* Subscribe form box *******/
+.ms-subscribe-box {
+    margin-bottom: 2.65rem;
+}
+
+.ms-subscribe-box .form-control {
+    padding: 0.8rem 1.75rem;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.ms-subscribe-box [type='submit'] {
+    padding: 0.8rem 1.75rem;
+    border-top-right-radius: 30px !important;
+    border-bottom-right-radius: 30px !important;
+    color: #ffffff;
+    background-color: #7827e2;
+    -webkit-transition: background-color 300ms linear;
+    -moz-transition: background-color 300ms linear;
+    -ms-transition: background-color 300ms linear;
+    -o-transition: background-color 300ms linear;
+    transition: background-color 300ms linear;
+}
+
+.ms-subscribe-box [type='submit']:hover,
+.ms-subscribe-box [type='submit']:focus,
+.ms-subscribe-box [type='submit']:active {
+    background-color: #7827e2;
+}
+
+/******* Social links box *******/
+.ms-social-box .ms-social-link {
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    color: #ffffff;
+    display: inline-block;
+    height: 35px;
+    width: 35px;
+    line-height: 35px;
+    font-size: 0.95rem;
+    text-align: center;
+    margin-left: 10px;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.ms-social-box .ms-social-link:first-child {
+    margin-left: 0;
+}
+
+.ms-social-box .ms-social-link:hover {
+    border-color: #7827e2;
+    background: transparent -webkit-linear-gradient(left, #6323b7 40%, #7827e2 100%) repeat scroll 0 0;
+    background: transparent linear-gradient(to right, #6323b7 40%, #7827e2 100%) repeat scroll 0 0;
+}
+
+.ms-social-box.ms-white-bg .ms-social-link {
+    border-color: #7827e2;
+    color: #7827e2;
+}
+
+.ms-social-box.ms-white-bg .ms-social-link:hover {
+    color: #ffffff;
+}
+
+
+.ms-footer-item-group {
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.ms-footer-item-group .ms-footer-item {
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    flex-basis: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.ms-footer-item-group .ms-footer-item .ms-footer-item-title {
+    margin-bottom: 1rem;
+}
+
+.ms-footer-item-group .ms-footer-item .ms-footer-item-link {
+    margin-bottom: 0.25rem;
+}
+
+.ms-footer-item-group .ms-footer-item .ms-footer-item-link a {
+    text-decoration: none;
+    color: #888888;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.ms-footer-item-group .ms-footer-item .ms-footer-item-link a:hover {
+    color: #ffffff;
+}
+
+.ms-footer-copyright-container {
+    margin-top: 3rem;
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.ms-footer-copyright-container .ms-footer-copyright,
+.ms-footer-copyright-container .ms-footer-social-links {
+    flex-basis: 50%;
+}
+
+.ms-footer-copyright-container .ms-footer-social-links {
+    text-align: right;
+}
+/****************************************
+ END FOOTER CONTAINER
+*****************************************/
+
+
+
+/****************************************
+19. START SCROLL TO TOP CONTAINER
+*****************************************/
+.ms-scroll-to-top {
+    position: fixed;
+    right: 0;
+    bottom: -70px;
+    height: 40px;
+    width: 40px;
+    margin: 0 15px 15px 0;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    color: #ffffff;
+    z-index: 100;
+    background: linear-gradient(-45deg, #7827e2, #5a45ec);
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-shadow: 0 2px 20px 5px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 2px 20px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 20px 5px rgba(0, 0, 0, 0.2);
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.ms-scroll-to-top.show {
+    bottom: 0;
+}
+/****************************************
+ END SCROLL TO TOP CONTAINER
+*****************************************/
+
+
+
+/****************************************
+20. START OVERRIDE SCSS
+*****************************************/
+.ms-boxshadow-none,
+.ms-boxshadow-none:hover {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.ms-border,
+.ms-border.active,
+.ms-border-hover:hover {
+    border: 1px solid #7827e2;
+}
+
+[aria-expanded="true"] {
+    color: #7827e2;
+    opacity: 0.8;
+}
+
+label {
+    margin-bottom: 0;
+}
+
+/******* Outline button *******/
+[class*="btn-outline-"] {
+    border-radius: 30px;
+    padding: .5rem 1.5rem;
+}
+
+[class*="btn-outline-"]:hover {
+    background-color: #7827e2;
+    border-color: #7827e2;
+    color: #ffffff;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    -webkit-box-shadow: 0 2px 20px 5px rgba(0, 0, 0, 0.21);
+    -moz-box-shadow: 0 2px 20px 5px rgba(0, 0, 0, 0.21);
+    box-shadow: 0 2px 20px 5px rgba(0, 0, 0, 0.21);
+}
+
+[class*="btn-outline-"]:focus {
+    box-shadow: 0 2px 20px 5px rgba(0, 0, 0, 0.21) !important;
+}
+
+.btn-outline-light:not(:disabled):not(.disabled).active,
+.btn-outline-light:not(:disabled):not(.disabled):focus,
+.btn-outline-light:not(:disabled):not(.disabled):active {
+    background-color: #ffffff;
+    border-color: #ffffff;
+    color: #7827e2;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.btn-outline-primary {
+    color: #7827e2;
+    background-color: transparent;
+    background-image: none;
+    border-color: #7827e2;
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled).active,
+.btn-outline-primary:not(:disabled):not(.disabled):active,
+.show > .btn-outline-primary.dropdown-toggle {
+    color: #ffffff;
+    background-color: #7827e2;
+    border-color: #7827e2;
+}
+
+/******* Outline Small Button *******/
+.ms-small-btn {
+    padding: 0.5rem 1.5rem 0.5rem 1rem;
+}
+
+/******* Outline Big Button *******/
+.ms-big-btn {
+    margin-bottom: 1rem;
+    padding: 0.5rem 2rem;
+}
+
+.ms-big-btn:not(:last-child) {
+    margin-right: 1.5rem;
+}
+
+.ms-big-btn span:first-child {
+    vertical-align: middle;
+    padding-right: 1rem;
+}
+
+.ms-big-btn .ms-icon {
+    font-size: 2rem;
+}
+
+/******* Form Group *******/
+.ms-form-group {
+    position: relative;
+    padding: 0;
+    margin-bottom: 1.25rem;
+    border: none;
+    overflow: visible;
+}
+
+.ms-form-group input,
+.ms-form-group textarea {
+    color: inherit;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px 10px 8px 0;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #eae9e9;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease;
+}
+
+.ms-form-group input:focus,
+.ms-form-group textarea:focus {
+    -webkit-box-shadow: 0 1px 0 0 #7827e2;
+    -moz-box-shadow: 0 1px 0 0 #7827e2;
+    box-shadow: 0 1px 0 0 #7827e2;
+}
+
+.ms-form-group input:not(:required):not([value=""]) ~ label,
+.ms-form-group input:not(:required):focus ~ label,
+.ms-form-group input:focus ~ label,
+.ms-form-group input:valid ~ label,
+.ms-form-group input[type='email']:not([value=""]):invalid ~ label,
+.ms-form-group input[type='password']:not([value=""]):invalid ~ label,
+.ms-form-group input[type='password']:not([value=""]):invalid ~ label,
+.ms-form-group input[type='number']:not([value=""]):invalid ~ label,
+.ms-form-group textarea:not(:required):not([value=""]) ~ label,
+.ms-form-group textarea:not(:required):focus ~ label,
+.ms-form-group textarea:focus ~ label,
+.ms-form-group textarea:valid ~ label,
+.ms-form-group textarea[type='email']:not([value=""]):invalid ~ label,
+.ms-form-group textarea[type='password']:not([value=""]):invalid ~ label,
+.ms-form-group textarea[type='password']:not([value=""]):invalid ~ label,
+.ms-form-group textarea[type='number']:not([value=""]):invalid ~ label {
+    font-size: 1rem;
+    color: #7827e2;
+    -moz-transform: translateY(-1rem) scale(0.8);
+    -o-transform: translateY(-1rem) scale(0.8);
+    -ms-transform: translateY(-1rem) scale(0.8);
+    -webkit-transform: translateY(-1rem) scale(0.8);
+    transform: translateY(-1rem) scale(0.8);
+}
+
+.ms-form-group input:not(:required) ~ label,
+.ms-form-group textarea:not(:required) ~ label {
+    color: inherit;
+    line-height: 1.65rem;
+    font-size: 1.25rem;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    -moz-transform: translateY(0.6rem) scale(0.8);
+    -o-transform: translateY(0.6rem) scale(0.8);
+    -ms-transform: translateY(0.6rem) scale(0.8);
+    -webkit-transform: translateY(0.6rem) scale(0.8);
+    transform: translateY(0.6rem) scale(0.8);
+}
+
+.ms-form-group input ~ button,
+.ms-form-group textarea ~ button {
+    border: none;
+    position: absolute;
+    right: 0;
+    bottom: 0.4rem;
+    color: inherit;
+    cursor: pointer;
+    outline: none;
+    background: transparent;
+}
+
+.ms-form-group input:focus ~ button,
+.ms-form-group input ~ button:hover,
+.ms-form-group textarea:focus ~ button,
+.ms-form-group textarea ~ button:hover {
+    color: #7827e2;
+}
+
+.ms-form-group label {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    font-size: 1rem;
+    transform-origin: 0 -150%;
+    pointer-events: none;
+    -webkit-transition: transform 0.3s ease;
+    -moz-transition: transform 0.3s ease;
+    -ms-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
+}
+
+/******* Slick Slider *******/
+.slick-prev:before,
+.slick-next:before {
+    font-family: "fontello";
+    color: #7827e2;
+    padding: 0.8rem;
+    border: 1px solid;
+    border-radius: 50px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.slick-prev:before {
+    content: "\E85E";
+}
+
+.slick-next:before {
+    content: "\E85F";
+    left: auto;
+    right: 0;
+}
+
+.slick-prev,
+.slick-next {
+    z-index: 1;
+    height: 50px;
+    width: 50px;
+}
+
+.slick-prev:hover:before,
+.slick-prev:hover:before,
+.slick-next:hover:before,
+.slick-next:hover:before {
+    border-color: #7827e2;
+    background-color: #7827e2;
+    color: #ffffff;
+    -webkit-box-shadow: 0 2px 20px 5px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 2px 20px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 20px 5px rgba(0, 0, 0, 0.2);
+}
+
+.slick-prev {
+    left: 0;
+}
+
+.slick-next {
+    right: 0;
+}
+
+/******* Venobo popup *******/
+.vbox-overlay {
+    z-index: 1080;
+    background: rgba(81, 8, 197, 0.88) !important;
+}
+
+.vbox-overlay .vbox-close {
+    color: #7827e2 !important;
+    background-color: #ffffff !important;
+}
+
+.vbox-overlay .vbox-prev span {
+    border-top-color: #ffffff !important;
+    border-right-color: #ffffff !important;
+}
+
+.vbox-overlay .vbox-next span {
+    border-top-color: #ffffff !important;
+    border-right-color: #ffffff !important;
+}
+
+/******* Particles *******/
+#ms-js-home-bg-particles .particles-js-canvas-el {
+    position: absolute;
+    top: 0;
+    left: 0; }
+
+/******* Water home bg *******/
+.ms-js-home-bg-water canvas {
+    z-index: 0 !important;
+}
+/****************************************
+END OVERRIDE CSS/SCSS
+*****************************************/
+
+
+
+/****************************************
+21. START BLOG PAGE SCSS
+*****************************************/
+/******* 21.1. BLOG DEFAULT *******/
+/******* Blog banner *******/
+.ms-blog-banner {
+    position: relative;
+    text-align: center;
+    margin: 5rem auto;
+    color: #ffffff;
+    z-index: 1;
+}
+
+/******* Blogs container *******/
+.ms-blogs-container {
+    padding-top: 6rem;
+}
+
+.ms-single-widget {
+    margin-bottom: 1.8rem;
+    -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.08);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.08);
+    padding: 1.25rem;
+}
+
+.ms-single-widget .ms-form-group {
+    margin: 0;
+}
+
+.ms-single-widget .ms-widget-content {
+    position: relative;
+}
+
+.ms-single-widget .ms-widget-title {
+    border-bottom: 1px solid #eae9e9;
+    margin-bottom: 1rem;
+    padding-bottom: 0.65rem;
+    text-transform: uppercase;
+}
+
+/******* 21.2. BLOG DETAILS LEFT SIDEBAR *******/
+.ms-widget-inner {
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.ms-single-find {
+    display: inline-block;
+    text-align: center;
+    background: #f9f9f9;
+    margin: 5px;
+    width: 30%;
+    line-height: 30px;
+}
+
+.ms-single-find a {
+    color: inherit;
+    text-decoration: none;
+    display: grid;
+    padding: 0.5rem;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.ms-single-find a:hover {
+    color: #7827e2;
+}
+
+.ms-gallery-container {
+    margin: -0.25rem;
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.ms-gallery-container .ms-gallery-item {
+    position: relative;
+    margin: 0.35rem;
+    display: inline-flex;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.ms-gallery-container .ms-gallery-item::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: block;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.ms-gallery-container .ms-gallery-item .ms-zoom-icon {
+    opacity: 0;
+    color: #ffffff;
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    top: 46%;
+    display: inline-flex;
+    transform: translateX(-50%);
+    justify-content: center;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.ms-gallery-container .ms-gallery-item .ms-gallery-img {
+    width: 92px;
+    height: 96px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.ms-gallery-container .ms-gallery-item:hover .ms-gallery-img {
+    transform: scale(1.2);
+}
+
+.ms-gallery-container .ms-gallery-item:hover .ms-zoom-icon {
+    opacity: 1;
+    z-index: 1;
+}
+
+.ms-gallery-container .ms-gallery-item:hover::before {
+    z-index: 1;
+    background-color: rgba(75, 46, 236, 0.55);
+}
+
+.ms-post-media {
+    margin-bottom: 1rem;
+}
+
+.ms-post-media:last-child {
+    margin-bottom: 0;
+}
+
+.ms-post-media .ms-post-img {
+    width: 90px;
+    height: 65px;
+    margin-right: 1rem;
+}
+
+.ms-post-media .ms-post-title {
+    font-size: 0.9rem;
+}
+
+.ms-post-media .ms-post-title a {
+    color: inherit;
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.ms-post-media:hover .ms-post-title a {
+    color: #7827e2;
+}
+
+.ms-blog-details-container {
+    padding: 5rem 0;
+}
+
+.ms-blog-single-post {
+    -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.08);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.08);
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.ms-blog-single-post .ms-blog-single-post-header img {
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
+
+.ms-blog-single-post .ms-post-content {
+    padding: 1.25rem;
+}
+
+.ms-blog-single-post .ms-share-post-wrapper {
+    padding: 1rem 1.5rem;
+    background: #f9f9f9;
+    margin: 2rem 0;
+    color: #888888;
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.ms-comment-media,
+.ms-comment-reply-media {
+    margin: 2rem 0;
+}
+
+.ms-comment-media .ms-comment-author-name,
+.ms-comment-reply-media .ms-comment-author-name {
+    margin: 0 0 0.25rem 0;
+}
+
+.ms-comment-media .ms-comment-author-avatar,
+.ms-comment-reply-media .ms-comment-author-avatar {
+    margin-right: 1rem;
+}
+
+.ms-comment-media .ms-comment-author-avatar img,
+.ms-comment-reply-media .ms-comment-author-avatar img {
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+}
+
+.ms-comment-reply-media {
+    margin-bottom: 0;
+}
+
+.ms-comment-time-left {
+    margin-bottom: 0.75rem;
+    color: #888888;
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.ms-post-content-inner .list-inline .list-inline-item,
+.ms-comment-action-options .list-inline .list-inline-item {
+    margin-right: 1rem;
+}
+
+.ms-post-new-comment {
+    padding-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+/******* Blog style 2 *******/
+.ms-blog-details-style-2 .ms-single-widget {
+    padding: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.ms-blog-details-style-2 .ms-blog-single-post {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.ms-blog-details-style-2 .ms-blog-single-post .ms-blog-single-post-header img {
+    border-radius: 0;
+}
+
+.ms-blog-details-style-2 .ms-blog-single-post .ms-post-content {
+    padding: 1.25rem 0;
+}
+
+/******* Related post container *******/
+.ms-related-post-container {
+    cursor: move;
+}
+
+.ms-related-post-container a:focus,
+.ms-related-post-container a:active {
+    outline: none;
+}
+
+.ms-related-post-container .slick-list {
+    padding-top: 0.5rem;
+}
+
+.ms-related-post-container .slick-slide {
+    margin: 0 1rem;
+}
+
+.ms-related-post-container:hover .slick-prev:before,
+.ms-related-post-container:hover .slick-next:before {
+    opacity: 1;
+}
+/****************************************
+END BLOG PAGE SCSS
+*****************************************/
+
+
+
+/****************************************
+22. START COMING SOON PAGE SCSS
+*****************************************/
+.ms-coming-soon-container {
+    height: 100vh;
+    min-height: 35rem;
+    position: relative;
+    z-index: 1;
+    color: #ffffff;
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ms-coming-soon-container .ms-date-count-container {
+    color: #ffffff;
+    width: 170px;
+    height: 170px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 36px 0;
+    border-radius: 50%;
+    position: relative;
+    text-align: center;
+    margin: 0 1rem 1rem;
+    -webkit-box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+.ms-coming-soon-container .ms-date-count-container h2 {
+    margin: 0;
+    margin-bottom: 1rem;
+    font-weight: 800;
+    font-size: 3.5rem;
+}
+
+.ms-coming-soon-container .ms-date-count-container h4 {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.ms-coming-soon-container .ms-date-count-container:not(.ms-first-date)::before {
+    content: ':';
+    display: block;
+    position: absolute;
+    left: -3rem;
+    top: 0;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 9rem;
+    line-height: 10rem;
+}
+
+.ms-coming-soon-container .ms-coming-soon-title {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 3rem;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.ms-coming-soon-container .ms-coming-soon-title:hover {
+    -moz-transform: scale(1.03);
+    -o-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
+}
+
+.ms-coming-soon-container .ms-subscribe-box {
+    width: 50%;
+    margin-top: 2rem;
+}
+
+.ms-coming-soon-container.ms-coming-soon-style-2 .ms-date-count-container {
+    border: 1px solid #ffffff;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.ms-coming-soon-container.ms-coming-soon-style-3 .ms-date-count-container {
+    border-radius: 0;
+}
+
+.ms-coming-soon-container.ms-coming-soon-style-4 .ms-date-count-container {
+    border-radius: 0;
+    border: 1px solid #ffffff;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+/****************************************
+END COMING SOON PAGE SCSS
+*****************************************/
+
+
+
+/****************************************
+23. START ERROR PAGE SCSS
+*****************************************/
+.ms-error-page-container {
+    height: 100vh;
+    min-height: 35rem;
+    position: relative;
+    align-items: center;
+    z-index: 1;
+    color: #ffffff;
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ms-error-page-container .ms-error-page-top {
+    align-items: center;
+    margin-bottom: 3rem;
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ms-error-page-container .ms-error-page-top h1,
+.ms-error-page-container .ms-error-page-top .h1 {
+    font-size: 12rem;
+    letter-spacing: 1.25rem;
+}
+
+.ms-error-page-container .ms-error-page-bottom .btn:not(:last-child) {
+    margin-right: 1.5rem;
+}
+/****************************************
+END ERROR PAGE SCSS
+*****************************************/
+
+
+
+/****************************************
+24. START SIGNUP/SIGNIN PAGE SCSS
+*****************************************/
+.ms-sign-form-container {
+    width: 60vw;
+    height: 500px;
+    position: relative;
+    margin: auto;
+    /******* Form box *******/
+    /******* When show sign in form *******/
+}
+
+.ms-sign-form-container .ms-form-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: url(../imgs/blog-5.png) no-repeat;
+    background-size: cover;
+    background-position: 100%;
+    border-radius: 0.3rem;
+}
+
+.ms-sign-form-container .ms-form-overlay::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #7827e2;
+    opacity: 0.9;
+}
+
+.ms-sign-form-container .ms-sign-forms {
+    position: relative;
+    height: 100%;
+    text-align: center;
+}
+
+.ms-sign-form-container .ms-sign-forms .ms-sign-form-info {
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    height: 100%;
+}
+
+.ms-sign-form-container .ms-sign-forms .ms-sign-form-info .ms-form-info-description {
+    padding: 0.7rem 0 1rem 0;
+}
+
+.ms-sign-form-container .ms-sign-forms .ms-sign-form-info .ms-signin-info,
+.ms-sign-form-container .ms-sign-forms .ms-sign-form-info .ms-signup-info {
+    text-align: center;
+    width: 60%;
+    height: 100%;
+    color: #ffffff;
+    opacity: 1;
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.ms-sign-form-container .ms-sign-forms .ms-sign-form-info .ms-signup-info {
+    width: 40%;
+}
+
+.ms-sign-form-container .ms-sign-form {
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 60%;
+    height: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+}
+
+.ms-sign-form-container .ms-sign-form .ms-form-box {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    padding: 1.5rem 3rem;
+    justify-content: center;
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.ms-sign-form-container .ms-sign-form .ms-form-box .ms-form-title {
+    margin-bottom: 1.5rem;
+}
+
+.ms-sign-form-container .ms-sign-form .ms-form-box .ms-form-suggest {
+    display: inline-block;
+    justify-content: center;
+    margin-bottom: 0.7rem;
+    padding-top: 0.7rem;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.ms-sign-form-container .ms-sign-form .ms-form-box .ms-form-suggest:hover {
+    color: #7827e2;
+}
+
+.ms-sign-form-container .ms-sign-form .ms-form-box .ms-text-muted {
+    margin-bottom: 0.8rem;
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+}
+
+.ms-sign-form-container .ms-sign-form .ms-form-box.ms-signup {
+    right: 100%;
+    opacity: 0;
+    display: none;
+}
+
+.ms-sign-form-container.ms-open-signup-form .ms-form-overlay {
+    background-position: unset;
+}
+
+.ms-sign-form-container.ms-open-signup-form .ms-signup-info {
+    width: 60% !important;
+}
+
+.ms-sign-form-container.ms-open-signup-form .ms-signin-info {
+    width: 40% !important;
+}
+
+.ms-sign-form-container.ms-open-signup-form .ms-sign-form {
+    right: 40%;
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.ms-sign-form-container.ms-open-signup-form .ms-form-box.ms-signin {
+    right: -100%;
+    opacity: 0;
+    display: none;
+}
+
+.ms-sign-form-container.ms-open-signup-form .ms-form-box.ms-signup {
+    right: 0 !important;
+    opacity: 1 !important;
+    display: flex !important;
+}
+/****************************************
+END SIGNUP/SIGNIN PAGE CSS
+*****************************************/
+
+
+/****************************************
+25. START THEMES(COLOR) BOX CSS
+*****************************************/
+.ms-options-box {
+    position: fixed;
+    right: -180px;
+    top: 15%;
+    width: 180px;
+    background: #ffffff;
+    z-index: 9999;
+    min-height: 50px;
+    border-bottom-left-radius: 0.1rem;
+    box-shadow: 0 2px 13px 0 rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease-in;
+}
+
+.ms-options-box.open {
+    right: 0;
+}
+
+.ms-options-handler {
+    position: absolute;
+    padding: 0.5rem;
+    left: -2.4rem;
+    background: #ffffff;
+    border-top-left-radius: 0.1rem;
+    border-bottom-left-radius: 0.1rem;
+    cursor: pointer;
+    box-shadow: -7px 6px 20px 0 rgba(0, 0, 0, 0.08);
+}
+
+.ms-options-box .ms-themes-box {
+    padding: 0.8rem 0.5rem;
+}
+
+.ms-options-box .ms-theme {
+    text-align: center;
+    width: 50%;
+    margin-top: 10px;
+    float: left;
+}
+
+.ms-options-box .ms-theme a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 3px;
+    margin-bottom: 5px;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.ms-options-box .ms-theme a>i {
+    font-size: 1.5rem;
+    opacity: 0;
+}
+
+.ms-options-box .ms-theme:hover a,
+.ms-options-box .ms-theme.active a {
+    border-radius: 50%;
+}
+
+.ms-options-box .ms-theme.active a>i {
+    opacity: 1;
+}
+
+.ms-rotated:before {
+    animation: rotation 2s infinite linear;
+}
+
+.open .ms-options-handler .ms-rotated:before,
+.ms-options-handler:hover .ms-rotated:before {
+    animation: unset;
+}
+
+@-webkit-keyframes rotation {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+/****************************************
+END THEMES(COLOR) BOX CSS
+*****************************************/
+
+/*.navbar-brand img {*/
+    /*width: 145px;*/
+/*}*/
+
+/*.ms-options-box {*/
+    /*display: none;*/
+/*}*/
+
+/*.ms-home-content h1 {*/
+    /*font-size: 3.5rem;*/
+/*}*/
+
+/*.ms-card .ms-card-body .card-title,*/
+/*.navbar-expand-md .navbar-nav {*/
+    /*font-size: 1.5rem;*/
+/*}*/

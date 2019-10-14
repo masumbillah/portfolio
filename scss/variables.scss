@@ -1,0 +1,151 @@
+
+/********** MSAPP SCSS/CSS INDEX *********
+1. SCSS VARIABLES
+  1.1 DEFAULT VARIABLES
+  1.2 MIXIN VARIABLES
+*****************************************/
+
+/****************************************
+1. SCSS VARIABLES
+*****************************************/
+  //*********** 1.1 DEFAULT VARIABLES ******/
+  $footer-bg: #404040;
+  $white: #ffffff;
+  $purple: #7827e2;
+  $purple-light: #6323b7;
+  $gray: #f9f9f9;
+  $danger: #E83636;
+  $silver: #c7c6c6;
+  $font-color: #656565;
+  $font-color-placeholder: $silver;
+  $text-muted: #888888;
+
+  $border: 1px solid #eae9e9;
+  $border-light: 1px solid #f1f1f1;
+  $radius: 0.25rem;
+  $transition: all 0.3s ease;
+  $home-level-bg-color: rgba(255, 255, 255, 0.45);
+  $video-link-bg-color: rgba(255, 255, 255, 0.3);
+  $vbox-overlay-bg-color: rgba(81, 8, 197, 0.88);
+  $gallery-img-hover-bg-color: rgba(75, 46, 236, 0.55);
+  $home-video-overlay-bg-color: rgba(97, 17, 224, 0.35);
+  $date-counter-separator-color: rgba(255, 255, 255, 0.5);
+  $date-count-container-bg-color:  rgba(255, 255, 255, 0.15);
+  $scroll-to-top-bg: linear-gradient(-45deg,$purple, #5a45ec);
+  $ms-bg: linear-gradient(-50deg, $purple 50%, $purple-light 50%);
+  $preloader-wrapper-bg: linear-gradient(to right, $purple 0%, $purple-light 100%);
+  $overlay-bg: linear-gradient(-45deg, rgba(89, 59, 210, 0.84), rgba(63, 23, 128, 0.95));
+  //********** END DEFAULT VARIABLES *******/
+
+  //********** 1.2 MIXIN VARIABLES *********/
+  @mixin transition($transition: .3s ease-in-out) {
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -ms-transition: $transition;
+    -o-transition: $transition;
+    transition: $transition;
+  }
+
+  //******** BOXSHADOW ******/
+  @mixin boxshadow($box-shadow) {
+    -webkit-box-shadow: $box-shadow;
+    -moz-box-shadow: $box-shadow;
+    box-shadow: $box-shadow;
+  }
+
+  /******** TRANSFORM ********/
+  @mixin transform($transforms) {
+    -moz-transform: $transforms;
+    -o-transform: $transforms;
+    -ms-transform: $transforms;
+    -webkit-transform: $transforms;
+    transform: $transforms;
+  }
+
+  /******** ANIMATION ********/
+  @mixin animation($animation) {
+    -webkit-animation: $animation; /* Safari 4+ */
+    -moz-animation:    $animation; /* Fx 5+ */
+    -o-animation:      $animation; /* Opera 12+ */
+    animation:         $animation; /* IE 10+, Fx 29+ */
+  }
+
+  /******** DISPLAY FLEX ********/
+  @mixin displayFlex(){
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+  }
+
+  /******** FLEX DIRECTION ********/
+  @mixin flexDirection($flexDirection:column){
+    -webkit-flex-direction: $flexDirection;
+    flex-direction: $flexDirection;
+  }
+
+  /******** FLEX WRAP ********/
+  @mixin flexWrap($flexWrap:wrap){
+    -webkit-flex-wrap: $flexWrap;
+    flex-wrap: $flexWrap;
+  }
+
+  /******** COMMON RGB ********/
+  @mixin commonBg(){
+    background: rgba(0, 0, 0, 0) -webkit-linear-gradient(left, $purple-light 40%, $purple 100%) repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) linear-gradient(to right, $purple-light 40%, $purple 100%) repeat scroll 0 0;
+  }
+
+  /******** ANIMAION UNDER LINER ********/
+  @mixin animationUnderLine( $linePositon: 'bottom', $lineColor: $white, $lineWidth:1px){
+    position: relative;
+    
+    &::after {
+      content: '';
+      background: $lineColor;
+      position: absolute;
+      left: 0;
+      @include transition(all 250ms ease 0s);
+      @include transform(scale(0));  
+      width: 100%;
+      height: $lineWidth;
+
+      /******** Various underline style ********/
+      @if $linePositon == 'bottom' {
+        bottom: 0;
+      } @else if $linePositon == 'left' {
+        width: $lineWidth;
+        height: 100%;
+        top: 0;
+      } @else if $linePositon == 'right' {
+        width: $lineWidth;
+        height: 100%;
+        top: 0;
+        left: auto;
+        right: 0;
+      } @else {
+        top: 0;
+      }
+    }
+
+    &.active::after,
+    &.active:hover::after,
+    &:hover::after {
+      @include transform(scale(1));
+    }
+  }
+
+  /******** USER TEXT SELECT ********/
+  @mixin user-text-select($context){
+    -webkit-user-select: $context;
+    -moz-user-select: $context;
+    -ms-user-select: $context;
+    user-select: $context;
+  }
+  //********** END MIXIN VARIABLES *******/
+/****************************************
+END SCSS VARIABLES
+*****************************************/

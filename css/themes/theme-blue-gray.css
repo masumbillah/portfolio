@@ -1,0 +1,485 @@
+
+/****************************************
+1. DEFAULT SCSS
+*****************************************/
+/*********** 1.2 COMMON SCSS *************/
+.ms-primary-bg {
+  background-color: #98AFC7;
+ }
+
+.ms-text-primary {
+  color: #98AFC7;
+ }
+
+/********** Widget list **********/
+.ms-widget-list li:hover,
+.ms-widget-list li:active,
+.ms-widget-list li.active {
+  color: #98AFC7;
+ }
+
+.ms-widget-list li:hover .ms-number,
+.ms-widget-list li:active .ms-number,
+.ms-widget-list li.active .ms-number {
+  background-color: #98AFC7;
+ }
+
+.ms-tag {
+  border-color: #98AFC7;
+  color: #98AFC7;
+ }
+
+.ms-tag:hover, .ms-tag.active {
+  background-color: #98AFC7;
+  border-color: #98AFC7;
+ }
+
+/********** Header divider **********/
+.ms-divider {
+  border-top: 1px solid #98AFC7;
+ }
+
+.ms-divider::after {
+  background-color: #98AFC7;
+ }
+
+.ms-divider.ms-reverse::after {
+  border-color: #98AFC7;
+ }
+
+/********** Pagination **********/
+.ms-pagination-container .page-link.ms-border {
+  color: #98AFC7;
+ }
+
+.ms-pagination-container .ms-page-item.active .page-link,
+.ms-pagination-container .ms-page-item .page-link:hover {
+  background: #98AFC7;
+ }
+
+/********** Rating **********/
+.ms-rating-box {
+  color: #98AFC7;
+ }
+
+/********** Nav list **********/
+.ms-nav-group .nav-link,
+.ms-nav-group .nav-link.active {
+  color: inherit;
+  background-color: transparent;
+ }
+
+.ms-nav-group .nav-link::after {
+  background: #98AFC7;
+ }
+
+/********** Overlay **********/
+.ms-overlay {
+  background: linear-gradient(-45deg, rgba(152, 175, 199, 0.95), rgba(152, 175, 199, 0.85));
+ }
+
+/********** Home style bg **********/
+.ms-bg {
+  background-image: linear-gradient(-50deg, #98AFC7 50%, #54718a 50%);
+ }
+
+/********** Checkbox **********/
+.ms-checkbox:hover + label:before, .ms-checkbox:checked + label:before {
+  border-color: #98AFC7;
+ }
+
+.ms-checkbox:not(:disabled):hover + label, .ms-checkbox:not(:disabled):checked + label {
+  color: #98AFC7;
+ }
+
+.ms-checkbox:not(:disabled):checked + label:after {
+  background: #98AFC7;
+ }
+/****************************************
+END COMMON SCSS
+*****************************************/
+
+
+/****************************************
+2. WINDOW/PAGE LOADER
+*****************************************/
+.ms-preloader-wrapper {
+  background: linear-gradient(to right, #98AFC7 0%, #54718a 100%);
+ }
+/****************************************
+ END WINDOW/PAGE LOADER
+*****************************************/
+
+
+/****************************************
+START HEADER/NAV CONTAINER
+*****************************************/
+.ms-inner-page .ms-navbar-fixed {
+  background: transparent -webkit-linear-gradient(left, #98AFC7 40%, #54718a 100%) repeat scroll 0 0;
+  background: transparent linear-gradient(to right, #98AFC7 40%, #54718a 100%) repeat scroll 0 0;
+ }
+
+.ms-navbar-fixed.ms-fixed {
+  background: transparent -webkit-linear-gradient(left, #98AFC7 40%, #54718a 100%) repeat scroll 0 0;
+  background: transparent linear-gradient(to right, #98AFC7 40%, #54718a 100%) repeat scroll 0 0;
+ }
+
+@media (max-width: 767px) {
+  /********** Page wrapper container **********/
+  .ms-page-wrapper .ms-navbar-fixed.show {
+    background: transparent -webkit-linear-gradient(left, #98AFC7 40%, #54718a 100%) repeat scroll 0 0;
+    background: transparent linear-gradient(to right, #98AFC7 40%, #54718a 100%) repeat scroll 0 0;
+ }
+}
+/****************************************
+END HEADER/NAV CONTAINER
+*****************************************/
+
+/****************************************
+START HOME CONTAINER
+*****************************************/
+.ms-card .ms-card-body .ms-card-title-icon {
+  color: #98AFC7;
+ }
+
+/*********** 4.1 HOME STYLE 1 *********/
+.ms-home-style-1 {
+  background: transparent -webkit-linear-gradient(left, #98AFC7 40%, #54718a 100%) repeat scroll 0 0;
+  background: transparent linear-gradient(to right, #98AFC7 40%, #54718a 100%) repeat scroll 0 0;
+ }
+
+.ms-home-style-2 {
+  background: transparent -webkit-linear-gradient(left, #98AFC7 40%, #54718a 100%) repeat scroll 0 0;
+  background: transparent linear-gradient(to right, #98AFC7 40%, #54718a 100%) repeat scroll 0 0;
+ }
+
+.ms-home-style-3 {
+  background: transparent -webkit-linear-gradient(left, #98AFC7 40%, #54718a 100%) repeat scroll 0 0;
+  background: transparent linear-gradient(to right, #98AFC7 40%, #54718a 100%) repeat scroll 0 0;
+ }
+
+.ms-home-style-4 {
+  background: transparent -webkit-linear-gradient(left, #98AFC7 40%, #54718a 100%) repeat scroll 0 0;
+  background: transparent linear-gradient(to right, #98AFC7 40%, #54718a 100%) repeat scroll 0 0;
+ }
+
+.ms-home-style-5 {
+  background: transparent -webkit-linear-gradient(left, #98AFC7 40%, #54718a 100%) repeat scroll 0 0;
+  background: transparent linear-gradient(to right, #98AFC7 40%, #54718a 100%) repeat scroll 0 0;
+ }
+
+/*********** 4.2 HOME BG STYLE *********/
+/********** 4.2.1 HOME BG IMG *********/
+.ms-home-bg-img .ms-home-bg-overlay::after {
+  background: #98AFC7;
+ }
+
+/********** 4.2.2 HOME BG VIDEO *********/
+.ms-home-bg-video .ms-home-bg-overlay::after {
+  background: #98AFC7;
+ }
+
+/*********** 4.3 HOME BOTTOM STYLE *********/
+/*********** 4.3.6 HOME BOTTOM VIDEO ******/
+  .ms-home-btm-video-container .ms-home-video-overlay {
+    background: rgba(152, 175, 199, 0.35);
+   }
+
+  .ms-home-btm-video-container .ms-home-video-overlay button {
+    color: #98AFC7;
+  }
+/****************************************
+END HOME CONTAINER
+*****************************************/
+
+
+/****************************************
+FEATURES CONTAINER
+*****************************************/
+.ms-media:hover .ms-media-avatar {
+  background-color: #98AFC7;
+ }
+
+.ms-media .ms-media-avatar {
+  border: 1px solid #98AFC7;
+  color: #98AFC7;
+ }
+/****************************************
+ END FEATURES CONTAINER
+*****************************************/
+
+
+/****************************************
+HOW IT WORK CONTAINER
+*****************************************/
+.ms-work-container::before {
+  background-color: #98AFC7;
+ }
+
+.ms-work-container .ms-work-single-line .ms-work-icon {
+  color: #98AFC7;
+  border-color: #98AFC7;
+ }
+
+.ms-work-container .ms-work-single-line.active .ms-work-icon, .ms-work-container .ms-work-single-line:focus .ms-work-icon, .ms-work-container .ms-work-single-line:active .ms-work-icon, .ms-work-container .ms-work-single-line:hover .ms-work-icon {
+  background-color: #98AFC7;
+ }
+/****************************************
+ END HOW IT WORK CONTAINER
+*****************************************/
+
+
+/****************************************
+VIDEO TUTORIAL CONTAINER
+*****************************************/
+.ms-video-container .ms-video-start-icon {
+  color: #98AFC7;
+ }
+/****************************************
+ END VIDEO TUTORIAL  CONTAINER
+*****************************************/
+
+
+/****************************************
+ACTIVITIES COUNTER CONTAINER
+*****************************************/
+.ms-counter-container {
+  color: #98AFC7;
+ }
+/****************************************
+ END ACTIVITIES COUNTER CONTAINER
+*****************************************/
+
+
+/****************************************
+PRICING CONTAINER
+*****************************************/
+.ms-single-pricing-table.ms-border .ms-pricing-header {
+  border-color: #98AFC7;
+ }
+
+.ms-single-pricing-table .ms-price-discout-alt {
+  background: #98AFC7;
+ }
+
+.ms-pricing-header h4 {
+  color: #98AFC7;
+ }
+/****************************************
+ END PRICING CONTAINER
+*****************************************/
+
+
+/****************************************
+FAQ CONTAINER
+*****************************************/
+.ms-tab-container .nav-link::before {
+  background: #98AFC7;
+ }
+
+.ms-tab-container.ms-border .nav-link {
+  border-color: #98AFC7;
+ }
+
+.ms-tab-container .nav-link:hover,
+.ms-tab-container .nav-link.active, .ms-tab-container.show > .nav-link {
+  color: #98AFC7;
+ }
+
+.ms-accordion.ms-border .ms-accordion-header {
+  border-color: #98AFC7;
+ }
+/****************************************
+ END FAQ CONTAINER
+*****************************************/
+
+
+/****************************************
+BLOGS CONTAINER
+*****************************************/
+.ms-blog-body a:hover,
+.ms-post-content a:hover {
+  color: #98AFC7;
+ }
+/****************************************
+ END BLOGS CONTAINER
+*****************************************/
+
+
+/****************************************
+CONTACT CONTAINER
+*****************************************/
+.ms-contact-container .ms-address-box {
+  background-color: #98AFC7;
+ }
+
+/****************************************
+ END CONTACT CONTAINER
+*****************************************/
+
+
+/****************************************
+18. FOOTER CONTAINER
+*****************************************/
+/********** Subscribe form box **********/
+.ms-subscribe-box [type='submit'] {
+  background-color: #98AFC7;
+ }
+
+.ms-subscribe-box [type='submit']:hover,
+.ms-subscribe-box [type='submit']:focus,
+.ms-subscribe-box [type='submit']:active {
+  background-color: #98AFC7;
+ }
+
+/********** Social links box **********/
+.ms-social-box .ms-social-link:hover {
+  border-color: #98AFC7;
+  background: transparent -webkit-linear-gradient(left, #98AFC7 40%, #54718a 100%) repeat scroll 0 0;
+  background: transparent linear-gradient(to right, #98AFC7 40%, #54718a 100%) repeat scroll 0 0;
+ }
+
+.ms-social-box.ms-white-bg .ms-social-link {
+  border-color: #98AFC7;
+  color: #98AFC7;
+ }
+/****************************************
+ END FOOTER CONTAINER
+*****************************************/
+
+
+/****************************************
+19. START SCROLL TO TOP CONTAINER
+*****************************************/
+.ms-scroll-to-top {
+  background: linear-gradient(-45deg, #496173, #98AFC7);
+ }
+/****************************************
+ END SCROLL TO TOP CONTAINER
+*****************************************/
+
+
+/****************************************
+START OVERRIDE SCSS
+*****************************************/
+.ms-border,
+.ms-border.active,
+.ms-border-hover:hover {
+  border: 1px solid #98AFC7;
+ }
+
+[aria-expanded="true"] {
+  color: #98AFC7;
+ }
+
+/********** Outline button **********/
+[class*="btn-outline-"]:hover {
+  background-color: #98AFC7;
+  border-color: #98AFC7;
+ }
+
+.btn-outline-light:not(:disabled):not(.disabled).active,
+.btn-outline-light:not(:disabled):not(.disabled):focus,
+.btn-outline-light:not(:disabled):not(.disabled):active {
+  color: #98AFC7;
+ }
+
+.btn-outline-primary {
+  color: #98AFC7;
+  border-color: #98AFC7;
+ }
+
+.btn-outline-primary:not(:disabled):not(.disabled).active,
+.btn-outline-primary:not(:disabled):not(.disabled):active,
+.show > .btn-outline-primary.dropdown-toggle {
+  background-color: #98AFC7;
+  border-color: #98AFC7;
+ }
+
+/********** Form Group **********/
+.ms-form-group input:not(:required):not([value=""]) ~ label, .ms-form-group input:not(:required):focus ~ label, .ms-form-group input:focus ~ label, .ms-form-group input:valid ~ label, .ms-form-group input[type='email']:not([value=""]):invalid ~ label, .ms-form-group input[type='password']:not([value=""]):invalid ~ label, .ms-form-group input[type='password']:not([value=""]):invalid ~ label, .ms-form-group input[type='number']:not([value=""]):invalid ~ label,
+.ms-form-group textarea:not(:required):not([value=""]) ~ label,
+.ms-form-group textarea:not(:required):focus ~ label,
+.ms-form-group textarea:focus ~ label,
+.ms-form-group textarea:valid ~ label,
+.ms-form-group textarea[type='email']:not([value=""]):invalid ~ label,
+.ms-form-group textarea[type='password']:not([value=""]):invalid ~ label,
+.ms-form-group textarea[type='password']:not([value=""]):invalid ~ label,
+.ms-form-group textarea[type='number']:not([value=""]):invalid ~ label {
+  color: #98AFC7;
+ }
+
+.ms-form-group input:focus,
+.ms-form-group textarea:focus {
+  -webkit-box-shadow: 0 1px 0 0 #98AFC7;
+  -moz-box-shadow: 0 1px 0 0 #98AFC7;
+  box-shadow: 0 1px 0 0 #98AFC7;
+ }
+
+.ms-form-group input:focus ~ button, .ms-form-group input ~ button:hover,
+.ms-form-group textarea:focus ~ button,
+.ms-form-group textarea ~ button:hover {
+  color: #98AFC7;
+ }
+
+/********** Slick Slider **********/
+.slick-slider:hover .slick-prev:before,
+.slick-slider:hover .slick-next:before {
+  border-color: #98AFC7;
+  color: #98AFC7;
+ }
+
+.slick-slider .slick-prev:hover:before, .slick-slider .slick-prev:hover:before,
+.slick-slider .slick-next:hover:before,
+.slick-slider .slick-next:hover:before {
+  border-color: #98AFC7;
+  background-color: #98AFC7;
+  color: #ffffff;
+ }
+
+/********** Venobo popup **********/
+.vbox-overlay {
+  background: rgba(152, 175, 199, 0.9) !important;
+ }
+
+.vbox-overlay .vbox-close {
+  color: #98AFC7 !important;
+ }
+/****************************************
+END OVERRIDE CSS/SCSS
+*****************************************/
+
+
+/****************************************
+START BLOG PAGE SCSS
+*****************************************/
+/********** 21.1. BLOG DEFAULT **********/
+.ms-single-find a:hover {
+  color: #98AFC7;
+ }
+
+.ms-gallery-container .ms-gallery-item:hover::before {
+  background-color: rgba(152, 175, 199, 0.55);
+ }
+
+.ms-post-media:hover .ms-post-title a {
+  color: #98AFC7;
+ }
+/****************************************
+END BLOG PAGE SCSS
+*****************************************/
+
+
+/****************************************
+24. START SIGNUP/SIGNIN PAGE SCSS
+*****************************************/
+.ms-sign-form-container .ms-form-overlay::after {
+  background: #98AFC7;
+}
+
+.ms-sign-form-container .ms-sign-form .ms-form-box .ms-form-suggest:hover {
+  color: #98AFC7;
+}
+/*****************************************
+END SIGNUP/SIGNIN PAGE SCSS
+*****************************************/

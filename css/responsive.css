@@ -1,0 +1,488 @@
+/********** MEDIA QUERY INDEX *********
+1. START MEDIUM DEVICES, TABLETS. SIZE(min-width: 992px) and (max-width: 1200px)
+2. START SMALL DEVICES, TABLETS. SIZE(min-width: 768px) and (max-width: 991px)
+3. START SMALL DEVICES, PHONES. SIZE(max-width: 767px)
+4. START EXTRA SMALL DEVICES, PHONES. SIZE(max-width: 480px)
+5. START EXTRA SMALL DEVICES, PHONES. SIZE(max-width: 320px)
+*****************************************/
+
+
+/************************************************
+1. START MEDIUM DEVICES, TABLETS. SIZE(min-width: 992px) and (max-width: 1200px)
+************************************************/
+@media (min-width: 992px) and (max-width: 1200px) {
+    .container {
+        max-width: 100%;
+    }
+
+    .ms-navbar-fixed {
+        padding: 2rem 0;
+    }
+}
+/************************************************
+End medium Devices, Desktops
+************************************************/
+
+
+/************************************************
+2. START SMALL DEVICES, TABLETS. SIZE(min-width: 768px) and (max-width: 991px)
+************************************************/
+@media (min-width: 768px) and (max-width: 991px) {
+    /******** Start common style ********/
+    h1, .h1 {
+        font-size: 1.5rem;
+    }
+
+    h2, .h2,
+    h4, .h4 {
+        font-size: 1.3rem;
+    }
+
+    h5, .h5 {
+        font-size: 1rem;
+    }
+
+    .container {
+        max-width: 100%;
+    }
+
+    /******** End common style ********/
+    /******** Start page wrapper ********/
+    .ms-page-wrapper .ms-home-content {
+        margin-top: 8rem;
+    }
+
+    .ms-page-wrapper .ms-home-btm-triangle::after, .ms-page-wrapper .ms-home-btm-triangle::before {
+        border-top: 6rem solid transparent;
+    }
+
+    .ms-page-wrapper .ms-wave-1::after {
+        height: 160px;
+    }
+
+    /******** End page wrapper ********
+
+
+    /******** Start blog list page ********/
+    .ms-blogs-container {
+        padding-top: 4rem;
+    }
+
+    /******** End blog list page ********/
+    /******** Start blog details page ********/
+    .ms-blog-details-container {
+        padding: 3rem 0;
+    }
+
+    .ms-blog-details-container > .container {
+        max-width: 90%;
+    }
+
+    /******** End blog details page ********/
+    /******** Start sign in page ********/
+    .ms-sign-form-container {
+        width: 80vw;
+    }
+
+    /******** End sign in page ********/
+    /******** Start coming soon page ********/
+    .ms-coming-soon-container .ms-date-count-container::before {
+        display: none !important;
+    }
+
+    /******** End coming soon page ********/
+    /******** Start coming soon page ********/
+    .ms-coming-soon-container .ms-subscribe-box {
+        width: 60%;
+    }
+
+    /******** End coming soon page ********/
+}
+/************************************************
+  END SMALL DEVICES, TABLETS
+************************************************/
+
+
+/************************************************
+3. START SMALL DEVICES, PHONES. SIZE(max-width: 767px)
+************************************************/
+@media (max-width: 767px) {
+    /******** Start common style ********/
+    h1, .h1 {
+        font-size: 1.5rem;
+    }
+
+    h2, .h2,
+    h4, .h4 {
+        font-size: 1.3rem;
+    }
+
+    h5, .h5 {
+        font-size: 1rem;
+    }
+
+    .container {
+        max-width: 100%;
+    }
+
+    .slick-prev,
+    .slick-next {
+        z-index: 2;
+    }
+
+    .slick-prev::before,
+    .slick-next::before {
+        opacity: 1;
+    }
+
+    .ms-comment-media .ms-comment-author-avatar img,
+    .ms-comment-reply-media .ms-comment-author-avatar img {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .ms-big-btn:not(:last-child) {
+        margin-right: 0.5rem;
+    }
+
+    .ms-item-container {
+        padding: 3.5rem 0;
+    }
+
+    /******** End common style ********/
+    /******** Start section header ********/
+    .ms-section-header {
+        width: 100%;
+        margin: 0 auto 3rem;
+    }
+
+    /******** Page wrapper container ********/
+    .ms-page-wrapper .ms-navbar-fixed.ms-fixed {
+        padding: 0.5rem 1rem;
+    }
+
+    .ms-page-wrapper .ms-navbar-fixed .navbar-collapse .nav-link {
+        -ms-box-orient: horizontal;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -moz-flex;
+        display: -webkit-flex;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        font-size: 1.25rem;
+    }
+
+    .ms-page-wrapper .ms-navbar-fixed.show {
+        background: transparent -webkit-linear-gradient(left, #6323b7 40%, #7827e2 100%) repeat scroll 0 0;
+        background: transparent linear-gradient(to right, #6323b7 40%, #7827e2 100%) repeat scroll 0 0;
+    }
+
+    .ms-page-wrapper .ms-navbar-fixed [aria-expanded="true"] {
+        opacity: 1;
+    }
+
+    .ms-page-wrapper .ms-navbar-fixed .navbar-collapse {
+        overflow: hidden;
+    }
+
+    .ms-page-wrapper .ms-home-item .ms-home-content {
+        margin-top: 5rem;
+        padding-right: 1rem;
+        margin-top: 3rem;
+        padding: 0;
+        text-align: center;
+        flex-basis: unset;
+    }
+
+    .ms-page-wrapper .ms-home-item .ms-home-content .ms-home-level {
+        font-size: 0.95rem;
+    }
+
+    .ms-page-wrapper .ms-home-item .container {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ms-page-wrapper .ms-home-item .ms-home-slider-img {
+        margin-top: 2rem;
+        flex-basis: unset;
+    }
+
+    .ms-page-wrapper .ms-home-item .ms-home-slider-img img {
+        margin: 0 auto;
+    }
+
+    .ms-page-wrapper .ms-home-item .img-fluid {
+        max-width: 50%;
+    }
+
+    .ms-page-wrapper .ms-home-style-3 .ms-home-item .ms-home-content {
+        width: 100%;
+        margin-bottom: 10rem;
+    }
+
+    .ms-page-wrapper .ms-home-style-3 .ms-home-item .ms-content-container {
+        width: 100%;
+    }
+
+    .ms-page-wrapper .ms-home-style-4 .ms-home-item .ms-content-container {
+        width: 100%;
+    }
+
+    .ms-page-wrapper .ms-home-style-5 .ms-home-item .ms-home-content {
+        margin-bottom: 8rem;
+    }
+
+    .ms-page-wrapper .ms-home-style-5 .ms-home-item .ms-content-container {
+        width: 100%;
+    }
+
+    .ms-page-wrapper .ms-home-btm-triangle::after, .ms-page-wrapper .ms-home-btm-triangle::before {
+        border-top: 6rem solid transparent;
+    }
+
+    .ms-page-wrapper .ms-home-btm-triangle .ms-home-slider-img {
+        margin-bottom: 5rem;
+    }
+
+    .ms-page-wrapper .ms-wave-1::after {
+        height: 125px;
+    }
+
+    /******** Start home bottom video style ********/
+    .ms-home-btm-video-container .ms-home-video {
+        width: 460px;
+    }
+
+    /******** End home bottom video style ********/
+    /******** Start work it section ********/
+    .ms-work-imgs-box {
+        -ms-box-orient: horizontal;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -moz-flex;
+        display: -webkit-flex;
+        display: flex;
+        justify-content: center;
+    }
+
+    /******** End work it section ********/
+    /******** Start video section ********/
+    .ms-video-container {
+        height: 350px;
+    }
+
+    /******** End video section ********/
+    /******** Start contact section ********/
+    .ms-contact-container {
+        max-width: 94%;
+        border-bottom-left-radius: 0.25rem;
+        border-bottom-right-radius: 0.25rem;
+    }
+
+    .ms-contact-container .ms-address-description {
+        margin-bottom: 2rem;
+    }
+
+    .ms-contact-container .ms-address-box,
+    .ms-contact-container .ms-contact-us-box {
+        padding: 1.5rem;
+    }
+
+    .ms-contact-container .ms-address-box {
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 0.25rem;
+    }
+
+    .ms-contact-container .ms-address-box .ms-address-info {
+        margin-bottom: 0;
+    }
+
+    .ms-contact-container .ms-contact-us-box {
+        border-bottom-left-radius: 0.25rem;
+        border-bottom-right-radius: 0.25rem;
+        border-top-right-radius: 0;
+    }
+
+    /******** End contact section ********/
+    /******** Start footer section ********/
+    .ms-footer {
+        margin-top: 13rem;
+        padding: 3rem 0 3rem;
+    }
+
+    .ms-footer-copyright-container {
+        margin-top: 0;
+        -ms-box-orient: horizontal;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -moz-flex;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ms-footer-copyright-container .ms-footer-copyright {
+        margin-bottom: 2rem;
+    }
+
+    /******** End footer section ********/
+    /******** Start blog list page ********/
+    .ms-blogs-container {
+        padding-top: 2rem;
+    }
+
+    /******** End blog list page ********/
+    /******** Start blog details page ********/
+    .ms-blog-details-container {
+        padding: 2rem 0;
+    }
+
+    /******** End blog details page ********/
+    /******** Start inner content page ********/
+    .ms-inner-page .ms-inner-content-container {
+        margin: 8rem auto 2rem 0;
+    }
+
+    /******** End inner content page ********/
+    /******** Start footer style page ********/
+    .ms-footer-item-group {
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ms-footer-item-group .ms-footer-item {
+        align-items: center;
+    }
+
+    .ms-footer-item-group .ms-first-sm-btn {
+        margin: 0 !important;
+    }
+
+    /******** End footer style page ********/
+    /******** Start sign in page ********/
+    .ms-sign-form-container {
+        width: 80vw;
+    }
+
+    .ms-sign-form-container .ms-sign-form {
+        width: 100%;
+    }
+
+    .ms-sign-form-container.ms-open-signup-form .ms-sign-form {
+        right: 0;
+    }
+
+    /******** End sign in page ********/
+    /******** Start error page ********/
+    .ms-error-page-container .ms-error-page-top .h1 {
+        font-size: 6rem;
+        letter-spacing: 1.25rem;
+    }
+
+    /******** End error page ********/
+    /******** Start coming soon page ********/
+    .ms-coming-soon-container {
+        margin: 3rem 0;
+        height: 100%;
+    }
+
+    .ms-coming-soon-container .ms-coming-soon-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .ms-coming-soon-container .ms-date-count-container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .ms-coming-soon-container .ms-date-count-container h2 {
+        font-size: 2rem;
+        line-height: 4rem;
+        margin-bottom: 0;
+    }
+
+    .ms-coming-soon-container .ms-date-count-container::before {
+        display: none !important;
+    }
+
+    .ms-coming-soon-container .ms-subscribe-box {
+        width: 80%;
+        margin-top: 0;
+    }
+    /******** End coming soon page ********/
+}
+/************************************************
+END SMALL DEVICES, PHONES
+************************************************/
+
+
+/************************************************
+4. START EXTRA SMALL DEVICES, PHONES. SIZE(max-width: 480px)
+************************************************/
+@media (max-width: 480px) {
+    .ms-home-bg-img .ms-home-bg-overlay {
+        background-position: center;
+    }
+
+    .ms-big-btn:not(:last-child) {
+        margin-right: 0;
+    }
+
+    .ms-home-btm-cloud::after {
+        height: 80px;
+    }
+
+    /******** Start home bottom video style ********/
+    .ms-home-btm-video-container .ms-home-video {
+        width: 95vw;
+        height: 250px;
+    }
+
+    /******** End home bottom video style ********/
+    /******** Start sign in page ********/
+    .ms-sign-form-container {
+        width: 100%;
+    }
+
+    .ms-sign-form-container .ms-sign-form .ms-form-box {
+        padding: 2rem;
+    }
+
+    /******** End sign in page ********/
+    /******** Start coming soon page ********/
+    .ms-coming-soon-container .ms-subscribe-box {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    /******** End coming soon page ********/
+}
+/************************************************
+END EXTRA SMALL DEVICES, PHONES
+************************************************/
+
+
+/************************************************
+5. START EXTRA SMALL DEVICES, PHONES. SIZE(max-width: 320px)
+************************************************/
+@media (max-width: 320px) {
+    .ms-footer-copyright-container p {
+        font-size: 0.8rem;
+        font-weight: bolder;
+    }
+}
+/************************************************
+END EXTRA SMALL DEVICES, PHONES
+************************************************/
