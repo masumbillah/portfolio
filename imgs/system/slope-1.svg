@@ -1,0 +1,18 @@
+<svg width="1440" height="410" xmlns="http://www.w3.org/2000/svg" style="vector-effect: non-scaling-stroke;" stroke="null">
+ <title style="vector-effect: non-scaling-stroke;" stroke="null">wave</title>
+ <desc style="vector-effect: non-scaling-stroke;" stroke="null">Created by themebins</desc>
+ <defs style="vector-effect: non-scaling-stroke;" stroke="null">
+  <linearGradient style="vector-effect: non-scaling-stroke;" stroke="null" y2="100%" y1="-10.959%" x2="NaN" x1="NaN" id="svg_1">
+   <stop style="vector-effect: non-scaling-stroke;" stroke="null" offset="0%" stop-color="#ffffff"/>
+   <stop style="vector-effect: non-scaling-stroke;" stroke="null" offset="100%" stop-color="#ffffff"/>
+  </linearGradient>
+ </defs>
+ <g stroke="null">
+  <title stroke="null">background</title>
+  <rect stroke="null" fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g stroke="null">
+  <title stroke="null">Layer 1</title>
+  <path stroke="null" id="svg_2" d="m2086.806811,397.39776c-407.272087,0 -536.786693,-86.852559 -1062.060889,-86.673481c-523.831042,0 -654.788802,86.673481 -1033.25673,86.673481l0,55.155852l2095.324166,0s-0.006548,-34.382869 -0.006548,-55.155852z" fill-rule="evenodd" fill="url(#svg_1)"/>
+ </g>
+</svg>

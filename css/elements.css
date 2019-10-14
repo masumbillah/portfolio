@@ -1,0 +1,15 @@
+/* ANIMATION STYLE */
+@import "animate.css";
+
+/* SLICK SLIDER STYLE */
+@import "slick-slider/slick.css";
+@import "slick-slider/slick-theme.css";
+
+/* VENOBOX POPUP STYLE */
+@import "venobox.css"; 
+
+/* YOUTUBE PLAYER */
+@import "youtube-player/jquery.mb.YTPlayer.min.css"; 
+
+/* OPENSTREET MAP STYPE */
+@import "openstreet-map/leaflet.css";

@@ -1,0 +1,108 @@
+.ms-demo-home.ms-home-btm-wave.ms-wave-3::after {
+    bottom: -4rem;
+}
+
+/*.ms-options-box {*/
+    /*position: fixed;*/
+    /*right: -180px;*/
+    /*top: 15%;*/
+    /*width: 180px;*/
+    /*background: #ffffff;*/
+    /*z-index: 9999;*/
+    /*min-height: 50px;*/
+    /*border-bottom-left-radius: 0.1rem;*/
+    /*box-shadow: 0 2px 13px 0 rgba(0, 0, 0, 0.1);*/
+    /*transition: all 0.2s ease-in;*/
+/*}*/
+
+/*.ms-options-box.open {*/
+    /*right: 0;*/
+/*}*/
+
+/*.ms-options-handler {*/
+    /*position: absolute;*/
+    /*padding: 0.5rem;*/
+    /*left: -2.4rem;*/
+    /*background: #ffffff;*/
+    /*border-top-left-radius: 0.1rem;*/
+    /*border-bottom-left-radius: 0.1rem;*/
+    /*cursor: pointer;*/
+    /*box-shadow: -7px 6px 20px 0 rgba(0, 0, 0, 0.08);*/
+/*}*/
+
+/*.ms-list-group {*/
+    /*list-style: none;*/
+    /*padding: 0;*/
+    /*margin: 0.5rem 0;*/
+/*}*/
+
+/*.ms-list-group .ms-list-group-item.active,*/
+/*.ms-list-group .ms-list-group-item:active,*/
+/*.ms-list-group .ms-list-group-item:active,*/
+/*.ms-list-group .ms-list-group-item:hover {*/
+    /*color: #7827e2;*/
+    /*cursor: pointer;*/
+    /*transition: all 0.3s ease-in-out;*/
+/*}*/
+
+/*.ms-list-group .ms-list-group-item {*/
+    /*padding: 0.35rem 1rem;*/
+/*}*/
+
+/* Color style */
+/*.ms-options-box .ms-themes-box {*/
+    /*padding: 0.8rem 0.5rem;*/
+/*}*/
+
+/*.ms-options-box .ms-theme {*/
+    /*text-align: center;*/
+    /*width: 50%;*/
+    /*margin-top: 10px;*/
+    /*float: left;*/
+/*}*/
+
+/*.ms-options-box .ms-theme a {*/
+    /*display: inline-flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    /*color: #fff;*/
+    /*width: 50px;*/
+    /*height: 50px;*/
+    /*border-radius: 3px;*/
+    /*margin-bottom: 5px;*/
+    /*-webkit-transition: all .3s ease;*/
+    /*-moz-transition: all .3s ease;*/
+    /*transition: all .3s ease;*/
+/*}*/
+
+/*.ms-options-box .ms-theme a>i {*/
+    /*font-size: 1.5rem;*/
+    /*opacity: 0;*/
+/*}*/
+
+/*.ms-options-box .ms-theme:hover a,*/
+/*.ms-options-box .ms-theme.active a {*/
+    /*border-radius: 50%;*/
+/*}*/
+
+/*.ms-options-box .ms-theme.active a>i {*/
+    /*opacity: 1;*/
+/*}*/
+
+/*.ms-rotated:before {*/
+    /*animation: rotation 2s infinite linear;*/
+/*}*/
+
+/*.open .ms-options-handler .ms-rotated:before,*/
+/*.ms-options-handler:hover .ms-rotated:before {*/
+    /*animation: unset;*/
+/*}*/
+
+/*@-webkit-keyframes rotation {*/
+    /*from {*/
+        /*transform: rotate(360deg);*/
+    /*}*/
+    /*to {*/
+        /*transform: rotate(0deg);*/
+    /*}*/
+/*}*/

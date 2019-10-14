@@ -1,0 +1,618 @@
+ /*********** 1.1 DEFAULT VARIABLES ******/
+ $blue-gray: #98AFC7;
+ $blue-gray-light: #54718a;
+ $vbox-overlay-bg-color: rgba(152, 175, 199, 0.9);
+ $gallery-img-hover-bg-color: rgba(152, 175, 199, 0.55);
+ $home-video-overlay-bg-color: rgba(152, 175, 199, 0.35);
+ $scroll-to-top-bg: linear-gradient(-45deg, #496173, $blue-gray);
+ $ms-bg: linear-gradient(-50deg, $blue-gray 50%, $blue-gray-light 50%);
+ $preloader-wrapper-bg: linear-gradient(to right, $blue-gray 0%, $blue-gray-light 100%);
+ $overlay-bg: linear-gradient(-45deg, rgba(152, 175, 199, 0.95), rgba(152, 175, 199, 0.85));
+ /********** END DEFAULT VARIABLES *******/
+
+ /********** BOXSHADOW **********/
+ @mixin boxshadow($box-shadow) {
+   -webkit-box-shadow: $box-shadow;
+   -moz-box-shadow: $box-shadow;
+   box-shadow: $box-shadow;
+ }
+
+ /********** COMMON RGB **********/
+ @mixin commonBg(){
+   background: rgba(0, 0, 0, 0) -webkit-linear-gradient(left, $blue-gray 40%, $blue-gray-light 100%) repeat scroll 0 0;
+   background: rgba(0, 0, 0, 0) linear-gradient(to right, $blue-gray 40%, $blue-gray-light 100%) repeat scroll 0 0;
+ }
+
+ /****************************************
+ 1. DEFAULT SCSS
+ *****************************************/
+ /*********** 1.2 COMMON SCSS *************/
+ .ms-primary-bg {
+   background-color: $blue-gray;
+ }
+
+ .ms-text-primary {
+   color: $blue-gray;
+ }
+
+ /********** Widget list **********/
+ .ms-widget-list {
+
+   li:hover,
+   li:active,
+   li.active {
+     color: $blue-gray;
+
+     .ms-number {
+       background-color: $blue-gray;
+     }
+   }
+ }
+
+ .ms-tag {
+   border-color: $blue-gray;
+   color: $blue-gray;
+
+   &:hover,
+   &.active {
+     background-color: $blue-gray;
+     border-color: $blue-gray
+   }
+ }
+
+ /********** Header divider **********/
+ .ms-divider {
+   border-top: 1px solid $blue-gray;
+
+   &::after {
+     background-color: $blue-gray;
+   }
+
+   &.ms-reverse {
+     &::after {
+       border-color: $blue-gray;
+     }
+   }
+ }
+
+ /********** Pagination **********/
+ .ms-pagination-container {
+   .page-link.ms-border {
+     color: $blue-gray;
+   }
+
+   .ms-page-item {
+     &.active .page-link,
+     .page-link:hover {
+       background: $blue-gray;
+     }
+   }
+ }
+
+ /********** Rating **********/
+ .ms-rating-box {
+   color: $blue-gray;
+ }
+
+ /********** Nav list **********/
+ .ms-nav-group {
+
+   .nav-link,
+   .nav-link.active {
+     color: inherit;
+     background-color: transparent;
+   }
+
+   .nav-link {
+     &::after {
+       background: $blue-gray;
+     }
+   }
+ }
+
+ /********** Overlay **********/
+ .ms-overlay {
+   background: $overlay-bg;
+ }
+
+ /********** Home style bg **********/
+ .ms-bg {
+   background-image: $ms-bg;
+ }
+
+ /********** Checkbox **********/
+ .ms-checkbox {
+   &:hover + label:before,
+   &:checked + label:before {
+     border-color: $blue-gray;
+   }
+
+   &:not(:disabled):hover + label,
+   &:not(:disabled):checked + label {
+     color: $blue-gray;
+   }
+
+   &:not(:disabled):checked + label:after {
+     background: $blue-gray;
+   }
+ }
+ /****************************************
+ END COMMON SCSS
+ *****************************************/
+
+
+ /****************************************
+ 2. WINDOW/PAGE LOADER
+ *****************************************/
+ .ms-preloader-wrapper {
+   background: $preloader-wrapper-bg;
+ }
+ /****************************************
+  END WINDOW/PAGE LOADER
+ *****************************************/
+
+
+ /****************************************
+ 3. HEADER/NAV CONTAINER
+ *****************************************/
+ .ms-inner-page .ms-navbar-fixed {
+   @include commonBg();
+ }
+
+ .ms-navbar-fixed {
+   &.ms-fixed {
+     @include commonBg();
+   }
+ }
+
+ @media (max-width: 767px) {
+   /********** Page wrapper container **********/
+   .ms-page-wrapper {
+     .ms-navbar-fixed {
+       &.show {
+         @include commonBg();
+       }
+     }
+   }
+ }
+ /********** End main navbar style **********/
+
+ /****************************************
+ 4. HOME CONTAINER
+ *****************************************/
+ .ms-card {
+   .ms-card-body {
+     .ms-card-title-icon {
+       color: $blue-gray;
+     }
+   }
+ }
+
+ /*********** 4.1 HOME STYLE 1 *********/
+ .ms-home-style-1 {
+   @include commonBg();
+ }
+
+ .ms-home-style-2 {
+   @include commonBg();
+ }
+
+ .ms-home-style-3 {
+   @include commonBg();
+ }
+
+ .ms-home-style-4{
+   @include commonBg();
+ }
+
+ .ms-home-style-5 {
+   @include commonBg();
+ }
+
+ /*********** 4.2 HOME BG STYLE *********/
+ /********** 4.2.1 HOME BG IMG *********/
+ .ms-home-bg-img {
+   .ms-home-bg-overlay {
+     &::after {
+       background: $blue-gray;
+     }
+   }
+ }
+
+ /********** 4.2.2 HOME BG VIDEO *********/
+ .ms-home-bg-video {
+   .ms-home-bg-overlay {
+     &::after {
+       background: $blue-gray;
+     }
+   }
+ }
+
+ /*********** 4.3 HOME BOTTOM STYLE *********/
+ /*********** 4.3.6 HOME BOTTOM VIDEO ******/
+ .ms-home-btm-video-container {
+   .ms-home-video-overlay {
+     background: $home-video-overlay-bg-color;
+
+     button {
+       color: $blue-gray;
+     }
+   }
+ }
+ /****************************************
+ END HOME CONTAINER
+ *****************************************/
+
+
+ /****************************************
+ FEATURES CONTAINER
+ *****************************************/
+ .ms-media {
+   &:hover {
+     .ms-media-avatar {
+       background-color: $blue-gray;
+     }
+   }
+
+   .ms-media-avatar {
+     border: 1px solid $blue-gray;
+     color: $blue-gray;
+   }
+ }
+ /****************************************
+  END FEATURES CONTAINER
+ *****************************************/
+
+
+ /****************************************
+ HOW IT WORK CONTAINER
+ *****************************************/
+ .ms-work-container {
+   &::before {
+     background-color: $blue-gray;
+   }
+
+   .ms-work-single-line {
+
+     .ms-work-icon {
+       color: $blue-gray;
+       border-color: $blue-gray;
+     }
+
+     &.active, &:focus,
+     &:active, &:hover {
+       .ms-work-icon {
+         background-color: $blue-gray;
+       }
+     }
+   }
+ }
+ /****************************************
+  END HOW IT WORK CONTAINER
+ *****************************************/
+
+
+ /****************************************
+ VIDEO TUTORIAL CONTAINER
+ *****************************************/
+ .ms-video-container {
+   .ms-video-start-icon {
+     color: $blue-gray;
+   }
+ }
+ /****************************************
+  END VIDEO TUTORIAL  CONTAINER
+ *****************************************/
+
+
+ /****************************************
+ ACTIVITIES COUNTER CONTAINER
+ *****************************************/
+ .ms-counter-container {
+   color: $blue-gray;
+ }
+ /****************************************
+  END ACTIVITIES COUNTER CONTAINER
+ *****************************************/
+
+
+ /****************************************
+ PRICING CONTAINER
+ *****************************************/
+ .ms-single-pricing-table {
+
+   &.ms-border {
+     .ms-pricing-header {
+       border-color: $blue-gray;
+     }
+   }
+
+   .ms-price-discout-alt {
+     background: $blue-gray;
+   }
+ }
+
+ .ms-pricing-header {
+   h4 {
+     color: $blue-gray;
+   }
+ }
+ /****************************************
+  END PRICING CONTAINER
+ *****************************************/
+
+
+ /****************************************
+ FAQ CONTAINER
+ *****************************************/
+ .ms-tab-container {
+
+   .nav-link {
+     &::before {
+       background: $blue-gray;
+     }
+   }
+
+   &.ms-border {
+     .nav-link {
+       border-color: $blue-gray;
+     }
+   }
+
+   .nav-link:hover,
+   .nav-link.active,
+   &.show>.nav-link {
+     color: $blue-gray;
+   }
+ }
+
+ .ms-accordion {
+   &.ms-border {
+     .ms-accordion-header {
+       border-color: $blue-gray;
+     }
+   }
+ }
+ /****************************************
+  END FAQ CONTAINER
+ *****************************************/
+
+
+ /****************************************
+ BLOGS CONTAINER
+ *****************************************/
+ .ms-blog-body,
+ .ms-post-content {
+   a {
+     &:hover {
+       color: $blue-gray;
+     }
+   }
+ }
+ /****************************************
+  END BLOGS CONTAINER
+ *****************************************/
+
+
+ /****************************************
+ CONTACT CONTAINER
+ *****************************************/
+ .ms-contact-container {
+   .ms-address-box{
+     background-color: $blue-gray;
+   }
+ }
+ /****************************************
+  END CONTACT CONTAINER
+ *****************************************/
+
+
+ /****************************************
+ 18. FOOTER CONTAINER
+ *****************************************/
+ /********** Subscribe form box **********/
+ .ms-subscribe-box {
+
+   [type='submit']{
+     background-color: $blue-gray;
+   }
+
+   [type='submit']:hover,
+   [type='submit']:focus,
+   [type='submit']:active {
+     background-color: $blue-gray;
+   }
+ }
+
+ /********** Social links box **********/
+ .ms-social-box {
+   .ms-social-link {
+     &:hover{
+       border-color: $blue-gray;
+       @include commonBg();
+     }
+   }
+
+   &.ms-white-bg {
+     .ms-social-link {
+       border-color: $blue-gray;
+       color: $blue-gray;
+     }
+   }
+ }
+ /****************************************
+  END FOOTER CONTAINER
+ *****************************************/
+
+
+ /****************************************
+ 19. START SCROLL TO TOP CONTAINER
+ *****************************************/
+ .ms-scroll-to-top {
+   background: $scroll-to-top-bg;
+ }
+ /****************************************
+  END SCROLL TO TOP CONTAINER
+ *****************************************/
+
+
+ /****************************************
+ START OVERRIDE SCSS
+ *****************************************/
+ .ms-border,
+ .ms-border.active,
+ .ms-border-hover:hover {
+   border: 1px solid $blue-gray;
+ }
+
+ [aria-expanded="true"]{
+   color: $blue-gray;
+ }
+
+ /********** Outline button **********/
+ [class*="btn-outline-"] {
+   &:hover {
+     background-color: $blue-gray;
+     border-color: $blue-gray;
+   }
+ }
+
+ .btn-outline-light:not(:disabled):not(.disabled).active,
+ .btn-outline-light:not(:disabled):not(.disabled):focus,
+ .btn-outline-light:not(:disabled):not(.disabled):active {
+   color: $blue-gray;
+ }
+
+ .btn-outline-primary {
+   color: $blue-gray;
+   border-color: $blue-gray;
+ }
+
+ .btn-outline-primary:not(:disabled):not(.disabled).active,
+ .btn-outline-primary:not(:disabled):not(.disabled):active,
+ .show>.btn-outline-primary.dropdown-toggle {
+   background-color: $blue-gray;
+   border-color: $blue-gray;
+ }
+
+ /********** Form Group **********/
+ .ms-form-group{
+
+   input,
+   textarea {
+     &:not(:required):not([value=""]) ~ label,
+     &:not(:required):focus ~ label,
+     &:focus ~ label,
+     &:valid ~ label,
+     &[type='email']:not([value=""]):invalid ~ label,
+     &[type='password']:not([value=""]):invalid ~ label,
+     &[type='password']:not([value=""]):invalid ~ label,
+     &[type='number']:not([value=""]):invalid ~ label {
+       color: $blue-gray;
+     }
+
+     &:focus {
+       @include boxshadow(0 1px 0 0 $blue-gray);
+     }
+
+     &:focus ~ button,
+     & ~ button:hover {
+       color: $blue-gray;
+     }
+   }
+ }
+
+ /********** Slick Slider **********/
+ .slick-slider {
+   &:hover {
+     .slick-prev:before,
+     .slick-next:before {
+       border-color: $blue-gray;
+       color: $blue-gray;
+     }
+   }
+
+   .slick-prev:hover,
+   .slick-next:hover {
+     &:before,
+     &:before {
+       border-color: $blue-gray;
+       background-color: $blue-gray;
+       color: #ffffff;
+     }
+   }
+ }
+
+ /********** Venobo popup **********/
+ .vbox-overlay {
+   background: $vbox-overlay-bg-color !important;
+
+   .vbox-close {
+     color: $blue-gray !important;
+   }
+ }
+ /****************************************
+ END OVERRIDE CSS/SCSS
+ *****************************************/
+
+
+ /****************************************
+ START BLOG PAGE SCSS
+ *****************************************/
+ /********** 21.1. BLOG DEFAULT **********/
+ .ms-single-find {
+   a {
+     &:hover {
+       color: $blue-gray;
+     }
+   }
+ }
+
+ .ms-gallery-container {
+
+   .ms-gallery-item {
+     &:hover {
+       &::before {
+         background-color: $gallery-img-hover-bg-color;
+       }
+     }
+   }
+ }
+
+ .ms-post-media {
+   &:hover {
+     .ms-post-title a {
+       color: $blue-gray;
+     }
+   }
+ }
+ /****************************************
+ END BLOG PAGE SCSS
+ *****************************************/
+
+
+ /****************************************
+ 24. START SIGNUP/SIGNIN PAGE SCSS
+ *****************************************/
+ .ms-sign-form-container {
+   .ms-form-overlay {
+
+     &::after{
+       background: $blue-gray;
+     }
+   }
+
+   /********** Form box **********/
+   .ms-sign-form {
+     .ms-form-box {
+       .ms-form-suggest {
+         &:hover {
+           color: $blue-gray;
+         }
+       }
+     }
+   }
+ }
+ /*****************************************
+ END SIGNUP/SIGNIN PAGE SCSS
+ *****************************************/

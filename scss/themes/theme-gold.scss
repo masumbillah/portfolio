@@ -1,0 +1,618 @@
+ /*********** 1.1 DEFAULT VARIABLES *******/
+ $gold: #e87e04;
+ $gold-light: #b76505;
+ $vbox-overlay-bg-color: rgba(232, 126, 4, 0.9);
+ $gallery-img-hover-bg-color: rgba(232, 126, 4, 0.55);
+ $home-video-overlay-bg-color: rgba(232, 126, 4, 0.35);
+ $scroll-to-top-bg: linear-gradient(-45deg, #733d14, $gold);
+ $ms-bg: linear-gradient(-50deg, $gold 50%, $gold-light 50%);
+ $preloader-wrapper-bg: linear-gradient(to right, $gold 0%, $gold-light 100%);
+ $overlay-bg: linear-gradient(-45deg, rgba(232, 126, 4, 0.85), rgba(232, 126, 4, 0.95));
+ /********** END DEFAULT VARIABLES ********/
+
+ /********** BOXSHADOW **********/
+ @mixin boxshadow($box-shadow) {
+   -webkit-box-shadow: $box-shadow;
+   -moz-box-shadow: $box-shadow;
+   box-shadow: $box-shadow;
+ }
+
+ /********** COMMON RGB **********/
+ @mixin commonBg(){
+   background: rgba(0, 0, 0, 0) -webkit-linear-gradient(left, $gold 40%, $gold-light 100%) repeat scroll 0 0;
+   background: rgba(0, 0, 0, 0) linear-gradient(to right, $gold 40%, $gold-light 100%) repeat scroll 0 0;
+ }
+
+ /****************************************
+ 1. DEFAULT SCSS
+ *****************************************/
+ /*********** 1.2 COMMON SCSS ************/
+ .ms-primary-bg {
+   background-color: $gold;
+ }
+
+ .ms-text-primary {
+   color: $gold;
+ }
+
+ /********** Widget list **********/
+ .ms-widget-list {
+
+   li:hover,
+   li:active,
+   li.active {
+     color: $gold;
+
+     .ms-number {
+       background-color: $gold;
+     }
+   }
+ }
+
+ .ms-tag {
+   border-color: $gold;
+   color: $gold;
+
+   &:hover,
+   &.active {
+     background-color: $gold;
+     border-color: $gold
+   }
+ }
+
+ /********** Header divider **********/
+ .ms-divider {
+   border-top: 1px solid $gold;
+
+   &::after {
+     background-color: $gold;
+   }
+
+   &.ms-reverse {
+     &::after {
+       border-color: $gold;
+     }
+   }
+ }
+
+ /********** Pagination **********/
+ .ms-pagination-container {
+   .page-link.ms-border {
+     color: $gold;
+   }
+
+   .ms-page-item {
+     &.active .page-link,
+     .page-link:hover {
+       background: $gold;
+     }
+   }
+ }
+
+ /********** Rating **********/
+ .ms-rating-box {
+   color: $gold;
+ }
+
+ /********** Nav list **********/
+ .ms-nav-group {
+
+   .nav-link,
+   .nav-link.active {
+     color: inherit;
+     background-color: transparent;
+   }
+
+   .nav-link {
+     &::after {
+       background: $gold;
+     }
+   }
+ }
+
+ /********** Overlay **********/
+ .ms-overlay {
+   background: $overlay-bg;
+ }
+
+ /********** Home style bg **********/
+ .ms-bg {
+   background-image: $ms-bg;
+ }
+
+ /********** Checkbox **********/
+ .ms-checkbox {
+   &:hover + label:before,
+   &:checked + label:before {
+     border-color: $gold;
+   }
+
+   &:not(:disabled):hover + label,
+   &:not(:disabled):checked + label {
+     color: $gold;
+   }
+
+   &:not(:disabled):checked + label:after {
+     background: $gold;
+   }
+ }
+ /****************************************
+ END COMMON SCSS
+ *****************************************/
+
+
+ /****************************************
+ 2. WINDOW/PAGE LOADER
+ *****************************************/
+ .ms-preloader-wrapper {
+   background: $preloader-wrapper-bg;
+ }
+ /****************************************
+  END WINDOW/PAGE LOADER
+ *****************************************/
+
+
+ /****************************************
+ 3. HEADER/NAV CONTAINER
+ *****************************************/
+ .ms-inner-page .ms-navbar-fixed {
+   @include commonBg();
+ }
+
+ .ms-navbar-fixed {
+   &.ms-fixed {
+     @include commonBg();
+   }
+ }
+
+ @media (max-width: 767px) {
+   /********** Page wrapper container **********/
+   .ms-page-wrapper {
+     .ms-navbar-fixed {
+       &.show {
+         @include commonBg();
+       }
+     }
+   }
+ }
+ /********** End main navbar style **********/
+
+ /****************************************
+ 4. HOME CONTAINER
+ *****************************************/
+ .ms-card {
+   .ms-card-body {
+     .ms-card-title-icon {
+       color: $gold;
+     }
+   }
+ }
+
+ /*********** 4.1 HOME STYLE 1 *********/
+ .ms-home-style-1 {
+   @include commonBg();
+ }
+
+ .ms-home-style-2 {
+   @include commonBg();
+ }
+
+ .ms-home-style-3 {
+   @include commonBg();
+ }
+
+ .ms-home-style-4{
+   @include commonBg();
+ }
+
+ .ms-home-style-5 {
+   @include commonBg();
+ }
+
+ /*********** 4.2 HOME BG STYLE *********/
+ /********** 4.2.1 HOME BG IMG *********/
+ .ms-home-bg-img {
+   .ms-home-bg-overlay {
+     &::after {
+       background: $gold;
+     }
+   }
+ }
+
+ /********** 4.2.2 HOME BG VIDEO *********/
+ .ms-home-bg-video {
+   .ms-home-bg-overlay {
+     &::after {
+       background: $gold;
+     }
+   }
+ }
+
+ /*********** 4.3 HOME BOTTOM STYLE *********/
+ /*********** 4.3.6 HOME BOTTOM VIDEO ******/
+ .ms-home-btm-video-container {
+   .ms-home-video-overlay {
+     background: $home-video-overlay-bg-color;
+
+     button {
+       color: $gold;
+     }
+   }
+ }
+ /****************************************
+ END HOME CONTAINER
+ *****************************************/
+
+
+ /****************************************
+ FEATURES CONTAINER
+ *****************************************/
+ .ms-media {
+   &:hover {
+     .ms-media-avatar {
+       background-color: $gold;
+     }
+   }
+
+   .ms-media-avatar {
+     border: 1px solid $gold;
+     color: $gold;
+   }
+ }
+ /****************************************
+  END FEATURES CONTAINER
+ *****************************************/
+
+
+ /****************************************
+ HOW IT WORK CONTAINER
+ *****************************************/
+ .ms-work-container {
+   &::before {
+     background-color: $gold;
+   }
+
+   .ms-work-single-line {
+
+     .ms-work-icon {
+       color: $gold;
+       border-color: $gold;
+     }
+
+     &.active, &:focus,
+     &:active, &:hover {
+       .ms-work-icon {
+         background-color: $gold;
+       }
+     }
+   }
+ }
+ /****************************************
+  END HOW IT WORK CONTAINER
+ *****************************************/
+
+
+ /****************************************
+ VIDEO TUTORIAL CONTAINER
+ *****************************************/
+ .ms-video-container {
+   .ms-video-start-icon {
+     color: $gold;
+   }
+ }
+ /****************************************
+  END VIDEO TUTORIAL  CONTAINER
+ *****************************************/
+
+
+ /****************************************
+ ACTIVITIES COUNTER CONTAINER
+ *****************************************/
+ .ms-counter-container {
+   color: $gold;
+ }
+ /****************************************
+  END ACTIVITIES COUNTER CONTAINER
+ *****************************************/
+
+
+ /****************************************
+ PRICING CONTAINER
+ *****************************************/
+ .ms-single-pricing-table {
+
+   &.ms-border {
+     .ms-pricing-header {
+       border-color: $gold;
+     }
+   }
+
+   .ms-price-discout-alt {
+     background: $gold;
+   }
+ }
+
+ .ms-pricing-header {
+   h4 {
+     color: $gold;
+   }
+ }
+ /****************************************
+  END PRICING CONTAINER
+ *****************************************/
+
+
+ /****************************************
+ FAQ CONTAINER
+ *****************************************/
+ .ms-tab-container {
+
+   .nav-link {
+     &::before {
+       background: $gold;
+     }
+   }
+
+   &.ms-border {
+     .nav-link {
+       border-color: $gold;
+     }
+   }
+
+   .nav-link:hover,
+   .nav-link.active,
+   &.show>.nav-link {
+     color: $gold;
+   }
+ }
+
+ .ms-accordion {
+   &.ms-border {
+     .ms-accordion-header {
+       border-color: $gold;
+     }
+   }
+ }
+ /****************************************
+  END FAQ CONTAINER
+ *****************************************/
+
+
+ /****************************************
+ BLOGS CONTAINER
+ *****************************************/
+ .ms-blog-body,
+ .ms-post-content {
+   a {
+     &:hover {
+       color: $gold;
+     }
+   }
+ }
+ /****************************************
+  END BLOGS CONTAINER
+ *****************************************/
+
+
+ /****************************************
+ CONTACT CONTAINER
+ *****************************************/
+ .ms-contact-container {
+   .ms-address-box{
+     background-color: $gold;
+   }
+ }
+ /****************************************
+  END CONTACT CONTAINER
+ *****************************************/
+
+
+ /****************************************
+ 18. FOOTER CONTAINER
+ *****************************************/
+ /********** Subscribe form box **********/
+ .ms-subscribe-box {
+
+   [type='submit']{
+     background-color: $gold;
+   }
+
+   [type='submit']:hover,
+   [type='submit']:focus,
+   [type='submit']:active {
+     background-color: $gold;
+   }
+ }
+
+ /********** Social links box **********/
+ .ms-social-box {
+   .ms-social-link {
+     &:hover{
+       border-color: $gold;
+       @include commonBg();
+     }
+   }
+
+   &.ms-white-bg {
+     .ms-social-link {
+       border-color: $gold;
+       color: $gold;
+     }
+   }
+ }
+ /****************************************
+  END FOOTER CONTAINER
+ *****************************************/
+
+
+ /****************************************
+ 19. START SCROLL TO TOP CONTAINER
+ *****************************************/
+ .ms-scroll-to-top {
+   background: $scroll-to-top-bg;
+ }
+ /****************************************
+  END SCROLL TO TOP CONTAINER
+ *****************************************/
+
+
+ /****************************************
+ START OVERRIDE SCSS
+ *****************************************/
+ .ms-border,
+ .ms-border.active,
+ .ms-border-hover:hover {
+   border: 1px solid $gold;
+ }
+
+ [aria-expanded="true"]{
+   color: $gold;
+ }
+
+ /********** Outline button **********/
+ [class*="btn-outline-"] {
+   &:hover {
+     background-color: $gold;
+     border-color: $gold;
+   }
+ }
+
+ .btn-outline-light:not(:disabled):not(.disabled).active,
+ .btn-outline-light:not(:disabled):not(.disabled):focus,
+ .btn-outline-light:not(:disabled):not(.disabled):active {
+   color: $gold;
+ }
+
+ .btn-outline-primary {
+   color: $gold;
+   border-color: $gold;
+ }
+
+ .btn-outline-primary:not(:disabled):not(.disabled).active,
+ .btn-outline-primary:not(:disabled):not(.disabled):active,
+ .show>.btn-outline-primary.dropdown-toggle {
+   background-color: $gold;
+   border-color: $gold;
+ }
+
+ /********** Form Group **********/
+ .ms-form-group{
+
+   input,
+   textarea {
+     &:not(:required):not([value=""]) ~ label,
+     &:not(:required):focus ~ label,
+     &:focus ~ label,
+     &:valid ~ label,
+     &[type='email']:not([value=""]):invalid ~ label,
+     &[type='password']:not([value=""]):invalid ~ label,
+     &[type='password']:not([value=""]):invalid ~ label,
+     &[type='number']:not([value=""]):invalid ~ label {
+       color: $gold;
+     }
+
+     &:focus {
+       @include boxshadow(0 1px 0 0 $gold);
+     }
+
+     &:focus ~ button,
+     & ~ button:hover {
+       color: $gold;
+     }
+   }
+ }
+
+ /********** Slick Slider **********/
+ .slick-slider {
+   &:hover {
+     .slick-prev:before,
+     .slick-next:before {
+       border-color: $gold;
+       color: $gold;
+     }
+   }
+
+   .slick-prev:hover,
+   .slick-next:hover {
+     &:before,
+     &:before {
+       border-color: $gold;
+       background-color: $gold;
+       color: #ffffff;
+     }
+   }
+ }
+
+ /********** Venobo popup **********/
+ .vbox-overlay {
+   background: $vbox-overlay-bg-color !important;
+
+   .vbox-close {
+     color: $gold !important;
+   }
+ }
+ /****************************************
+ END OVERRIDE CSS/SCSS
+ *****************************************/
+
+
+ /****************************************
+ START BLOG PAGE SCSS
+ *****************************************/
+ /********** 21.1. BLOG DEFAULT **********/
+ .ms-single-find {
+   a {
+     &:hover {
+       color: $gold;
+     }
+   }
+ }
+
+ .ms-gallery-container {
+
+   .ms-gallery-item {
+     &:hover {
+       &::before {
+         background-color: $gallery-img-hover-bg-color;
+       }
+     }
+   }
+ }
+
+ .ms-post-media {
+   &:hover {
+     .ms-post-title a {
+       color: $gold;
+     }
+   }
+ }
+ /****************************************
+ END BLOG PAGE SCSS
+ *****************************************/
+
+
+ /****************************************
+ 24. START SIGNUP/SIGNIN PAGE SCSS
+ *****************************************/
+ .ms-sign-form-container {
+   .ms-form-overlay {
+
+     &::after{
+       background: $gold;
+     }
+   }
+
+   /********** Form box **********/
+   .ms-sign-form {
+     .ms-form-box {
+       .ms-form-suggest {
+         &:hover {
+           color: $gold;
+         }
+       }
+     }
+   }
+ }
+ /****************************************
+ END SIGNUP/SIGNIN PAGE SCSS
+ *****************************************/

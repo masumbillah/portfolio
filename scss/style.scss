@@ -1,0 +1,3032 @@
+/****************************************
+Template Name: MSAPP 
+Description: App/Personal/CRM/Blog Landing HTML5 Template
+Template URI: http://msapp.themebins.com
+Author: themebins
+Author URI: https://themeforest.net/user/themebins
+Version: 0.1 (20 Jan 2019)
+
+********** MSAPP SCSS/CSS INDEX *********
+1. DEFAULT SCSS
+    1.1. DEFAULT
+    1.2. COMMON SCSS
+2. WINDOW/PAGE LOADER
+3. HEADER/NAV CONTAINER
+4. HOME CONTAINER
+    4.1. HOME-STYLES
+        4.1.1. HOME-STYLE-1
+        4.1.2. HOME-STYLE-2
+        4.1.3. HOME-STYLE-3
+    4.2. HOME-BACKGROUND
+        4.2.1. HOME-BG-SOLID
+        4.2.2. HOME-BG-IMG
+        4.2.3. HOME-BG-PARTICLES
+        4.2.4. HOME-BG-VIDEO
+        4.2.5. HOME-BG-WATER
+        4.2.6. HOME-BG-ANIMATION
+    4.3. HOME-BOTTOM-STYLE
+        4.3.1. HOME-MAIN
+        4.3.2. HOME-TRIANGLE
+        4.3.3. HOME-WAVE
+        4.3.4. HOME-CLOUD
+5. FEATURES CONTAINER
+6. HOW IT WORKS CONTAINER
+7. VIDEO TUTORIAL CONTAINER
+8. SCREENSHOT/SLIDER CONTAINER
+9. ACTIVITIES COUNTER CONTAINER
+10. TEAM CONTAINER
+11. CLIENTS CONTAINER
+12. PRICING CONTAINER
+13. DOWNLOAD CONTAINER
+14. FAQ CONTAINER
+15. BLOGS CONTAINER
+16. MAP CONTAINER
+17. CONTACT CONTAINER
+18. FOOTER CONTAINER
+19. SCROLL TO TOP CONTAINER
+20. CSS OVERRIDE
+21. BLOG PAGE
+    21.1. BLOG DEFAULT
+    21.2. BLOG 2 COLUMN STYLE 1
+22. COMING SOON PAGE
+23. ERROR PAGE
+24. SIGNUP/SIGNIN PAGE
+25. THEMES(COLOR) BOX
+*****************************************/
+
+/******* Import variables scss file *******/
+@import 'variables.scss';
+
+/****************************************
+1. DEFAULT SCSS
+*****************************************/
+  /*********** 1.1 START DEFAULT ***************/
+  @import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i');
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    background: $white;
+    color: $font-color;
+    font-size: 1rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, .h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  h5, .h5 {
+    font-size: 1.1rem;
+  }
+  /*********** END DEFAULT ***************/
+
+  /*********** 1.2 COMMON SCSS ************/
+  .ms-hidden {
+    display: none;
+  }
+
+  .ms-item-container {
+    padding: 5.5rem 0;
+  }
+
+  .ms-dsp-tc {
+    display: table-cell;
+  }
+
+  .ms-gray-bg {
+    background-color: $gray;
+  }
+
+  .ms-primary-bg {
+    background-color: $purple;
+    color: $white;
+  }
+
+  .ms-space-200 {
+    height: 200px;
+  }
+
+  .ms-space-130 {
+    height: 130px;
+  }
+
+  .ms-success-color {
+    color: $purple;
+  }
+  
+  .ms-error-color {
+    color: $danger;
+  }
+
+  .ms-text-muted {
+    color: $text-muted;
+  }
+
+  .ms-text-primary {
+    color: $purple;
+  }
+
+  .ms-load-more {
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+
+  .ms-section-header {
+    width: 60%;
+    text-align: center;
+    margin: 0 auto 5rem;
+  }
+
+  .ms-content-container {
+    width: 70%;
+    margin: 0 auto;
+  }
+  
+  .ms-width-100p {
+    width: 100%;
+  }
+
+  /******* Widget list *******/
+  .ms-contact-form-message {
+    margin: 1rem 0 0;
+    text-align: center;
+  }
+
+  /******* Widget list *******/
+  .ms-widget-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li:not(:first-child) {
+      border-top: $border-light;
+    }
+
+    li a {
+      position: relative;
+      display: block;
+      padding: 15px 0;
+      color: inherit;
+      text-decoration: none;
+
+      .ms-number {
+        display: block;
+        position: absolute;
+        border-radius: 10px;
+        top: 50%;
+        right: 0;
+        color: #444;
+        background-color: $gray;
+        padding: 0 6px;
+        margin-top: -10px;
+        font-size: 14px;
+      } 
+    }
+
+    li:hover, 
+    li:active,
+    li.active {
+      color: $purple;
+      @include transition($transition);
+
+      .ms-number {
+        background-color: $purple;
+        color: $white;
+        @include transition($transition);
+      }
+    }
+  }
+
+  .ms-tag {
+    display: inline-block;
+    padding: 0.25rem 0.85rem 0.25rem 0.35rem;
+    border: $border;
+    border-color: $purple;
+    color: $purple;
+    text-decoration: none !important;
+    border-radius: 50px;
+    margin: 0 0.5rem 0.75rem 0;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    @include transition($transition);
+
+    &:hover,
+    &.active {
+      background-color: $purple;
+      color: $white;
+      border-color: $purple
+    }
+  }
+
+  /******** Header divider ********/
+  .ms-divider {
+    position: relative;
+    width: 20%;
+    border-top: 1px solid $purple;
+    margin: 1.5rem auto;
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-color: $purple;
+      top: -11px;
+      border-radius: 50%;
+      margin-left: -10px;
+      padding: 5px;
+      border: 5px solid $white;
+      left: 50%;
+    }
+
+    &.ms-reverse {
+      border-color: $white;
+
+      &::after {
+        background-color: $white;
+        border-color: $purple;
+      }
+    }
+  }
+
+  /******** Breadcrumbs or page path instruction ********/
+  .ms-breadcrumb-group {
+    background: transparent; 
+    justify-content: center;
+
+    .breadcrumb-item {
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 1.2rem;
+    }
+
+    .breadcrumb-item a,
+    .breadcrumb-item+.breadcrumb-item::before {
+      color: $white;
+      content: "-";
+      text-decoration: none;
+    }
+  }
+
+  /******* Pagination *******/
+  .ms-pagination-container {
+    .ms-pagination {
+      @include displayFlex();
+      @include flexWrap(wrap);
+      justify-content: center;
+      list-style: none;
+    }
+
+    .page-link {
+      padding: 8px 15px;
+      margin-right: 15px;
+      background: $white;
+      border-radius: 50px;
+      font-size: 15px;
+      color: inherit;
+      margin-bottom: 0.8rem;
+      @include transition($transition);
+      @include boxshadow(0 0 20px 0 rgba(0, 0, 0, 0.08));
+
+      &:not(.ms-border) {
+        border: 0;
+      }
+    }
+
+    .page-link.ms-border {
+      color: $purple;
+    }
+
+    .ms-page-item {
+      &.active .page-link,
+      .page-link:hover {
+        background: $purple;
+        color: $white;
+      }
+
+      &.disabled {
+        .page-link,
+        .page-link:hover {
+          background: inherit;
+          color: inherit;
+          opacity: 0.6;
+          cursor: not-allowed;
+          pointer-events: none;
+        }
+      }
+      
+    }
+  }
+
+  /******* Section triangle *******/
+  .ms-triangle-container {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 0;
+      width: 0;
+      z-index: 2;
+      border-left: 100vw solid $white;
+      border-bottom: 10rem solid transparent;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: 0;
+      width: 0;
+      z-index: 2;
+      border-right: 100vw solid $white;
+      border-top: 10rem solid transparent;
+    }
+  }
+
+  /******** Scroll to next bottom ********/
+  .ms-scroll-to-next {
+    position: absolute;
+    bottom: 0;
+    left: auto;
+    color: $white;
+    width: 100%;
+    text-align: center;
+    z-index: 3;
+
+    a { 
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      text-decoration: none;
+
+      i {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  /******* Rating *******/
+  .ms-rating-box {
+    color: $purple;
+    margin: 0.5rem 0;
+    text-align: center;
+  }
+
+  /******** Nav list *******/
+  .ms-nav-group {
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+
+    .nav-link,
+    .nav-link.active {
+      color: inherit;
+      background-color: transparent;
+      font-size: 0.8rem;
+      font-weight: 500;
+      padding: 0.35rem 0.6rem;
+      border-radius: 0;
+    }
+
+    .nav-link {
+      position: relative;
+
+      &::after {
+        content: '';
+        background: $purple;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        bottom: 0;
+        @include transition(all 250ms ease 0s);
+        @include transform(scale(0));
+      }
+
+      &:hover::after,
+      &.active::after  {
+        @include transform(scale(1));
+      }
+    }
+  }
+
+  /******** Overlay *******/
+  .ms-overlay {
+    height: 100%;
+    @include displayFlex();
+    @include flexDirection(column);
+    justify-content: center;
+    align-items: center;
+    color: $white;
+    background: $overlay-bg;
+  }
+
+  /******* Home style bg ********/
+  .ms-bg {
+    @include animation(slide 2s ease-in-out infinite alternate);
+    background-image: $ms-bg;
+    bottom: 0;
+    left: -50%;
+    opacity: 0.35;
+    position: absolute;
+    right: -50%;
+    top: 0;
+
+    &:nth-child(2) {
+      animation-direction:alternate-reverse;
+      animation-duration:4s;
+    }
+
+    &:nth-child(3) {
+      animation-duration:5s;
+    }
+  }
+
+  @keyframes slide {
+    0% {
+      @include transform(translateX(-25%));
+    }
+    100% {
+      @include transform(translateX(25%));
+    }
+  }
+
+  /******** Checkbox *******/
+  .ms-checkbox {
+    position: absolute;
+    opacity: 0;
+
+    & + label {
+      position: relative;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    & + label:before {
+      content: '';
+      margin-right: 0.9rem;
+      margin-top: -0.15rem;
+      display: inline-block;
+      vertical-align: text-top;
+      width: 1.5rem;
+      height: 1.5rem;
+      border: $border;
+      border-radius: 50px;
+      @include transition($transition);
+    }
+
+    &:hover + label:before,
+    &:checked + label:before {
+      border-color: $purple;
+    }
+    
+    &:disabled + label {
+      color: $silver;
+      cursor: not-allowed;
+    }
+
+    &:disabled + label:before {
+      background: $gray;
+      border: $border;
+    }
+
+    &:not(:disabled):hover + label,
+    &:not(:disabled):checked + label {
+      color: $purple;
+      @include transition($transition);
+    }
+
+    &:not(:disabled):checked + label:after {
+      content: '';
+      position: absolute;
+      left: 0.41rem;
+      top: 0.7rem;
+      width: 2px;
+      height: 2px;
+      transform: rotate(45deg);
+      background: $purple;
+      @include transition($transition);
+      box-shadow: 
+        2px 0 0 $purple,
+        4px 0 0 $purple,
+        4px -2px 0 $purple,
+        4px -4px 0 $purple,
+        4px -6px 0 $purple,
+        4px -8px 0 $purple;
+    }
+  }
+
+  /******* Blockquote *******/
+  .ms-blockquote {
+    background-color: $gray;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    margin: 2.5rem 0 1.5rem 1.5rem;
+    padding: 1.5rem;
+  }
+
+
+  .ms-single-item-style {
+    margin-bottom: 1rem;
+
+    img {
+      @include boxshadow(0px 0px 20px 0px rgba(0, 0, 0, 0.15));
+    }
+
+    a {
+      text-decoration: none;
+      display: block;
+    }
+
+    .ms-single-item-box {
+      display: block;
+      position: relative;
+    }
+
+    &:hover .ms-single-item-box .ms-single-item-hover {
+      opacity: 1;
+    }
+
+    .ms-single-item-box {
+      .ms-single-item-hover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        transition: all 0.3s ease 0s;
+        z-index: 1;
+        opacity: 0;
+      }
+
+      .ms-single-item-hover .btn {
+        display: none;
+      }
+
+      &:hover .ms-single-item-hover .btn {
+        display: block;
+      }
+    }
+  }
+
+  /******* Sketch animation bg *******/
+  .ms-sketch {
+    border: 2px solid $white;
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    left: 0;
+    top: 0;
+    @include animation(sketch 15s linear 2s infinite running);
+    @include transform(scale(0) rotate(0deg) translate(-50%, -50%));
+    -webkit-transform-origin: left top 0;
+    transform-origin: left top 0;
+  }
+
+  .ms-sketch:nth-child(2) {
+    -webkit-animation-delay: 4s;
+    animation-delay: 4s;
+    left: 75vw;
+    top: 50vh;
+  }
+
+  .ms-sketch:nth-child(3) {
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+    left: 40vw;
+    top: 30vh;
+  }
+
+  .ms-sketch:nth-child(4) {
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+    background-color: transparent;
+    left: 90vw;
+    top: 10vh;
+  }
+
+  .ms-sketch:nth-child(5) {
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+    background-color: $white;
+    border: 0;
+    left: 2vw;
+    top: 90vh;
+  }
+
+  .ms-sketch:nth-child(6) {
+    -webkit-animation-delay: 4s;
+    animation-delay: 4s;
+    left: 50vw;
+    top: 100vh;
+  }
+
+  @-webkit-keyframes sketch {
+    0% {
+        opacity: 0.5;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+        @include transform(scale(0) rotate(0deg) translate(-50%, -50%));
+    }
+    100% {
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        @include transform(scale(20) rotate(960deg) translate(-50%, -50%));
+    }
+  }
+
+  @keyframes sketch {
+    0% {
+        opacity: 0.5;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+        @include transform(scale(0) rotate(0deg) translate(-50%, -50%));
+    }
+    100% {
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        @include transform(scale(20) rotate(960deg) translate(-50%, -50%));
+    }
+  }
+/****************************************
+END COMMON SCSS
+*****************************************/
+
+
+/****************************************
+2. WINDOW/PAGE LOADER
+*****************************************/
+  .ms-preloader-wrapper {
+    background: $preloader-wrapper-bg;
+    position: fixed;
+    top: 0;
+    left: 0; 
+    height: 100vh;
+    width: 100vw;
+    z-index: 99999;
+    
+    .ms-preloader-effect {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      height: 100px;
+      width: 100px;
+      @include transform(translate(-50%, -50%));
+
+      &:before,
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 50px solid $white;
+      }
+
+      @keyframes loader-scale {
+        0% {
+          @include transform(scale(0));
+          opacity: 0;
+        }
+        
+        50% {
+          @include transform(scale(0.7));
+          opacity: 1;
+        }
+        
+        100% {
+          @include transform(scale(1));
+          opacity: 0;
+        }
+      }
+      
+      &:before {
+        @include animation(loader-scale 1s linear 0s infinite);
+      }
+      
+      &:after {
+        @include transform(scale(0));
+        @include animation(loader-scale 1s linear 0.5s infinite);
+      }
+    }
+  }
+/****************************************
+ END WINDOW/PAGE LOADER
+*****************************************/
+
+
+/****************************************
+3. HEADER/NAV CONTAINER
+*****************************************/
+  .ms-navbar{
+    .nav-link:hover,
+    .nav-link {
+      color: $white;
+    }
+  }
+
+  .ms-navbar-fixed {
+    padding: 2rem 1rem;
+    @include transition($transition);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1030;
+
+    &.ms-fixed {
+      position: fixed;
+      padding: 0.5rem 0;
+      @include boxshadow(0px 3px 20px -10px rgba(0, 0, 0, 0.5));
+      @include commonBg();
+    }
+
+    .nav-link {
+      margin-right: 0.6rem;
+      margin-left: 0.6rem;
+      font-weight: bold;
+      @include animationUnderLine();
+    }
+  }
+
+  /******** Toogle navbar button for mobile view ******/
+  .navbar-toggler {
+    position: relative;
+    padding: 1.1rem;
+    border: none;
+    cursor: pointer;
+    outline: none;
+
+    &:active,
+    &:focus {
+      outline: none;
+    }
+
+    span {
+      position: absolute;
+      background-color: $white;
+      height: 2px;
+      @include transform(translateX(-50%) translateY(-50%));
+      @include transition(background-color 0.2s ease-in-out);
+    }
+
+    span:before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: $white;
+      -webkit-transition: -webkit-transform 0.1s ease-in-out, background-color 0.1s ease-in-out;
+      -webkit-transition: background-color 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out;
+      transition: background-color 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out;
+      transition: transform 0.1s ease-in-out, background-color 0.1s ease-in-out;
+      transition: transform 0.1s ease-in-out, background-color 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out;
+    }
+
+    span:after {
+      content: '';
+      position: absolute;
+      top: 10px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: $white;
+      -webkit-transition: -webkit-transform 0.1s ease-in-out, background-color 0.1s ease-in-out;
+      -webkit-transition: background-color 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out;
+      transition: background-color 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+      transition: transform 0.1s ease-in-out, background-color 0.1s ease-in-out;
+      transition: transform 0.1s ease-in-out, background-color 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out;
+    }
+
+    &:not(.collapsed){
+      span:before {
+        background-color: $white;
+        @include transform(translateY(10px) translateX(0) rotate(45deg));
+      }
+
+      span:after {
+        background-color: $white;
+        @include transform(translateY(-10px) translateX(0) rotate(-45deg));
+      }
+      
+      span {
+        background-color: transparent;
+      }
+    }
+  }
+/****************************************
+ END HEADER/NAV CONTAINER
+*****************************************/
+
+
+/****************************************
+4. HOME CONTAINER
+*****************************************/
+  .ms-page-wrapper {
+    .ms-home-content {
+      color: $white;
+      margin-top: 13rem;
+    }
+
+    .ms-home-container{
+      z-index: 2;
+    }
+
+    .ms-home-item {
+      .container {
+        @include displayFlex();
+        @include flexDirection(row);
+        @include flexWrap(wrap);
+      }
+
+      .ms-home-content {
+        flex-basis: 75%;
+        padding-right: 5rem;
+        
+        .ms-home-level {
+          font-size: 1.7rem;
+          background: $home-level-bg-color;
+          padding: 0.25rem 0.8rem;
+          margin-left: 0.8rem;
+          border-radius: .05rem;
+        }
+
+        p {
+          margin-bottom: 2rem;
+        }
+      
+        .btn {
+          margin-bottom: 1rem;
+          @include boxshadow(1px 1px 20px 1px rgba(0, 0, 0, 0.10));
+
+          &:not(:last-child) {
+            margin-right: 1rem;
+          }
+        }
+      }
+
+      .ms-home-slider-img {
+        flex-basis: 25%;
+        margin-top: 4rem;
+      }
+
+    }
+  }
+
+  .ms-inner-page {
+    .ms-navbar-fixed {
+      @include commonBg();
+    }
+
+    .ms-inner-content-container {
+      margin: 12rem auto 0;
+      margin-bottom: 5rem;
+      min-height: 50vh;
+      @include transition($transition);
+    }
+  }
+
+  .ms-card {
+    border-color: transparent;
+    @include transition($transition 0s);
+
+    &:hover {
+      @include boxshadow(0 5px 10px 0 rgba(0, 0, 0, 0.07));
+      @include transform(translate(3px, 3px));
+    }
+
+    .ms-card-body {
+      .card-title {
+        margin: 0.75rem 0;
+      }
+
+      .ms-card-title-icon {
+        font-size: 2.5rem;
+        color: $purple;
+      }
+    }
+  }
+ 
+  //*********** 4.1 HOME STYLE 1 *********
+  .ms-home-style-1 {
+    position: relative;
+    overflow: hidden;
+    padding: 5.5rem 0 0;
+    @include commonBg();
+  }
+
+  .ms-home-style-2 {
+    position: relative;
+    overflow: hidden;
+    padding: 5.5rem 0 0;
+    @include commonBg();
+
+    .ms-home-item {
+      .container {
+        @include flexDirection(row-reverse);
+      }
+      
+      .ms-home-content {
+        padding-left: 5rem;
+      }
+    }
+  }
+
+  .ms-home-style-3 {
+    position: relative;
+    overflow: hidden;
+    padding: 5.5rem 0 0;
+    @include commonBg();
+
+    .ms-home-item {
+      .ms-home-content {
+        flex-basis: 100%;
+        text-align: center;
+        padding-right: 0;
+        margin-bottom: 18rem;
+      }
+    }
+  }
+
+  .ms-home-style-4{
+    position: relative;
+    overflow: hidden;
+    padding: 5.5rem 0 0;
+    @include commonBg();
+
+    .ms-home-item {
+      .ms-home-content {
+        flex-basis: 100%;
+        text-align: center;
+        padding-right: 0;
+        margin: 10rem 0 16rem 0;
+      }
+    }
+  }
+
+  .ms-home-style-5 {
+    position: relative;
+    overflow: hidden;
+    padding: 5.5rem 0 0;
+    @include commonBg();
+
+    .ms-home-item {
+      .ms-home-content {
+        flex-basis: 100%;
+        text-align: center;
+        padding-right: 0;
+        margin: 10rem 0 12rem 0;
+      }
+    }
+  } 
+
+  //*********** 4.2 HOME BG STYLE **********/
+    //********** 4.2.1 HOME BG IMG **********/
+    .ms-home-bg-img {
+
+      .ms-home-bg-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: url(../imgs/home-bg.png) no-repeat;
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+    
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          background: $purple;
+          opacity: 0.85;
+        }
+      }
+
+    }
+
+    //********** 4.2.2 HOME BG VIDEO **********/
+    .ms-home-bg-video {
+      .ms-home-bg-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+    
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          background: $purple;
+          opacity: 0.7;
+        }
+      }
+
+      .inline-YTPlayer {
+        max-width: none !important;
+        position: absolute!important;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+      }
+
+      #ms-js-video-bg {
+        height: 100% !important;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 0;
+      }
+    }
+ 
+ //*********** 4.3 HOME BOTTOM STYLE **********/
+  //****** 4.3.1 HOME BOTTOM MAIN(DEFAULT) *******/
+    /******* No need default style. *******/
+
+  //*********** 4.3.2 HOME BOTTOM TRIANGLE **********/
+  .ms-home-btm-triangle {
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      right: 0;
+      height: 0;
+      width: 0;
+      z-index: 2;
+      border-right: 50vw solid $white;
+      border-top: 10rem solid transparent;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      height: 0;
+      width: 0;                                               
+      z-index: 1;
+      border-left: 50vw solid $white;
+      border-top: 10rem solid transparent;
+    }
+
+    &.ms-triangle-2 {
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        right: 0;
+        height: 0;
+        width: 0;
+        z-index: 2;
+        border-right: 100vw solid $white;
+        border-top: 10rem solid transparent;
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  //*********** 4.3.3 HOME BOTTOM WAVE **********/
+  .ms-home-btm-wave {
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      background: url(../imgs/system/wave-1.svg) bottom no-repeat;
+      background-size: cover;
+      height: 100%;
+      width: 100%;
+      z-index: 1;
+    }
+
+    &.ms-wave-2 {
+      &::after {
+        background: url(../imgs/system/wave-2.svg) bottom no-repeat;
+        background-size: cover;
+        bottom: -5px;
+        height: 100%;
+        z-index: 1;
+      }
+    }
+
+    &.ms-wave-3 {
+      &::after {
+        background: url(../imgs/system/wave-3.svg) bottom no-repeat;
+        z-index: 1;
+        height: 100%;
+        background-size: contain;
+      }
+    }
+
+    &.ms-wave-4 {
+      &::after {
+        background: url(../imgs/system/wave-4.svg) bottom no-repeat;
+        background-size: contain;
+        height: 100%;
+        z-index: 1;
+      }
+    }
+
+    &.ms-wave-5 {
+      &::after {
+        background: url(../imgs/system/wave-5.svg) bottom no-repeat;
+        background-size: contain;
+        height: 100%;
+        z-index: 1;
+      }
+    }
+  }
+
+  //*********** 4.3.4 HOME BOTTOM CLOUD **********/
+  .ms-home-btm-cloud {
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      background: url(../imgs/system/cloud-1.svg) bottom no-repeat;
+      height: 100%;
+      width: 100%;
+      z-index: 1;
+    }
+
+    &.ms-cloud-2 {
+      &::after {
+        background: url(../imgs/system/cloud-2.svg) bottom no-repeat;
+        background-size: cover;
+        height: 5rem;
+      }
+    }
+  }
+
+  //*********** 4.3.5 HOME BOTTOM CLOUD **********/
+  .ms-home-btm-spot {
+
+    &.ms-spot-1::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -50vw;
+      height: 100%;
+      z-index: 1;
+      border-left: 95vw solid rgba(255, 255, 255, 0.38);
+      border-color: rgba(255, 255, 255, 0.38);
+      border-top-right-radius: 15rem;
+      transform: rotate(20deg);
+    }
+
+    &.ms-spot-2::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 7rem;
+      z-index: 1;
+      border-right: 60vw solid rgba(255, 255, 255, 0.38);
+      border-color: rgba(255, 255, 255, 0.38);
+      border-bottom-left-radius: 15rem;
+    }
+  }
+
+  //*********** 4.3.6 HOME BOTTOM VIDEO ****/
+    .ms-home-btm-video-container {
+      position: relative;
+      z-index: 4;
+      margin-bottom: 10rem;
+
+      .ms-home-video {
+        position: absolute;
+        top: -160px;
+        left: 50%;
+        height: 320px;
+        width: 550px;
+        text-align: center;
+        border-radius: $radius;
+        @include transform(translateX(-50%));
+
+        .playerBox {
+          width: 100% !important;
+          height: 100% !important;
+          margin-top: 0 !important;
+          margin-left: 0 !important;
+        }
+      }
+
+      .mbYTP_wrapper{
+        border-radius: $radius;
+        @include boxshadow(1px 2px 17px 1px rgba(0, 0, 0, 0.35));
+      }
+
+      .ms-home-video-overlay {
+        height: 100%;
+        width: 100%;
+        background: $home-video-overlay-bg-color;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        border-radius: $radius;
+        @include displayFlex();
+        @include flexDirection(column);
+
+        button {
+          padding: 0.8rem 0.9rem;
+          border-radius: 50px;
+          font-size: 1.25rem;
+          color: $purple;
+          outline: none;
+          cursor: pointer;
+          @include boxshadow(1px 2px 17px 1px rgba(0, 0, 0, 0.35));
+          @include animation(videoAnimation 800ms ease-out 0s alternate infinite none running);
+        }
+
+        .ms-video-loader,
+        .ms-js-pause-btn {
+          display: none;
+        }
+
+        &.ms-js-video-playing {
+          .ms-js-play-btn {
+            display: none;
+          }
+        }
+
+        &.ms-js-video-playing:hover {
+          .ms-js-pause-btn {
+            display: block;
+          }
+        }
+
+        &.ms-video-loading {
+          .ms-js-play-btn {
+            display: none;
+          }
+
+          .ms-video-loader {
+            display: block;
+          }
+        }
+      }
+    }
+
+  //*********** 4.3.7 HOME BOTTOM LINKS ****/
+  .ms-btm-link-container {
+    position: absolute;
+    bottom: 3.25rem;
+    color: $white;
+    width: 100%;
+    justify-content: center;
+    z-index: 2;
+
+    .nav-link {
+      display: block;
+      padding: .25rem 1rem;
+      line-height: 0.5rem;
+      font-weight: bolder;
+    }
+
+    .nav-item {
+      span, i {
+        color: rgba(234, 233, 233, 0.50);
+      }
+
+      &:hover {
+        span, i {
+          color: $white;
+        }
+      }
+
+      &:not(:last-child) {
+        border-right: 1px solid rgba(234, 233, 233, 0.50);
+      }
+    }
+  }
+
+/****************************************
+END HOME CONTAINER
+*****************************************/
+
+
+/****************************************
+5. FEATURES CONTAINER
+*****************************************/
+  .ms-feature-list {
+    padding: 0;
+    margin: 0;
+
+    li {
+      list-style: none;
+      line-height: 2rem;
+    }
+  }
+
+  .ms-media {
+    margin-bottom: 3rem;
+
+    &:hover {
+      .ms-media-avatar {
+        color: $white;
+        background-color: $purple;
+        @include boxshadow(-2px 3px 20px 0 rgba(0, 0, 0, 0.32));
+      }
+    }
+
+    .ms-media-avatar {
+      padding: 0.7rem;
+      border: 1px solid $purple;
+      border-radius: 50%;
+      color: $purple;
+      font-size: 1.5rem;
+      margin-right: 1.25rem;
+      width: 60px;
+      height: 60px;
+      text-align: center;
+      @include transition($transition 0s);
+    }
+  }
+/****************************************
+ END FEATURES CONTAINER
+*****************************************/
+
+
+/****************************************
+6. HOW IT WORK CONTAINER
+*****************************************/
+  .ms-work-container {
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 1px;
+      background-color: $purple;
+      left: 2.7rem;
+      z-index: -1;
+      @include transition($transition);
+    }
+
+    .ms-work-single-line {
+      display: inline-flex;
+      align-items: center;
+      position: relative;
+      cursor: pointer;
+
+      &:not(:last-child) {
+        margin-bottom: 2.5rem;
+      }
+    
+      .ms-work-icon {
+        padding: 0.7rem;
+        border: 1px solid $purple;
+        border-radius: 50%;
+        color: $purple;
+        font-size: 1.5rem;
+        margin-right: 1.25rem;
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        background-color: $white;
+        @include transition($transition 0s);
+      }
+
+      &.active, &:focus,
+      &:active, &:hover {
+        .ms-work-icon {
+          background-color: $purple;
+          color: $white;
+          @include boxshadow(-2px 3px 20px 0 rgba(0, 0, 0, 0.32));
+        }
+      }
+    }
+  }
+/****************************************
+ END HOW IT WORK CONTAINER
+*****************************************/
+
+
+/****************************************
+7. VIDEO TUTORIAL CONTAINER
+*****************************************/
+  .ms-video-container {
+    background: url('../imgs/video-bg.png') center center no-repeat fixed;
+    background-size: cover;
+    height: 450px;
+
+    .ms-video-link {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background: $video-link-bg-color;
+      text-align: center;
+      display: inline-block;
+      line-height: 110px;
+      outline: none;
+      @include animation(videoAnimation 800ms ease-out 0s alternate infinite none running);
+    }
+
+    @keyframes videoAnimation {
+      0% {
+        @include transform(scale(.7));
+        border-radius: 100%;
+      }
+      100% {
+        @include transform(scale(1));
+      }
+    }
+
+    .ms-video-start-icon {
+      display: inline-block;
+      vertical-align: middle;
+      width: 80px;
+      height: 80px;
+      font-size: 2rem;
+      line-height: 84px;
+      border-radius: 50%;
+      background: $white;
+      text-align: center;
+      color: $purple;
+    }
+  }
+/****************************************
+ END VIDEO TUTORIAL  CONTAINER
+*****************************************/
+
+
+/****************************************
+8. SCREENSHOT/SLIDER CONTAINER
+*****************************************/
+  .ms-screenshot-container {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 24px;
+      left: calc(50% + 0.5px);
+      background-image: url("../imgs/system/mobile-moc-1.png");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      display: block;
+      height: 645px;
+      width: 300px;
+      z-index: 2;
+      border-radius: 50px;
+      @include transform(translateX(-50%));
+      @include boxshadow(0px 23px 42px rgba(0, 0, 0, 0.2));
+    }
+
+    .ms-screenshot-item {
+      cursor: pointer;
+      outline: none;
+
+      & > img {
+        margin: 30px auto auto;
+        border-radius: 35px;
+        @include boxshadow(1px 1px 7px 1px rgba(0, 0, 0, 0.12));
+      }
+    }
+
+    &:hover {
+      .slick-prev:before,
+      .slick-next:before {
+      opacity: 1;
+      }
+    }
+  }
+/****************************************
+ END SCREENSHOT/SLIDER CONTAINER
+*****************************************/
+
+
+/****************************************
+9. ACTIVITIES COUNTER CONTAINER
+*****************************************/
+  .ms-counter-container {
+    text-align: center;
+    color: $purple;
+    margin: 0.5rem 0 1rem 0;
+
+    .ms-icon {
+      font-size: 2.5rem;
+    }
+
+    .ms-counter-title {
+      margin: 0 0 0.6rem;
+    }
+  }
+/****************************************
+ END ACTIVITIES COUNTER CONTAINER
+*****************************************/
+
+
+/****************************************
+10. TEAM CONTAINER
+*****************************************/
+  .ms-avatar-card {
+    border: none;
+    color: inherit;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: $radius;
+    @include boxshadow(0 0 20px 0 rgba(0, 0, 0, 0.08));
+    @include transition($transition 0s);
+
+    .ms-avatar-description {
+      background: rgba(253, 253, 253, 0.9);
+      position: absolute;
+      top: 0;
+      left: -100%;
+      height: 100%;
+      width: 100%;
+      padding: 1.5rem;
+      text-align: center;
+      @include transition($transition);
+    }
+
+    &:hover {
+      .ms-avatar-description {
+        left: 0;
+      }    
+    }
+  }
+/****************************************
+ END TEAM CONTAINER
+*****************************************/
+
+
+/****************************************
+11. CLIENTS CONTAINER
+*****************************************/
+  .ms-client-container {
+    text-align: center;
+
+    .ms-client {
+      cursor: move;
+      padding: 1rem 1.5rem;
+    }
+
+    .ms-client-avatar {
+      display: inline-block;
+      height: 100px;
+      width: 100px;
+      border-radius: 50px;
+      margin-bottom: 1.25rem;
+    }
+
+    &:hover {
+      .slick-prev:before,
+      .slick-next:before {
+      opacity: 1;
+      }
+    }
+  }
+
+  .ms-quotation {
+    margin-top: 1rem;
+    margin-left: 2.5rem;
+    font-style: italic;
+    position: relative;
+    text-align: left;
+
+    &::before {
+      content: "\E80E";
+      font-family: "fontello";
+      position: absolute;
+      top: -5px;
+      left: -15px;
+      font-size: 0.8rem;
+    }
+
+    &::after {
+      content: "\E812";
+      font-family: "fontello"; 
+      position: absolute;
+      bottom: 0;
+      font-size: 0.8rem;
+    }
+  }
+/****************************************
+ END CLIENTS CONTAINER
+*****************************************/
+
+
+/****************************************
+12. PRICING CONTAINER
+*****************************************/
+  .ms-single-pricing-table {
+    position: relative;
+    margin-bottom: 2rem;
+    border-radius: $radius;
+    @include boxshadow(0 0 20px 0 rgba(0, 0, 0, 0.08));
+    @include transition($transition 0s);
+    
+    &:hover {
+      @include boxshadow(-2px 2px 20px 0 rgba(0, 0, 0, 0.13));
+      @include transform(translate(-3px, -3px));
+    }
+
+    &.ms-border {
+      .ms-pricing-header {
+        border-color: $purple;
+      }
+    }
+
+    .ms-price-discout-alt {
+      position: absolute;
+      right: 0.5rem;
+      top: -1.8rem;
+      font-size: 1.25rem;
+      border-radius: 50%;
+      background: $purple;
+      height: 60px;
+      width: 60px;
+      line-height: 3.5rem;
+      color: $white;
+      @include boxshadow(-2px 3px 20px 0 rgba(0, 0, 0, 0.32));
+    }
+  }
+
+  .ms-pricing-header {
+    padding: 2.5rem 1.5rem 2rem;
+    border-bottom: $border;
+    margin-bottom: 2.25rem;
+
+    h4 {
+      margin-bottom: 1.5rem;
+      color: $purple;
+    }
+
+    .ms-price {
+      sub {
+        font-size: 0.9rem;
+        color: $text-muted;
+      }
+    }
+  }
+
+  .ms-pricing-footer {
+    padding: 2.25rem 1.5rem 2.5rem;
+  }
+/****************************************
+ END PRICING CONTAINER
+*****************************************/
+
+
+/****************************************
+13. DOWNLOAD CONTAINER
+*****************************************/
+  .ms-download-container {
+    background: url('../imgs/download-bg.png') center center no-repeat fixed;
+    background-size: cover;
+
+    .ms-overlay {
+      padding: 5.5rem 0;
+    }
+  }
+/****************************************
+ END DOWNLOAD CONTAINER
+*****************************************/
+
+
+/****************************************
+14. FAQ CONTAINER
+*****************************************/
+  .ms-tab-container {
+    margin-bottom: 1rem;
+    border-radius: $radius;
+    @include boxshadow(0 0 20px 0 rgba(0, 0, 0, 0.08));
+
+    .nav-link {
+      color: inherit;
+      background-color: $white;
+      border-radius: 0;
+      padding: 1.2rem 1.5rem;
+      position: relative;
+      @include displayFlex();
+      @include flexDirection(column);
+      @include transition($transition);
+
+      &:first-child {
+        border-top-left-radius: $radius;
+        border-top-right-radius: $radius;
+      }
+
+      &:last-child {
+        border-bottom-left-radius: $radius;
+        border-bottom-right-radius: $radius;
+      }
+
+      &:not(:last-child) {
+        border-bottom: $border;
+      }
+
+      &::before {
+        content: '';
+        background: $purple;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 1px;
+        height: 100%;
+      @include transition($transition 0s);
+      @include transform(scale(0));
+      }
+    }
+
+    &.ms-border {
+      .nav-link {
+        border-color: $purple;
+
+        &::before {
+          width: 2px;
+        }
+      }
+    }
+
+  .nav-link:hover,
+  .nav-link.active,
+  &.show>.nav-link {
+    background-color: inherit;
+    color: $purple;
+    
+    &::before {
+      @include transform(scale(1));
+    }
+  }
+  }
+
+  .ms-accordion {
+    margin-bottom: 1rem;
+    border-radius: $radius;
+    @include boxshadow(0 0 20px 0 rgba(0, 0, 0, 0.08));
+    
+    .ms-accordion-tab-header {
+      padding: 1.8rem 1.8rem 1rem;
+    }
+
+    .ms-accordion-header[aria-expanded="true"] {
+      .ms-accordion-icon {
+        @include transform(rotate(90deg));
+      }
+    }
+
+    .ms-accordion-header {
+      padding: 1.2rem 1.8rem;
+      border-bottom: $border;
+      cursor: pointer;
+    }
+
+    .ms-accordion-icon {
+      float: right;
+      opacity: 0.8;
+      @include transition($transition 0s);
+    }
+
+    .ms-accordion-body {
+      padding: 1.2rem 1.8rem;
+    }
+
+    &.ms-border {
+      .ms-accordion-header {
+        border-color: $purple;
+      }
+    }
+
+    &>div:last-child  .ms-accordion-header[aria-expanded="false"] {
+      border: none;
+     }
+  }
+/****************************************
+ END FAQ CONTAINER
+*****************************************/
+
+
+/****************************************
+15. BLOGS CONTAINER
+*****************************************/
+  .ms-blog {
+    border: none;
+    color: inherit;
+    margin-bottom: 2rem;
+    @include boxshadow(0 0 20px 0 rgba(0, 0, 0, 0.08));
+    @include transition($transition 0s);
+
+    .card-img-top {
+      height: auto; 
+      width: 100%;
+      display: block;
+    }
+
+    &:hover {
+      @include boxshadow(-2px 2px 20px 0 rgba(0, 0, 0, 0.13));
+      @include transform(translate(-3px, -3px));
+    }
+  }
+
+  .ms-blog-body,
+  .ms-post-content {
+    a {
+      color: inherit;
+      text-decoration: none;
+      @include transition($transition 0s);
+
+      &:hover {
+        color: $purple;
+      }
+    }
+
+    .ms-blog-options {
+      font-size: 0.9rem;
+      padding: 0.5rem 0;
+      color: $text-muted;
+    }
+
+    .ms-blog-title {
+      font-size: 1.25rem;
+    }
+  }
+/****************************************
+ END BLOGS CONTAINER
+*****************************************/
+
+
+/****************************************
+16. MAP CONTAINER
+*****************************************/
+  .ms-map {
+    width: 100%;
+    height: 450px;
+    z-index: 0;
+  }
+/****************************************
+ END MAP CONTAINER
+*****************************************/
+
+
+/****************************************
+17. CONTACT CONTAINER
+*****************************************/
+  .ms-contact-section {
+    position: relative;
+    margin-bottom: 10rem;
+  }
+
+
+  .ms-contact-container {
+    left: 50%;
+    margin: 0 auto;
+    position: absolute;
+    top: 70%;
+    @include transform(translateX(-50%));
+    @include boxshadow(-2px 3px 20px 0 rgba(0, 0, 0, 0.32));
+
+    .ms-address-box{
+      padding: 4rem;
+      background-color: $purple;
+      color: $white;
+      border-top-left-radius: 0.25rem;
+      border-bottom-left-radius: 0.25rem;
+    }
+
+    .ms-address-description {
+      margin-top: 1rem;
+      margin-bottom: 3rem;
+    }
+
+    .ms-address-info {
+    list-style: none;
+    padding-left: 1.5rem;
+    margin-bottom: 2.5rem;
+
+      li {
+        margin-bottom: 1.25rem;
+      }
+
+      .ms-info-icon {
+        border: 1px solid;
+        border-radius: 30px;
+        height: 26px;
+        width: 26px;
+        margin-right: 1rem;
+        font-size: 0.7rem;
+        justify-content: center;
+        align-items: center;
+        @include displayFlex();
+      }
+    }
+
+    .ms-contact-us-box {
+      padding: 4rem;
+      background-color: $white;
+      border-top-right-radius: 0.25rem;
+      border-bottom-right-radius: 0.25rem;
+    }
+  }
+/****************************************
+ END CONTACT CONTAINER
+*****************************************/
+
+
+/****************************************
+18. FOOTER CONTAINER
+*****************************************/
+  .ms-footer {
+    padding: 5.5em 0 3.5rem;
+    background: $footer-bg;
+    color: $white;
+  }
+
+  /******* Subscribe form box *******/
+  .ms-subscribe-box {
+    margin-bottom: 2.65rem;
+
+    .form-control {
+      padding: 0.8rem 1.75rem;
+      border-top-left-radius: 30px;
+      border-bottom-left-radius: 30px;
+    }
+
+    [type='submit']{
+      padding: 0.8rem 1.75rem;
+      border-top-right-radius: 30px!important;
+      border-bottom-right-radius: 30px!important;
+      color: $white;
+      background-color: $purple;
+      @include transition(background-color 300ms linear);
+    }
+
+    [type='submit']:hover,
+    [type='submit']:focus,
+    [type='submit']:active {
+      background-color: $purple;
+    }
+  }
+
+  /******* Social links box *******/
+  .ms-social-box {
+    .ms-social-link {
+      border: 1px solid $white;
+      border-radius: 50%;
+      color: $white;
+      display: inline-block;
+      height: 35px;
+      width: 35px;
+      line-height: 35px;
+      font-size: 0.95rem;
+      text-align: center;
+      margin-left: 10px;
+      @include transition($transition 0s);
+      
+      &:first-child {
+        margin-left: 0;
+      }
+    
+      &:hover{
+        border-color: $purple;
+        @include commonBg();
+      }
+    }
+
+    &.ms-white-bg {
+      .ms-social-link {
+        border-color: $purple;
+        color: $purple;
+      }
+
+      .ms-social-link:hover{
+        color: $white;
+      }
+    }
+  }
+
+  .ms-footer-item-group {
+    @include displayFlex();
+
+    .ms-footer-item {
+      @include displayFlex();
+      @include flexDirection(column);
+      flex-basis: 100%;
+      margin-bottom: 1.5rem;
+
+      .ms-footer-item-title {
+        margin-bottom: 1rem;
+      }
+
+      .ms-footer-item-link {
+        margin-bottom: 0.25rem;
+      }
+
+      .ms-footer-item-link a {
+        text-decoration: none;
+        color: $text-muted;
+        @include transition($transition);
+
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+  }
+
+  .ms-footer-copyright-container {
+    margin-top: 3rem;
+    @include displayFlex();
+
+    .ms-footer-copyright,
+    .ms-footer-social-links {
+      flex-basis: 50%;
+    }
+
+    .ms-footer-social-links {
+      text-align: right;
+    }
+  }
+
+/****************************************
+ END FOOTER CONTAINER
+*****************************************/
+
+
+/****************************************
+19. START SCROLL TO TOP CONTAINER
+*****************************************/
+  .ms-scroll-to-top {
+    position: fixed;
+    right: 0;
+    bottom: -70px;
+    height: 40px;
+    width: 40px;
+    margin: 0 15px 15px 0;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    color: $white;
+    z-index: 100;
+    background: $scroll-to-top-bg;
+    @include displayFlex();
+    @include boxshadow(0 2px 20px 5px rgba(0, 0, 0, 0.2));
+    @include transition(all .5s ease-in-out);
+
+    &.show {
+      bottom: 0;
+    }
+  }
+/****************************************
+ END SCROLL TO TOP CONTAINER
+*****************************************/
+
+
+/****************************************
+20. START OVERRIDE SCSS
+*****************************************/
+  .ms-boxshadow-none,
+  .ms-boxshadow-none:hover {
+    @include boxshadow(none);
+  }
+
+  .ms-border,
+  .ms-border.active,
+  .ms-border-hover:hover {
+    border: 1px solid $purple;
+  }
+
+  [aria-expanded="true"]{
+    color: $purple;
+    opacity: 0.8;
+  }
+
+  label {
+    margin-bottom: 0;
+  }
+
+  /******* Outline button *******/
+  [class*="btn-outline-"] {
+    border-radius: 30px;
+    padding: .5rem 1.5rem;
+
+    &:hover {
+      background-color: $purple;
+      border-color: $purple;
+      color: $white; 
+      @include transition($transition 0s);
+      @include boxshadow(0 2px 20px 5px rgba(0, 0, 0, 0.21));
+    }
+
+    &:focus {
+    box-shadow: 0 2px 20px 5px rgba(0, 0, 0, 0.21) !important;
+    }
+  }
+
+  .btn-outline-light:not(:disabled):not(.disabled).active,
+  .btn-outline-light:not(:disabled):not(.disabled):focus,
+  .btn-outline-light:not(:disabled):not(.disabled):active {
+      background-color: $white;
+      border-color: $white;
+      color: $purple;
+      @include transition($transition 0s);
+    }
+
+  .btn-outline-primary {
+    color: $purple;
+    background-color: transparent;
+    background-image: none;
+    border-color: $purple;
+  }
+
+  .btn-outline-primary:not(:disabled):not(.disabled).active,
+  .btn-outline-primary:not(:disabled):not(.disabled):active,
+  .show>.btn-outline-primary.dropdown-toggle {
+    color: $white;
+    background-color: $purple;
+    border-color: $purple;
+  }
+
+  /******* Outline Small Button *******/
+  .ms-small-btn {
+    padding: 0.5rem 1.5rem 0.5rem 1rem;
+  }
+
+  /******* Outline Big Button *******/
+  .ms-big-btn {
+    margin-bottom: 1rem;
+    padding: 0.5rem 2rem;
+
+    &:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+
+    span:first-child {
+      vertical-align: middle;
+      padding-right: 1rem;
+    }
+
+    .ms-icon {
+      font-size: 2rem;
+    }
+  }
+
+  /******* Form Group *******/
+  .ms-form-group{
+    position: relative;
+    padding: 0;
+    margin-bottom: 1.25rem;
+    border: none;
+    overflow: visible;
+
+    input,
+    textarea {
+      color: inherit;
+      box-sizing: border-box;
+      width: 100%;
+      padding: 12px 10px 8px 0;
+      border: none;
+      outline: none;
+      border-bottom: $border;
+      @include transition(all 300ms ease);
+      
+      &:focus {
+        @include boxshadow( 0 1px 0 0 $purple);
+      }
+
+      &:not(:required):not([value=""]) ~ label,
+      &:not(:required):focus ~ label,
+      &:focus ~ label,
+      &:valid ~ label,
+      &[type='email']:not([value=""]):invalid ~ label,
+      &[type='password']:not([value=""]):invalid ~ label,
+      &[type='password']:not([value=""]):invalid ~ label,
+      &[type='number']:not([value=""]):invalid ~ label {
+        font-size: 1rem;
+        color: $purple;
+        @include transform(translateY(-1rem) scale(0.8));
+      }
+
+      &:not(:required) ~ label {
+        color: inherit;
+        line-height: 1.65rem;
+        font-size: 1.25rem;
+        @include transition($transition);
+        @include transform(translateY(0.6rem) scale(0.8));
+      }
+
+      & ~ button {
+        border: none;
+        position: absolute;
+        right: 0;
+        bottom: 0.4rem;
+        color: inherit;
+        cursor: pointer;
+        outline: none;
+        background: transparent;
+      }
+
+      &:focus ~ button,
+      & ~ button:hover {
+        color: $purple;
+      }
+    }
+
+    label {
+      position: absolute;
+      top: 10px;
+      left: 0;
+      font-size: 1rem;
+      transform-origin: 0 -150%;
+      pointer-events: none;
+      @include transition(transform 0.3s ease);
+    }
+  }
+
+  /******* Slick Slider *******/
+  .slick-prev:before,
+  .slick-next:before {
+    font-family: "fontello";
+    color: $purple;
+    padding: 0.8rem;
+    border: 1px solid;
+    border-radius: 50px;
+    background-color: $white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    @include transition($transition 0s);
+  }
+
+  .slick-prev:before {
+    content: "\E85E";
+  }
+
+  .slick-next:before {
+    content: "\E85F";
+    left: auto;
+    right: 0;
+  }
+
+  .slick-prev,
+  .slick-next {
+    z-index: 1;
+    height: 50px;
+    width: 50px;
+
+    &:hover {
+      &:before,
+      &:before {
+        border-color: $purple;
+        background-color: $purple;
+        color: $white;
+        @include boxshadow(0 2px 20px 5px rgba(0, 0, 0, 0.2));
+      }
+    }
+  }
+
+  .slick-prev {
+    left: 0;
+  }
+
+  .slick-next {
+    right: 0;
+  }
+
+  /******* Venobo popup *******/
+  .vbox-overlay {
+    z-index: 1080;
+    background: $vbox-overlay-bg-color !important;
+
+    .vbox-close {
+      color: $purple !important;
+      background-color:$white !important;
+    }
+
+    .vbox-prev span{
+      border-top-color: $white !important;
+      border-right-color: $white !important;
+    }
+
+    .vbox-next span{
+      border-top-color: $white !important;
+      border-right-color: $white !important;
+    }
+  }
+
+  /******* Particles *******/
+  #ms-js-home-bg-particles {
+    .particles-js-canvas-el {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  /******* Water home bg *******/
+  .ms-js-home-bg-water {
+    canvas {
+      z-index: 0 !important;
+    }
+  }
+
+/****************************************
+END OVERRIDE CSS/SCSS
+*****************************************/
+
+
+/****************************************
+21. START BLOG PAGE SCSS
+*****************************************/
+  /******* 21.1. BLOG DEFAULT *******/
+  /******* Blog banner *******/
+  .ms-blog-banner {
+    position: relative;
+    text-align: center;
+    margin: 5rem auto;
+    color: $white;
+    z-index: 1;
+  }
+
+  /******* Blogs container *******/
+  .ms-blogs-container {
+    padding-top: 6rem;
+  }
+
+  .ms-single-widget {
+    margin-bottom: 1.8rem;
+    @include boxshadow(0 0 20px 0 rgba(0, 0, 0, 0.08));
+    padding: 1.25rem;
+
+    .ms-form-group {
+      margin: 0;
+    }
+
+    .ms-widget-content {
+      position: relative;
+    }
+
+    .ms-widget-title {
+      border-bottom: $border;
+      margin-bottom: 1rem;
+      padding-bottom: 0.65rem;
+      text-transform: uppercase;
+    }
+  }
+
+  /******* 21.2. BLOG DETAILS LEFT SIDEBAR *******/
+  .ms-widget-inner {
+    @include displayFlex();
+    @include flexWrap(wrap);
+  }
+
+  .ms-single-find {
+    display: inline-block;
+    text-align: center;
+    background: $gray;
+    margin: 5px;
+    width: 30%;
+    line-height: 30px;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      display: grid;
+      padding: 0.5rem;
+      @include transition($transition);
+
+      &:hover {
+        color: $purple;
+      }
+    }
+  }
+
+  .ms-gallery-container {
+    margin: -0.25rem;
+    @include displayFlex();
+    @include flexWrap(wrap);
+
+    .ms-gallery-item {
+      position: relative;
+      margin: 0.35rem;
+      display: inline-flex;
+      text-decoration: none;
+      overflow: hidden;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: block;
+        @include transition($transition);
+      }
+
+      .ms-zoom-icon {
+        opacity: 0;
+        color: $white;
+        position: absolute;
+        width: 100%;
+        left: 50%;
+        top: 46%;
+        display: inline-flex;
+        transform: translateX(-50%);
+        justify-content: center;
+        @include transition($transition);
+      }
+
+      .ms-gallery-img {
+        width: 92px;
+        height: 96px;
+        @include transition($transition);
+      }
+
+      &:hover {
+        .ms-gallery-img{
+          transform: scale(1.2);
+        }
+
+        .ms-zoom-icon {
+          opacity: 1;
+          z-index: 1;
+        }
+
+        &::before {
+          z-index: 1;
+          background-color: $gallery-img-hover-bg-color;
+        } 
+
+      } 
+    }
+  }
+
+  .ms-post-media {
+    margin-bottom: 1rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .ms-post-img {
+      width: 90px;
+      height: 65px;
+      margin-right: 1rem;
+    }
+
+    .ms-post-title {
+      font-size: 0.9rem;
+    }
+
+    .ms-post-title a {
+      color: inherit;
+      text-decoration: none;
+      @include transition($transition);
+    }
+
+    &:hover {
+      .ms-post-title a {
+        color: $purple;
+      }
+    }
+  }
+
+  .ms-blog-details-container {
+    padding: 5rem 0;
+  }
+
+  .ms-blog-single-post {
+    @include boxshadow(0 0 20px 0 rgba(0, 0, 0, 0.08));
+    @include transition($transition 0s);
+
+    .ms-blog-single-post-header {
+      img {
+        border-top-left-radius: $radius;
+        border-top-right-radius: $radius;
+      }  
+    }
+    
+    .ms-post-content {
+      padding: 1.25rem;
+    }
+
+    .ms-share-post-wrapper {
+      padding: 1rem 1.5rem;
+      background: $gray;
+      margin: 2rem 0;
+      color: $text-muted;
+      @include displayFlex();
+    }
+  }
+
+  .ms-comment-media,
+  .ms-comment-reply-media {
+    margin: 2rem 0;
+
+    .ms-comment-author-name {
+      margin: 0 0 0.25rem 0;
+    }
+
+    .ms-comment-author-avatar {
+      margin-right: 1rem;
+
+      img {
+        border-radius: 50%;
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+  }
+
+  .ms-comment-reply-media {
+    margin-bottom: 0;
+  }
+
+  .ms-comment-time-left {
+    margin-bottom: 0.75rem;
+    color: $text-muted;
+    @include displayFlex();
+  }
+
+  .ms-post-content-inner,
+  .ms-comment-action-options {
+    .list-inline {
+      .list-inline-item {
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  .ms-post-new-comment {
+    padding-top: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+
+  /******* Blog style 2 *******/
+  .ms-blog-details-style-2 {
+
+    .ms-single-widget {
+      padding: 0;
+      @include boxshadow(none);
+    }
+
+    .ms-blog-single-post {
+      @include boxshadow(none);
+
+      .ms-blog-single-post-header img {
+        border-radius: 0;
+      }
+
+      .ms-post-content {
+        padding: 1.25rem 0;
+      }
+    }
+  }
+
+  /******* Related post container *******/
+  .ms-related-post-container {
+    cursor: move;
+
+    a:focus,
+    a:active {
+      outline: none;
+    }
+
+    .slick-list {
+      padding-top: 0.5rem;
+    }
+
+    .slick-slide {
+      margin: 0 1rem;
+    }
+
+    &:hover {
+      .slick-prev:before,
+      .slick-next:before {
+      opacity: 1;
+      }
+    }
+  }
+
+/****************************************
+END BLOG PAGE SCSS
+*****************************************/
+
+/****************************************
+22. START COMING SOON PAGE SCSS
+*****************************************/
+  .ms-coming-soon-container {
+    height: 100vh;
+    min-height: 35rem;
+    position: relative;
+    z-index: 1;
+    color: $white;
+    @include displayFlex();
+    @include flexDirection(column);
+    justify-content: center;
+    align-items: center;
+
+
+    .ms-date-count-container {
+      color: $white;
+      width: 170px;
+      height: 170px;
+      background: $date-count-container-bg-color;
+      padding: 36px 0;
+      border-radius: 50%;
+      position: relative;
+      text-align: center;
+      margin: 0 1rem 1rem;
+      @include boxshadow(1px 1px 20px 0px rgba(0, 0, 0, 0.10));
+
+      h2 {
+        margin: 0;
+        margin-bottom: 1rem;
+        font-weight: 800;
+        font-size: 3.5rem;
+      }
+    
+      h4 {
+        margin: 0;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 100;
+      }
+
+      &:not(.ms-first-date)::before {
+        content: ':';
+        display: block;
+        position: absolute;
+        left: -3rem;
+        top: 0;
+        color: $date-counter-separator-color;
+        font-size: 9rem;
+        line-height: 10rem;
+      }
+
+    }
+
+    .ms-coming-soon-title {
+      font-size: 4rem;
+      font-weight: 800;
+      margin-bottom: 3rem;
+      @include transition($transition);
+
+      &:hover {
+        @include transform(scale(1.03));
+      }
+    }
+
+    .ms-subscribe-box {
+      width: 50%;
+      margin-top: 2rem;
+    }
+
+    &.ms-coming-soon-style-2 {
+      .ms-date-count-container {
+        border: 1px solid $white;
+        background-color: transparent;
+        @include boxshadow(none);
+      }
+    }
+
+    &.ms-coming-soon-style-3 {
+      .ms-date-count-container {
+        border-radius: 0;
+      }
+    }
+
+    &.ms-coming-soon-style-4 {
+      .ms-date-count-container {
+        border-radius: 0;
+        border: 1px solid $white;
+        background-color: transparent;
+        @include boxshadow(none);
+      }
+    }
+
+  }
+
+/****************************************
+END COMING SOON PAGE SCSS
+*****************************************/
+
+
+/****************************************
+23. START ERROR PAGE SCSS
+*****************************************/
+
+  .ms-error-page-container {
+    height: 100vh;
+    min-height: 35rem;
+    position: relative;
+    align-items: center;
+    z-index: 1;
+    color: $white;
+    @include displayFlex();
+    @include flexDirection(column);
+    justify-content: center;
+
+    .ms-error-page-top {
+      align-items: center;
+      margin-bottom: 3rem;
+      @include displayFlex();
+      @include flexDirection(column);
+      justify-content: center;
+      
+
+      h1,
+      .h1 {
+        font-size: 12rem;
+        letter-spacing: 1.25rem;
+      }
+    }
+
+    .ms-error-page-bottom {
+      .btn:not(:last-child) {
+        margin-right: 1.5rem;
+      }
+    }
+  }
+
+/****************************************
+END ERROR PAGE SCSS
+*****************************************/
+
+
+/****************************************
+24. START SIGNUP/SIGNIN PAGE SCSS
+*****************************************/
+  .ms-sign-form-container {
+    width: 60vw;
+    height: 500px;
+    position: relative;
+    margin: auto;
+
+    .ms-form-overlay {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: url(../imgs/blog-5.png) no-repeat;
+      background-size: cover;
+      background-position: 100%;
+      border-radius: 0.3rem;
+
+      &::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: $purple;
+        opacity: 0.9;
+      }
+    }
+
+    .ms-sign-forms {
+      position: relative;
+      height: 100%;
+      text-align: center;
+
+      .ms-sign-form-info {
+        @include displayFlex();
+        height: 100%;
+
+        .ms-form-info-description {
+          padding: 0.7rem 0 1rem 0;
+        }
+
+        .ms-signin-info,
+        .ms-signup-info{
+          text-align: center;
+          width: 60%;
+          height: 100%;
+          color: $white;
+          opacity: 1;
+          @include displayFlex();
+          @include flexDirection(column);
+          justify-content: center;
+          align-items: center;
+          @include transition($transition);
+        }
+
+        .ms-signup-info {
+          width: 40%;
+        }
+      }
+    }
+
+  /******* Form box *******/
+    .ms-sign-form {
+      overflow: hidden;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 60%;
+      height: 100%;
+      background-color: $white;
+      box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+      @include transition($transition);
+      border-top-right-radius: $radius;
+      border-bottom-right-radius: $radius;
+
+      .ms-form-box {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        padding: 1.5rem 3rem;
+        justify-content: center;
+        @include displayFlex();
+        @include flexDirection(column);
+        @include transition($transition);
+
+        .ms-form-title {
+          margin-bottom: 1.5rem;
+        }
+
+        .ms-form-suggest {
+          display: inline-block;
+          justify-content: center;
+          margin-bottom: 0.7rem;
+          padding-top: 0.7rem;
+          text-decoration: none;
+          color: inherit;
+          cursor: pointer;
+
+          &:hover {
+            color: $purple;
+          }
+        }
+
+        .ms-text-muted {
+          margin-bottom: 0.8rem;
+          @include displayFlex();
+          justify-content: center;
+        }
+      }
+
+      .ms-form-box.ms-signup {
+        right: 100%;
+        opacity: 0;
+        display: none;
+      }
+    }
+
+    /******* When show sign in form *******/
+    &.ms-open-signup-form {
+
+      .ms-form-overlay {
+        background-position: unset;
+      }
+
+      .ms-signup-info {
+        width: 60% !important;
+      }
+
+      .ms-signin-info {
+        width: 40% !important;
+      }
+
+      .ms-sign-form{
+        right: 40%;
+        border-top-left-radius: $radius;
+        border-bottom-left-radius: $radius;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+
+      .ms-form-box.ms-signin {
+        right: -100%;
+        opacity: 0;
+        display: none;
+      }
+
+      .ms-form-box.ms-signup {
+        right: 0 !important;
+        opacity: 1 !important;
+        display: flex !important;
+      } 
+    }
+  }
+/****************************************
+END SIGNUP/SIGNIN PAGE SCSS
+*****************************************/
+
+
+/****************************************
+25. START THEMES(COLOR) BOX CSS
+*****************************************/
+.ms-options-box {
+  position: fixed;
+  right: -180px;
+  top: 15%;
+  width: 180px;
+  background: $white;
+  z-index: 9999;
+  min-height: 50px;
+  border-bottom-left-radius: 0.1rem;
+  @include boxshadow(0 2px 13px 0 rgba(0, 0, 0, 0.1));
+  @include transition(all 0.2s ease-in);
+
+  &.open {
+    right: 0;
+  }
+}
+
+.ms-options-handler {
+  position: absolute;
+  padding: 0.5rem;
+  left: -2.4rem;
+  background: $white;
+  border-top-left-radius: 0.1rem;
+  border-bottom-left-radius: 0.1rem;
+  cursor: pointer;
+  @include boxshadow(-7px 6px 20px 0 rgba(0, 0, 0, 0.08));
+}
+
+.ms-options-box .ms-themes-box {
+  padding: 0.8rem 0.5rem;
+}
+
+.ms-options-box .ms-theme {
+  text-align: center;
+  width: 50%;
+  margin-top: 10px;
+  float: left;
+}
+
+.ms-options-box .ms-theme a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 3px;
+  margin-bottom: 5px;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.ms-options-box .ms-theme a>i {
+  font-size: 1.5rem;
+  opacity: 0;
+}
+
+.ms-options-box .ms-theme:hover a,
+.ms-options-box .ms-theme.active a {
+  border-radius: 50%;
+}
+
+.ms-options-box .ms-theme.active a>i {
+  opacity: 1;
+}
+
+.ms-rotated:before {
+  animation: rotation 2s infinite linear;
+}
+
+.open .ms-options-handler .ms-rotated:before,
+.ms-options-handler:hover .ms-rotated:before {
+  animation: unset;
+}
+
+@-webkit-keyframes rotation {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+/****************************************
+END THEMES(COLOR) BOX CSS
+*****************************************/

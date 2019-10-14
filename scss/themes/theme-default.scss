@@ -1,0 +1,618 @@
+ /*********** 1.1 DEFAULT VARIABLES ******/
+  $purple: #7827e2;
+  $purple-light: #6323b7;
+  $vbox-overlay-bg-color: rgba(81, 8, 197, 0.88);
+  $gallery-img-hover-bg-color: rgba(75, 46, 236, 0.55);
+  $home-video-overlay-bg-color: rgba(97, 17, 224, 0.35);
+  $scroll-to-top-bg: linear-gradient(-45deg, #5a45ec, $purple);
+  $ms-bg: linear-gradient(-50deg, $purple 50%, $purple-light 50%);
+  $preloader-wrapper-bg: linear-gradient(to right, $purple 0%, $purple-light 100%);
+  $overlay-bg: linear-gradient(-45deg, rgba(89, 59, 210, 0.84), rgba(63, 23, 128, 0.95));
+ /********** END DEFAULT VARIABLES *******/
+
+  /********** BOXSHADOW **********/
+  @mixin boxshadow($box-shadow) {
+    -webkit-box-shadow: $box-shadow;
+    -moz-box-shadow: $box-shadow;
+    box-shadow: $box-shadow;
+  }
+  
+  /********** COMMON RGB **********/
+  @mixin commonBg(){
+    background: rgba(0, 0, 0, 0) -webkit-linear-gradient(left, $purple 40%, $purple-light 100%) repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) linear-gradient(to right, $purple 40%, $purple-light 100%) repeat scroll 0 0;
+  }
+
+/****************************************
+1. DEFAULT SCSS
+*****************************************/
+  /*********** 1.2 COMMON SCSS ************/
+  .ms-primary-bg {
+    background-color: $purple;
+  }
+  
+  .ms-text-primary {
+    color: $purple;
+  }
+
+  /********** Widget list **********/
+  .ms-widget-list {
+
+    li:hover, 
+    li:active,
+    li.active {
+      color: $purple;
+
+      .ms-number {
+        background-color: $purple;
+      }
+    }
+  }
+
+  .ms-tag {
+    border-color: $purple;
+    color: $purple;
+
+    &:hover,
+    &.active {
+      background-color: $purple;
+      border-color: $purple
+    }
+  }
+
+  /********** Header divider **********/
+  .ms-divider {
+    border-top: 1px solid $purple;
+
+    &::after {
+      background-color: $purple;
+    }
+
+    &.ms-reverse {
+      &::after {
+        border-color: $purple;
+      }
+    }
+  }
+
+  /********** Pagination **********/
+  .ms-pagination-container {
+    .page-link.ms-border {
+      color: $purple;
+    }
+
+    .ms-page-item {
+      &.active .page-link,
+      .page-link:hover {
+        background: $purple;
+      }      
+    }
+  }
+
+  /********** Rating **********/
+  .ms-rating-box {
+    color: $purple;
+  }
+
+  /********** Nav list **********/
+  .ms-nav-group {
+
+    .nav-link,
+    .nav-link.active {
+      color: inherit;
+      background-color: transparent;
+    }
+
+    .nav-link {
+      &::after {
+        background: $purple;
+      }
+    }
+  }
+
+  /********** Overlay **********/
+  .ms-overlay {
+    background: $overlay-bg;
+  }
+
+  /********** Home style bg **********/
+  .ms-bg {
+    background-image: $ms-bg;
+  }
+
+  /********** Checkbox **********/
+  .ms-checkbox {
+    &:hover + label:before,
+    &:checked + label:before {
+      border-color: $purple;
+    }
+    
+    &:not(:disabled):hover + label,
+    &:not(:disabled):checked + label {
+      color: $purple;
+    }
+
+    &:not(:disabled):checked + label:after {
+      background: $purple;
+    }
+  }
+/****************************************
+END COMMON SCSS
+*****************************************/
+
+
+/****************************************
+2. WINDOW/PAGE LOADER
+*****************************************/
+  .ms-preloader-wrapper {
+    background: $preloader-wrapper-bg;
+  }
+/****************************************
+ END WINDOW/PAGE LOADER
+*****************************************/
+
+
+/****************************************
+3. HEADER/NAV CONTAINER
+*****************************************/
+  .ms-inner-page .ms-navbar-fixed {
+    @include commonBg();
+  }
+
+  .ms-navbar-fixed {
+    &.ms-fixed {
+      @include commonBg();
+    }
+  }
+
+  @media (max-width: 767px) {
+    /********** Page wrapper container **********/
+    .ms-page-wrapper {
+      .ms-navbar-fixed {
+        &.show {
+          @include commonBg();
+        }
+      }
+    }
+  }
+  /********** End main navbar style **********/
+
+/****************************************
+4. HOME CONTAINER
+*****************************************/
+  .ms-card {
+    .ms-card-body {
+      .ms-card-title-icon {
+        color: $purple;
+      }
+    }
+  }
+ 
+  /*********** 4.1 HOME STYLE 1 *********/
+  .ms-home-style-1 {
+    @include commonBg();
+  }
+
+  .ms-home-style-2 {
+    @include commonBg();
+  }
+
+  .ms-home-style-3 {
+    @include commonBg();
+  }
+
+  .ms-home-style-4{
+    @include commonBg();
+  }
+
+  .ms-home-style-5 {
+    @include commonBg();
+  } 
+
+  /*********** 4.2 HOME BG STYLE *********/
+    /********** 4.2.1 HOME BG IMG *********/
+    .ms-home-bg-img {
+      .ms-home-bg-overlay {    
+        &::after {
+          background: $purple;
+        }
+      }
+    }
+
+    /********** 4.2.2 HOME BG VIDEO *********/
+    .ms-home-bg-video {
+      .ms-home-bg-overlay {
+        &::after {
+          background: $purple;
+        }
+      }
+    }
+ 
+ /*********** 4.3 HOME BOTTOM STYLE *********/
+  /*********** 4.3.6 HOME BOTTOM VIDEO ******/
+    .ms-home-btm-video-container {
+      .ms-home-video-overlay {
+        background: $home-video-overlay-bg-color;
+
+        button {
+          color: $purple;
+        }
+      }
+    }
+/****************************************
+END HOME CONTAINER
+*****************************************/
+
+
+/****************************************
+FEATURES CONTAINER
+*****************************************/
+  .ms-media {
+    &:hover {
+      .ms-media-avatar {
+        background-color: $purple;
+      }
+    }
+
+    .ms-media-avatar {
+      border: 1px solid $purple;
+      color: $purple;
+    }
+  }
+/****************************************
+ END FEATURES CONTAINER
+*****************************************/
+
+
+/****************************************
+HOW IT WORK CONTAINER
+*****************************************/
+  .ms-work-container {
+    &::before {
+      background-color: $purple;
+    }
+
+    .ms-work-single-line {
+     
+      .ms-work-icon {
+        color: $purple;
+        border-color: $purple;
+      }
+
+      &.active, &:focus,
+      &:active, &:hover {
+        .ms-work-icon {
+          background-color: $purple;
+        }
+      }
+    }
+  }
+/****************************************
+ END HOW IT WORK CONTAINER
+*****************************************/
+
+
+/****************************************
+VIDEO TUTORIAL CONTAINER
+*****************************************/
+  .ms-video-container {
+    .ms-video-start-icon {
+      color: $purple;
+    }
+  }
+/****************************************
+ END VIDEO TUTORIAL  CONTAINER
+*****************************************/
+
+
+/****************************************
+ACTIVITIES COUNTER CONTAINER
+*****************************************/
+  .ms-counter-container {
+    color: $purple;
+  }
+/****************************************
+ END ACTIVITIES COUNTER CONTAINER
+*****************************************/
+
+
+/****************************************
+PRICING CONTAINER
+*****************************************/
+  .ms-single-pricing-table {
+
+    &.ms-border {
+      .ms-pricing-header {
+        border-color: $purple;
+      }
+    }
+
+    .ms-price-discout-alt {
+      background: $purple;
+    }
+  }
+
+  .ms-pricing-header {
+    h4 {
+      color: $purple;
+    }
+  }
+/****************************************
+ END PRICING CONTAINER
+*****************************************/
+
+
+/****************************************
+FAQ CONTAINER
+*****************************************/
+  .ms-tab-container {
+
+    .nav-link {
+      &::before {
+        background: $purple;
+      }
+    }
+
+    &.ms-border {
+      .nav-link {
+        border-color: $purple;
+      }
+    }
+
+  .nav-link:hover,
+  .nav-link.active,
+  &.show>.nav-link {
+    color: $purple;
+    }
+  }
+
+  .ms-accordion {
+    &.ms-border {
+      .ms-accordion-header {
+        border-color: $purple;
+      }
+    }
+  }
+/****************************************
+ END FAQ CONTAINER
+*****************************************/
+
+
+/****************************************
+BLOGS CONTAINER
+*****************************************/
+  .ms-blog-body,
+  .ms-post-content {
+    a {
+      &:hover {
+        color: $purple;
+      }
+    }
+  }
+/****************************************
+ END BLOGS CONTAINER
+*****************************************/
+
+
+/****************************************
+CONTACT CONTAINER
+*****************************************/
+  .ms-contact-container {
+    .ms-address-box{
+      background-color: $purple;
+    }
+  }
+/****************************************
+ END CONTACT CONTAINER
+*****************************************/
+
+
+/****************************************
+18. FOOTER CONTAINER
+*****************************************/
+  /********** Subscribe form box **********/
+  .ms-subscribe-box {
+
+    [type='submit']{
+      background-color: $purple;
+    }
+
+    [type='submit']:hover,
+    [type='submit']:focus,
+    [type='submit']:active {
+      background-color: $purple;
+    }
+  }
+
+  /********** Social links box **********/
+  .ms-social-box {
+    .ms-social-link {    
+      &:hover{
+        border-color: $purple;
+        @include commonBg();
+      }
+    }
+
+    &.ms-white-bg {
+      .ms-social-link {
+        border-color: $purple;
+        color: $purple;
+      }
+    }
+  }
+/****************************************
+ END FOOTER CONTAINER
+*****************************************/
+
+
+/****************************************
+19. START SCROLL TO TOP CONTAINER
+*****************************************/
+  .ms-scroll-to-top {
+    background: $scroll-to-top-bg;
+  }
+/****************************************
+ END SCROLL TO TOP CONTAINER
+*****************************************/
+
+
+/****************************************
+START OVERRIDE SCSS
+*****************************************/
+  .ms-border,
+  .ms-border.active,
+  .ms-border-hover:hover {
+    border: 1px solid $purple;
+  }
+
+  [aria-expanded="true"]{
+    color: $purple;
+  }
+
+  /********** Outline button **********/
+  [class*="btn-outline-"] {
+    &:hover {
+      background-color: $purple;
+      border-color: $purple;
+    }
+  }
+
+  .btn-outline-light:not(:disabled):not(.disabled).active,
+  .btn-outline-light:not(:disabled):not(.disabled):focus,
+  .btn-outline-light:not(:disabled):not(.disabled):active {
+      color: $purple;
+    }
+
+  .btn-outline-primary {
+    color: $purple;
+    border-color: $purple;
+  }
+
+  .btn-outline-primary:not(:disabled):not(.disabled).active,
+  .btn-outline-primary:not(:disabled):not(.disabled):active,
+  .show>.btn-outline-primary.dropdown-toggle {
+    background-color: $purple;
+    border-color: $purple;
+  }
+
+  /********** Form Group **********/
+  .ms-form-group{
+
+    input,
+    textarea {
+      &:not(:required):not([value=""]) ~ label,
+      &:not(:required):focus ~ label,
+      &:focus ~ label,
+      &:valid ~ label,
+      &[type='email']:not([value=""]):invalid ~ label,
+      &[type='password']:not([value=""]):invalid ~ label,
+      &[type='password']:not([value=""]):invalid ~ label,
+      &[type='number']:not([value=""]):invalid ~ label {
+        color: $purple;
+      }
+
+      &:focus {
+        @include boxshadow(0 1px 0 0 $purple);
+      }
+
+      &:focus ~ button,
+      & ~ button:hover {
+        color: $purple;
+      }
+    }
+  }
+
+  /********** Slick Slider **********/
+.slick-slider {
+  &:hover {
+    .slick-prev:before,
+    .slick-next:before {
+     border-color: $purple;
+     color: $purple;
+    }
+  }
+
+  .slick-prev:hover,
+  .slick-next:hover {
+      &:before,
+      &:before {
+        border-color: $purple;
+        background-color: $purple;
+        color: #ffffff;
+      }
+    }
+  }
+
+  /********** Venobo popup **********/
+  .vbox-overlay {
+    background: $vbox-overlay-bg-color !important;
+
+    .vbox-close {
+      color: $purple !important;
+    }
+  }
+/****************************************
+END OVERRIDE CSS/SCSS
+*****************************************/
+
+
+/****************************************
+START BLOG PAGE SCSS
+*****************************************/
+  /********** 21.1. BLOG DEFAULT **********/
+  .ms-single-find {
+    a {
+      &:hover {
+        color: $purple;
+      }
+    }
+  }
+
+  .ms-gallery-container {
+
+    .ms-gallery-item {
+      &:hover {
+        &::before {
+          background-color: $gallery-img-hover-bg-color;
+        } 
+      } 
+    }
+  }
+
+  .ms-post-media {
+    &:hover {
+      .ms-post-title a {
+        color: $purple;
+      }
+    }
+  }
+/****************************************
+END BLOG PAGE SCSS
+*****************************************/
+
+
+/****************************************
+24. START SIGNUP/SIGNIN PAGE SCSS
+*****************************************/
+  .ms-sign-form-container {
+    .ms-form-overlay {
+
+      &::after{
+        background: $purple;
+      }
+    }
+
+  /********** Form box **********/
+    .ms-sign-form {
+      .ms-form-box {
+        .ms-form-suggest {
+          &:hover {
+            color: $purple;
+          }
+        }
+      }
+    }
+  }
+/****************************************
+END SIGNUP/SIGNIN PAGE SCSS
+*****************************************/
