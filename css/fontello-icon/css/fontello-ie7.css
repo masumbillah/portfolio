@@ -375,6 +375,7 @@
 .icon-user-male-solid { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf062;&nbsp;'); }
 .icon-user-female-solid { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf063;&nbsp;'); }
 .icon-users-solid { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf064;&nbsp;'); }
+.icon-github { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf09b;&nbsp;'); }
 .icon-gplus { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf0d5;&nbsp;'); }
 .icon-linkedin { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf0e1;&nbsp;'); }
 .icon-dot { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf111;&nbsp;'); }

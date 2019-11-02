@@ -130,7 +130,7 @@ h5, .h5 {
 }
 
 .ms-section-header {
-    width: 60%;
+    width: 80%;
     text-align: center;
     margin: 0 auto 5rem;
 }
@@ -3512,19 +3512,46 @@ END SIGNUP/SIGNIN PAGE CSS
 END THEMES(COLOR) BOX CSS
 *****************************************/
 
-/*.navbar-brand img {*/
-    /*width: 145px;*/
-/*}*/
+/* Custom style for portfolio */
+.name-box {
+    display: inline-flex; 
+    width: 100%;
+    justify-content: space-between;
+}
 
-/*.ms-options-box {*/
-    /*display: none;*/
-/*}*/
+.designation {
+    opacity: 0.65;
+}
 
-/*.ms-home-content h1 {*/
-    /*font-size: 3.5rem;*/
-/*}*/
+.ms-link {
+    text-decoration: none;
+    color: #ffffff;
+}
 
-/*.ms-card .ms-card-body .card-title,*/
-/*.navbar-expand-md .navbar-nav {*/
-    /*font-size: 1.5rem;*/
-/*}*/
+.ms-link:hover {
+    text-decoration: none;
+    color: #c5c5c5;
+}
+
+.btn-force-active {
+    color: #ffffff! important;
+    background-color: #7827e2;
+    border-color: #7827e2;
+}
+
+.ms-table-content {
+    display: table;
+}
+
+.ms-table-content-cell {
+    display: table-cell;
+    margin-bottom: 0.2rem;
+}
+
+.ms-table-content-cell:first-child {
+    width: 180px;
+}
+
+.ms-tag.ms-without-icon {
+    padding-left: 0.85rem;
+}
