@@ -248,7 +248,7 @@ Version: 0.1 (20 Jan 2019)
 			});
 
 			//****** 4.3. CLIENTS SLIDER *****
-			$('#ms-js-client-slider').slick({
+			$('#ms-js-client-slider, #ms-js-work-slider').slick({
 			slidesToShow: 3,
 			slidesToScroll: 1,
 			responsive: [
