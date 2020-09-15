@@ -7,7 +7,7 @@
     $message = $_POST["message"];
 
     //Your own email address
-    $toEmail = "masum@themebins.com";
+    $toEmail = "masum.billah78@gmail.com";
     
     // Set email header
     $mailHeaders = "From: " . $name . "<". $email .">\r\n";
