@@ -3555,3 +3555,12 @@ END THEMES(COLOR) BOX CSS
 .ms-tag.ms-without-icon {
     padding-left: 0.85rem;
 }
+
+
+/*Custom style change*/
+.download-btn,
+.download-btn:hover {
+    color: inherit;
+    text-decoration: none;
+    outline: none;
+}
