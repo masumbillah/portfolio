@@ -3564,3 +3564,24 @@ END THEMES(COLOR) BOX CSS
     text-decoration: none;
     outline: none;
 }
+
+
+.works-section {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.works-section .ms-client {
+    cursor: default;
+    max-width: 365px;
+    margin-bottom: 10px;
+}
+
+.my-gallery-section::before {
+    content: none !important;
+}
+
+.my-gallery-section .ms-js-slider-imgs {
+    cursor: pointer;
+}
