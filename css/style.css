@@ -3584,4 +3584,9 @@ END THEMES(COLOR) BOX CSS
 
 .my-gallery-section .ms-js-slider-imgs {
     cursor: pointer;
+    padding: 0 15px;
+}
+
+.my-gallery-section .ms-js-slider-imgs img {
+    width: 100%;
 }
